@@ -19,10 +19,10 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
     },
     price: {
-      type: DataTypes.NUMBER, //Ver si el precio va a la entrada o al show
+      type: DataTypes.INTEGER, //Ver si el precio va a la entrada o al show
     },
     ticketsQty: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
     },
     rated: {
       type: DataTypes.ENUM("G", "PG", "PG-13", "R", "NC-17"),
@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
     },
     score: {
-      type: DataTypes.ENUM(1, 2, 3, 4, 5),
+      type: DataTypes.ENUM("1", "2", "3", "4", "5"),
     },
   });
 };

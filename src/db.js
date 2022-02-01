@@ -2,11 +2,6 @@ require("dotenv").config();
 const { Sequelize, Op } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const Reviews = require("./models/Reviews");
-const Theaters = require("./models/Theaters");
-const Shows = require("./models/Shows");
-const Tickets = require("./models/Tickets");
-const Viewers = require("./models/Viewers");
 
 const { DB_USER, DB_PASSWORD, DB_HOST, API_KEY, DB_NAME } = process.env;
 

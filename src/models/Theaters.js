@@ -56,10 +56,10 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
     },
     seatsQTY: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
     },
     score: {
-      type: DataTypes.ENUM(1, 2, 3, 4, 5),
+      type: DataTypes.ENUM("1", "2", "3", "4", "5"),
     },
   });
 };
