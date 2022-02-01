@@ -17,7 +17,7 @@ router.post("/", async (req, res, next) => {
     );
     postViewersRegistration
       ? res.status(200).json(addViewer)
-      : res.status(400).send("Error");
+      : res.status(404).send("Error");
   } catch (err) {
     next(err);
   }

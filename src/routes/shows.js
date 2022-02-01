@@ -28,7 +28,7 @@ router.post("/", async (req, res, next) => {
       time,
       score
     );
-    postShows ? res.status(200).json(addShow) : res.status(400).send("Error");
+    postShows ? res.status(200).json(addShow) : res.status(404).send("Error");
   } catch (err) {
     next(err);
   }

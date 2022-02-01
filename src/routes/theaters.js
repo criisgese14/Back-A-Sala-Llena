@@ -34,7 +34,14 @@ router.post("/", async (req, res, next) => {
     );
     postTheatersRegistration
       ? res.status(200).json(addTheater)
-      : res.status(400).send("Error");
+      : res.status(404).send("Error");
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/", async (req, res, next) => {
+  try {
   } catch (err) {
     next(err);
   }

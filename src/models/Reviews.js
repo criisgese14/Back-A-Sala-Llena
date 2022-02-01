@@ -5,7 +5,11 @@ module.exports = (sequelize) => {
     review: {
       type: DataTypes.TEXT,
     },
-    score: {
+    theaterScore: {
+      type: DataTypes.ENUM("1", "2", "3", "4", "5"),
+      allowNull: false,
+    },
+    showScore: {
       type: DataTypes.ENUM("1", "2", "3", "4", "5"),
       allowNull: false,
     },

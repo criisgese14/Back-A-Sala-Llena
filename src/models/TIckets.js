@@ -5,9 +5,11 @@ module.exports = (sequelize) => {
   sequelize.define("tickets", {
     seatNumber: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     price: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
   });
 };
