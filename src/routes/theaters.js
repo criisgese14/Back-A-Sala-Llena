@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const router = Router();
 const {
-  postTheaterRegistration,
-} = require("../Controllers/theatersController");
+  postTheatersRegistration,
+} = require("../Controllers/theatersControllers");
 
 router.post("/", async (req, res, next) => {
   const {
@@ -19,7 +19,7 @@ router.post("/", async (req, res, next) => {
     score,
   } = req.body;
   try {
-    const addTheater = await postTheaterRegistration(
+    const addTheater = await postTheatersRegistration(
       name,
       CUIT,
       email,
@@ -32,7 +32,7 @@ router.post("/", async (req, res, next) => {
       seatsQTY,
       score
     );
-    postTheaterRegistration
+    postTheatersRegistration
       ? res.status(200).json(addTheater)
       : res.status(400).send("Error");
   } catch (err) {

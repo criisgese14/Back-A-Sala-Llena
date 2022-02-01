@@ -1,6 +1,6 @@
 const { Theaters, Shows, Tickets, Reviews } = require("../db");
 
-const postTheaterRegistration = async (
+const postTheatersRegistration = async (
   name,
   CUIT,
   email,
@@ -33,4 +33,4 @@ const postTheaterRegistration = async (
   }
 };
 
-module.exports = { postTheaterRegistration };
+module.exports = { postTheatersRegistration };
