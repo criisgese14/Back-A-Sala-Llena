@@ -7,7 +7,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genere: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: false,
     },
