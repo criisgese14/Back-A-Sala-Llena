@@ -5,18 +5,23 @@ module.exports = (sequelize) => {
   sequelize.define("viewers", {
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     userName: {
       type: DataTypes.STRING, // ver si no va a ser el email
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     image: {
       type: DataTypes.TEXT,
+      allowNull: false,
     },
     province: {
       type: DataTypes.ENUM(
@@ -45,6 +50,7 @@ module.exports = (sequelize) => {
         "Tucuman",
         "CABA"
       ),
+      allowNull: false,
     },
   });
 };
