@@ -18,9 +18,6 @@ module.exports = (sequelize) => {
     summary: {
       type: DataTypes.TEXT,
     },
-    price: {
-      type: DataTypes.INTEGER, //Ver si el precio va a la entrada o al show
-    },
     ticketsQty: {
       type: DataTypes.INTEGER,
     },

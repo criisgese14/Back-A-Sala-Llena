@@ -5,6 +5,9 @@ module.exports = (sequelize) => {
   sequelize.define("tickets", {
     seatNumber: {
       type: DataTypes.STRING,
-    }, // ver si falta el precio
+    },
+    price: {
+      type: DataTypes.INTEGER,
+    },
   });
 };
