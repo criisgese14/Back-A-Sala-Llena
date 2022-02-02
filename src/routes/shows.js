@@ -32,7 +32,6 @@ router.post("/", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-
   router.get("/", async (req, res, next) => {
     try {
       const getShows = await getAllShows();

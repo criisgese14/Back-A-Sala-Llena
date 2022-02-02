@@ -3,7 +3,6 @@ const { Viewers, Shows, Tickets, Reviews } = require("../db");
 const postViewersRegistration = async (
   name,
   email,
-  userName,
   password,
   image,
   province
@@ -12,7 +11,6 @@ const postViewersRegistration = async (
     let newViewer = await Viewers.create({
       name,
       email,
-      userName,
       password,
       image,
       province,

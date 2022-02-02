@@ -13,4 +13,11 @@ const postReviews = async (review, theaterScore, showScore) => {
   }
 };
 
-module.exports = { postReviews };
+const getAllReviews = async () =>
+  await Reviews.findAll({
+    include: {
+      model: Shows,
+      Theaters,
+    },
+  });
+module.exports = { postReviews, getAllReviews };

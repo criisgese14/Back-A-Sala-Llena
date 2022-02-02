@@ -39,4 +39,5 @@ const getAllShows = async () =>
       Reviews,
     },
   });
+
 module.exports = { postShows, getAllShows };
