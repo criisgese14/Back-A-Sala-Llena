@@ -4,6 +4,7 @@ const { postShows, getAllShows } = require("../Controllers/showsControllers");
 
 router.post("/", async (req, res, next) => {
   const {
+    CUIT,
     name,
     genre,
     length,
@@ -17,6 +18,7 @@ router.post("/", async (req, res, next) => {
   } = req.body;
   try {
     const addShow = await postShows(
+      CUIT,
       name,
       genre,
       length,
@@ -32,13 +34,13 @@ router.post("/", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-  router.get("/", async (req, res, next) => {
+
+  router.get("/", async (req, res) => {
     try {
       const getShows = await getAllShows();
-
-      getShows ? res.status(200).json(getShows) : res.status(404).send("Error");
+      res.send(getShows);
     } catch (err) {
-      next(err);
+      console.log(err);
     }
   });
 });

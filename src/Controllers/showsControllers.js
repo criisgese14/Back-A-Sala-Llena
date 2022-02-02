@@ -1,6 +1,7 @@
 const { Shows, Tickets, Reviews, Theaters } = require("../db");
 
 const postShows = async (
+  CUIT,
   name,
   genre,
   length,
@@ -25,19 +26,20 @@ const postShows = async (
       time,
       score,
     });
+
+    const theater = await Theaters.findOne({
+      where: {
+        CUIT,
+      },
+    });
+    await theater.addShows(newShow);
+
     return newShow;
   } catch (err) {
     console.error(err);
   }
 };
 
-const getAllShows = async () =>
-  await Shows.findAll({
-    include: {
-      model: Theaters,
-      Tickets,
-      Reviews,
-    },
-  });
+const getAllShows = async () => await Shows.findAll({});
 
 module.exports = { postShows, getAllShows };

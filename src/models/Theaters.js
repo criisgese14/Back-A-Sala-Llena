@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
     },
     CUIT: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false, //Seria Pk???
     },
     email: {
       type: DataTypes.STRING,

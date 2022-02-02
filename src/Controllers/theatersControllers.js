@@ -31,12 +31,6 @@ const postTheatersRegistration = async (
   }
 };
 
-const getAllTheaters = async () =>
-  await Theaters.findAll({
-    include: {
-      model: Shows,
-      Reviews,
-    },
-  });
+const getAllTheaters = async () => await Theaters.findAll({});
 
 module.exports = { postTheatersRegistration, getAllTheaters };

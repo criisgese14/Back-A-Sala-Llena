@@ -3,42 +3,57 @@ const { conn, Theaters, Shows, Reviews } = require("./src/db.js");
 const { TheatersDb, ShowsDb, ReviewsDb } = require("./preload-Db");
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
-  server.listen(3001, () => {
-    try {
-      Shows.create({
-        name: ShowsDb.name,
-        genre: ShowsDb.genre,
-        length: ShowsDb.length,
-        image: ShowsDb.image,
-        summary: ShowsDb.summary,
-        ticketsQty: ShowsDb.ticketsQty,
-        rated: ShowsDb.rated,
-        date: ShowsDb.date,
-        time: ShowsDb.time,
-        score: ShowsDb.score,
-      });
-      Theaters.create({
-        name: TheatersDb.name,
-        CUIT: TheatersDb.CUIT,
-        email: TheatersDb.email,
-        password: TheatersDb.password,
-        province: TheatersDb.province,
-        adress: TheatersDb.adress,
-        image: TheatersDb.image,
-        phoneNumber: TheatersDb.phoneNumber,
-        seatsQTY: TheatersDb.seatsQTY,
-        score: TheatersDb.score,
-      });
+conn.sync({ force: false }).then(async () => {
+  try {
+    // console.log(TheatersDb);
+    const modelTheater = TheatersDb.map((el) => ({
+      name: el.name,
+      CUIT: el.CUIT,
+      email: el.email,
+      password: el.password,
+      province: el.province,
+      adress: el.adress,
+      image: el.image,
+      phoneNumber: el.phoneNumber,
+      seatsQTY: el.seatsQTY,
+      score: el.score,
+    }));
+    await Theaters.bulkCreate(modelTheater);
+  } catch (err) {
+    console.error(err);
+  }
 
-      Reviews.create({
-        review: ReviewsDb.review,
-        theaterScore: ReviewsDb.theaterScore,
-        showScore: ReviewsDb.showScore,
-      });
-    } catch (err) {
-      console.error(err);
-    }
+  try {
+    // console.log(ShowsDb);
+    const modelShows = ShowsDb.map((el) => ({
+      name: el.name,
+      genre: el.genre,
+      length: el.length,
+      image: el.image,
+      summary: el.summary,
+      ticketsQty: el.ticketsQty,
+      rated: el.rated,
+      date: el.date,
+      time: el.time,
+      score: el.score,
+    }));
+    await Shows.bulkCreate(modelShows);
+  } catch (err) {
+    console.error(err);
+  }
+
+  try {
+    const modelReviews = ReviewsDb.map((el) => ({
+      review: el.review,
+      theaterScore: el.theaterScore,
+      showScore: el.showScore,
+    }));
+    await Reviews.bulkCreate(modelReviews);
+  } catch (err) {
+    console.error(err);
+  }
+
+  server.listen(3001, () => {
     console.log("%s listening at 3001 - Data base loaded."); // eslint-disable-line no-console
   });
 });

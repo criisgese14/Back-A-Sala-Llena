@@ -6,10 +6,17 @@ const {
 } = require("../Controllers/reviewsControllers");
 
 router.post("/", async (req, res, next) => {
-  const { review, theaterScore, showScore } = req.body;
+  const { review, theaterScore, showScore, nameViewer, nameTheater, nameShow } =
+    req.body;
   try {
-    const addReview = await postReviews(review, theaterScore, showScore);
-
+    const addReview = await postReviews(
+      review,
+      theaterScore,
+      showScore,
+      nameViewer,
+      nameTheater,
+      nameShow
+    );
     addReview ? res.status(200).json(addReview) : res.status(404).send("Error");
   } catch (err) {
     next(err);
@@ -18,11 +25,10 @@ router.post("/", async (req, res, next) => {
 
 router.get("/", async (req, res, next) => {
   try {
-    const getReview = await getAllReviews();
-
-    getReview ? res.status(200).json(getReview) : res.status(404).send("Error");
+    const allReviews = await getAllReviews();
+    res.send(allReviews);
   } catch (err) {
-    next(err);
+    console.log(err);
   }
 });
 

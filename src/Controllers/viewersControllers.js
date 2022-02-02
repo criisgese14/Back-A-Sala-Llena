@@ -21,4 +21,6 @@ const postViewersRegistration = async (
   }
 };
 
-module.exports = { postViewersRegistration };
+const getAllViewers = async () => await Viewers.findAll({});
+
+module.exports = { postViewersRegistration, getAllViewers };
