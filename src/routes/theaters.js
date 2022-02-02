@@ -2,6 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const {
   postTheatersRegistration,
+  getAllTheaters,
 } = require("../Controllers/theatersControllers");
 
 router.post("/", async (req, res, next) => {
@@ -42,6 +43,11 @@ router.post("/", async (req, res, next) => {
 
 router.get("/", async (req, res, next) => {
   try {
+    const getTheaters = await getAllTheaters();
+
+    getTheaters
+      ? res.status(200).json(getTheaters)
+      : res.status(404).send("Error");
   } catch (err) {
     next(err);
   }

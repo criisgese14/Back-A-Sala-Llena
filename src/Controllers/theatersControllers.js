@@ -1,4 +1,4 @@
-const { Theaters, Shows, Tickets, Reviews } = require("../db");
+const { Theaters, Shows, Reviews } = require("../db");
 
 const postTheatersRegistration = async (
   name,
@@ -33,4 +33,12 @@ const postTheatersRegistration = async (
   }
 };
 
-module.exports = { postTheatersRegistration };
+const getAllTheaters = async () =>
+  await Theaters.findAll({
+    include: {
+      model: Shows,
+      Reviews,
+    },
+  });
+
+module.exports = { postTheatersRegistration, getAllTheaters };
