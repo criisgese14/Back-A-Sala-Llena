@@ -6,7 +6,6 @@ const {
   postTheatersRegistration,
   getAllTheaters,
 } = require("../Controllers/theatersControllers");
-const { Query } = require("pg");
 
 router.post("/", async (req, res, next) => {
   const {
@@ -51,24 +50,6 @@ router.get("/", async (req, res, next) => {
       : res.status(404).send("Error");
   } catch (err) {
     next(err);
-  }
-});
-
-router.put("/:id", async (req, res, next) => {
-  try {
-    const changes = req.body;
-    console.log(changes);
-    const { id } = req.params;
-
-    const updateTheater = await Theaters.update(changes, {
-      where: {
-        id: id,
-      },
-    });
-    console.log(updateTheater);
-    res.send("Datos Actualizados");
-  } catch (error) {
-    next(error);
   }
 });
 
