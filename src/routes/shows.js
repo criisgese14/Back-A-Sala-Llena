@@ -34,15 +34,19 @@ router.post("/", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-
-  router.get("/", async (req, res) => {
-    try {
-      const getShows = await getAllShows();
-      res.send(getShows);
-    } catch (err) {
-      console.log(err);
-    }
-  });
 });
+
+router.get("/", async (req, res, next) => {
+  try {
+    const getShows = await getAllShows();
+    getShows ? res.status(200).json(getShows) : res.status(404).send("Error");
+  } catch (err) {
+    next(err);
+  }
+});
+
+// router.get("/", async (req, res, next) => {
+//   res.send("Funciona?");
+// });
 
 module.exports = router;

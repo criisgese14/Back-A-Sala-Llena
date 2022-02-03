@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     genre: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, //ENUM Ale pasa los generos
       allowNull: false,
     },
     length: {
