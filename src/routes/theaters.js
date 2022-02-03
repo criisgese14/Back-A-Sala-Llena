@@ -54,42 +54,22 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// router.put("/:id", async (req, res, next) => {
-//   try {
-//     const { id } = req.params;
-//     const {
-//       name,
-//       email,
-//       password,
-//       province,
-//       adress,
-//       image,
-//       phoneNumber,
-//       seatsQTY,
-//       score,
-//     } = req.body;Query
+router.put("/:id", async (req, res, next) => {
+  try {
+    const changes = req.body;
+    console.log(changes);
+    const { id } = req.params;
 
-//     const updateTheater = await Theaters.update(
-//       name,
-//       email,
-//       password,
-//       province,
-//       adress,
-//       image,
-//       phoneNumber,
-//       seatsQTY,
-//       score,
-//       {
-//         where: {
-//           id,
-//         },
-//       }
-//     );
-
-//     res.send(updateTheater);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+    const updateTheater = await Theaters.update(changes, {
+      where: {
+        id: id,
+      },
+    });
+    console.log(updateTheater);
+    res.send("Datos Actualizados");
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;
