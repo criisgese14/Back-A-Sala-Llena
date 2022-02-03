@@ -5,8 +5,8 @@ const { Theaters } = require("../db");
 const {
   postTheatersRegistration,
   getAllTheaters,
+  getTheater
 } = require("../Controllers/theatersControllers");
-const { Query } = require("pg");
 
 router.post("/", async (req, res, next) => {
   const {
@@ -54,42 +54,44 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// router.put("/:id", async (req, res, next) => {
-//   try {
-//     const { id } = req.params;
-//     const {
-//       name,
-//       email,
-//       password,
-//       province,
-//       adress,
-//       image,
-//       phoneNumber,
-//       seatsQTY,
-//       score,
-//     } = req.body;Query
+router.get("/:id", async (req, res) => {
+  const {id} = req.params
+  console.log(id)
+  try {
+    const detailTheater = await getTheater(id);
+    res.send(detailTheater)
+  } catch (error) {
+    console.log(error)
+  }
+})
 
-//     const updateTheater = await Theaters.update(
-//       name,
-//       email,
-//       password,
-//       province,
-//       adress,
-//       image,
-//       phoneNumber,
-//       seatsQTY,
-//       score,
-//       {
-//         where: {
-//           id,
-//         },
-//       }
-//     );
+router.put("/:id", async (req, res) => {
+  const datos = req.body
+  const {id} = req.params
+  try {
+    await Theaters.update(datos, {
+      where: {
+        id: id
+      }
+    })
+    res.send("Teatro actualizado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
 
-//     res.send(updateTheater);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+router.delete("/:id", async (req, res) => {
+  const {id} = req.params;
+  try {
+    await Theaters.destroy({
+      where: {
+        id: id
+      }
+    })
+    res.send("Teatro eliminado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 module.exports = router;
