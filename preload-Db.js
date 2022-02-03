@@ -66,7 +66,7 @@ const ShowsDb = [
     summary:
       "Las penas saben nadar es una obra que te ofrece un retrato agridulce de la vida y del mundo de la interpretación.Dentro del marco de un Festival de Monólogos, Greta, como le llaman algunos compañeros de trabajo, sale a escena sin previo aviso. Una vez allí, y con el pretexto siempre truncado de interpretar La voz humana, comienza a confesar, entre tragos, pedazos de la historia de su vida: la experiencia con diversos directores, actrices y actores; el recuerdo del entorno familiar y escolar; la añoranza por el distanciamiento de una hija a la que no ve hace años; las frustraciones amorosas; los deseos incumplidos; los sueños por realizar. Todo se devela sobre un círculo de profunda soledad, en medio de una vorágine de sentimientos, pero pleno ante la entereza de una mujer que ha dedicado gran parte de su existencia al muchas veces ingrato arte de la interpretación.",
     ticketsQty: 8,
-    rated: "PG-13",
+    rated: "Todas las edades",
     date: "12-08-22",
     time: "21:00",
     score: "4",
@@ -81,7 +81,7 @@ const ShowsDb = [
     summary:
       "Transcurre una noche en el dto que comparten alejandra (Soledad Gonzalez) y clara (laura raiteri) en la cual esperan la llegada de German, un desconocido a quien han citado mediante un aviso de una revista. la tensa espera hace aflorar sentimientos y personalidades que subyacen en estas dos mujeres sumiodas en una tremenda rutina aplastadora. se juega una relacion indefinida entre las dos mujeres que...escalando los limites del nerviosismo y sus miserias internas mostraran su verdadera cara.",
     ticketsQty: 8,
-    rated: "PG-13",
+    rated: "Apta para mayores de 13 años",
     date: "10-04-22",
     time: "22:00",
     score: "4",
@@ -89,14 +89,14 @@ const ShowsDb = [
   },
   {
     name: "Amame",
-    genre: "Comedia",
+    genre: "Monologo",
     length: "120'",
     image:
       "https://puntomardelplata.com/admin/recursos/actividades/2019/9960-1.jpg",
     summary:
       "Una mujer deambula dentro de un mundo insomne. Nada parece cierto, las cosas se distancian. Todo parece una copia de una copia, de otra copia.",
     ticketsQty: 10,
-    rated: "PG-13",
+    rated: "Apta para mayores de 16 años",
     date: "12-8-22",
     time: "21:00",
     score: "4",
@@ -111,7 +111,7 @@ const ShowsDb = [
     summary:
       "Será en Cuatro Elementos, en una puesta que busca que el público experimente la distancia de la acción. La obra traduce la atmósfera de la poesía de Santoro, un poeta desaparecido en 1977.",
     ticketsQty: 8,
-    rated: "PG-13",
+    rated: "Apta para mayores de 16 años",
     date: "12-8-22",
     time: "21:00",
     score: "4",
@@ -126,7 +126,7 @@ const ShowsDb = [
     summary:
       "Distopía grotesca sobre el fin del mundo. el mundo fue destruido por una epidemia de miedos. En un precario refugio, un grupo de sobrevivientes resiste y se debate en cavilaciones sobre qué hacer.",
     ticketsQty: 10,
-    rated: "PG-13",
+    rated: "Apta para mayores de 16 años",
     date: "22-04-22",
     time: "22:00",
     score: "4",

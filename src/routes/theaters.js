@@ -1,16 +1,18 @@
 const { Router } = require("express");
 const router = Router();
+const { Theaters } = require("../db");
+
 const {
   postTheatersRegistration,
   getAllTheaters,
 } = require("../Controllers/theatersControllers");
+const { Query } = require("pg");
 
 router.post("/", async (req, res, next) => {
   const {
     name,
     CUIT,
     email,
-    userName,
     password,
     province,
     adress,
@@ -24,7 +26,6 @@ router.post("/", async (req, res, next) => {
       name,
       CUIT,
       email,
-      userName,
       password,
       province,
       adress,
@@ -52,5 +53,43 @@ router.get("/", async (req, res, next) => {
     next(err);
   }
 });
+
+// router.put("/:id", async (req, res, next) => {
+//   try {
+//     const { id } = req.params;
+//     const {
+//       name,
+//       email,
+//       password,
+//       province,
+//       adress,
+//       image,
+//       phoneNumber,
+//       seatsQTY,
+//       score,
+//     } = req.body;Query
+
+//     const updateTheater = await Theaters.update(
+//       name,
+//       email,
+//       password,
+//       province,
+//       adress,
+//       image,
+//       phoneNumber,
+//       seatsQTY,
+//       score,
+//       {
+//         where: {
+//           id,
+//         },
+//       }
+//     );
+
+//     res.send(updateTheater);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 module.exports = router;

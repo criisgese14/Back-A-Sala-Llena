@@ -38,13 +38,13 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const { Reviews, Theaters, Tickets, Viewers, Shows } = sequelize.models;
 
-Theaters.hasMany(Shows); //hecho
+Theaters.hasMany(Shows);
 Shows.belongsTo(Theaters);
 
-Shows.hasMany(Tickets); //hecho
+Shows.hasMany(Tickets);
 Tickets.belongsTo(Shows);
 
-Viewers.hasMany(Tickets); //hecho
+Viewers.hasMany(Tickets);
 Tickets.belongsTo(Viewers);
 
 Viewers.hasMany(Reviews);

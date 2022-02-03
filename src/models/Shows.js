@@ -8,7 +8,13 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     genre: {
-      type: DataTypes.STRING, //ENUM Ale pasa los generos
+      type: DataTypes.ENUM(
+        "Comedia",
+        "Drama",
+        "Tragedia",
+        "Tragicomedia",
+        "Monologo"
+      ),
       allowNull: false,
     },
     length: {
@@ -28,7 +34,13 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     rated: {
-      type: DataTypes.ENUM("G", "PG", "PG-13", "R", "NC-17"),
+      type: DataTypes.ENUM(
+        "Todas las edades",
+        "Apta para mayores de 13 años",
+        "Apta para mayores de 16 años",
+        "Apta para mayores de 18 años",
+        "Exhibición condicionada."
+      ),
       allowNull: false,
     },
     date: {

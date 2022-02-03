@@ -6,12 +6,11 @@ const {
 } = require("../Controllers/viewersControllers");
 
 router.post("/", async (req, res, next) => {
-  const { name, email, userName, password, image, province } = req.body;
+  const { name, email, password, image, province } = req.body;
   try {
     const addViewer = await postViewersRegistration(
       name,
       email,
-      userName,
       password,
       image,
       province
