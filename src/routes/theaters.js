@@ -54,6 +54,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+<<<<<<< HEAD
 router.get("/:id", async (req, res) => {
   const {id} = req.params
   console.log(id)
@@ -93,5 +94,24 @@ router.delete("/:id", async (req, res) => {
     console.log(error)
   }
 })
+=======
+router.put("/:id", async (req, res, next) => {
+  try {
+    const changes = req.body;
+    console.log(changes);
+    const { id } = req.params;
+
+    const updateTheater = await Theaters.update(changes, {
+      where: {
+        id: id,
+      },
+    });
+    console.log(updateTheater);
+    res.send("Datos Actualizados");
+  } catch (error) {
+    next(error);
+  }
+});
+>>>>>>> e40ede5be898c2b9e01f6cadf54f9902805f3d6d
 
 module.exports = router;
