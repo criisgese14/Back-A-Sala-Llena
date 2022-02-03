@@ -21,6 +21,10 @@ const postViewersRegistration = async (
   }
 };
 
-const getAllViewers = async () => await Viewers.findAll({});
+const getAllViewers = async () => await Viewers.findAll({
+  include: {
+    model: Tickets
+  }
+});
 
 module.exports = { postViewersRegistration, getAllViewers };

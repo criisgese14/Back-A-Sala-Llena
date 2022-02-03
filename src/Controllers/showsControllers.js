@@ -29,7 +29,7 @@ const postShows = async (
 
     const theater = await Theaters.findOne({
       where: {
-        id,
+        id: id,
       },
     });
     await theater.addShows(newShow);
