@@ -31,7 +31,9 @@ const postTheatersRegistration = async (
   }
 };
 
-const getAllTheaters = async () => await Theaters.findAll({});
+const getAllTheaters = async () => await Theaters.findAll({
+  
+});
 
 const getTheater = async (id) => {
   const theater = await Theaters.findOne({

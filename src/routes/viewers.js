@@ -4,6 +4,7 @@ const {
   postViewersRegistration,
   getAllViewers,
 } = require("../Controllers/viewersControllers");
+const Viewers = require("../db");
 
 router.post("/", async (req, res, next) => {
   const { name, email, password, image, province } = req.body;
@@ -27,5 +28,34 @@ router.get("/", async (req, res, next) => {
   const allViewers = await getAllViewers();
   res.send(allViewers);
 });
+
+router.put("/:id", async (req, res) => {
+  const datos = req.body
+  const {id} = req.params
+  try {
+    await Viewers.update(datos, {
+      where: {
+        id: id
+      }
+    })
+    res.send("Viewer actualizado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+router.delete("/:id", async (req, res) => {
+  const {id} = req.params;
+  try {
+    await Viewers.destroy({
+      where: {
+        id: id
+      }
+    })
+    res.send("Viewer eliminado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 module.exports = router;
