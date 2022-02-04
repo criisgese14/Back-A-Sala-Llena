@@ -13,7 +13,17 @@ module.exports = (sequelize) => {
         "Drama",
         "Tragedia",
         "Tragicomedia",
-        "Monologo"
+        "Monologo",
+        "Entremes",
+        "Sainete",
+        "Farsa",
+        "Vodevil",
+        "Ópera",
+        "Zarsuela",
+        "Opereta",
+        "Musical",
+        "Ballet",
+        "Danza"
       ),
       allowNull: false,
     },
