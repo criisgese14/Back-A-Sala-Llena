@@ -3,7 +3,9 @@ const { Router } = require("express");
 const router = Router();
 
 router.post("/", async (req, res, next) => {
-  //   const {parametros} = req.body;
+  // crear ruta de post shows favoritos para enviar al id que matchee ???
+  //shows que matcheen con la provincia
+
   const transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
     port: 587,
@@ -15,7 +17,7 @@ router.post("/", async (req, res, next) => {
 
   const mailOption = {
     from: "A Sala Llena",
-    to: "elena.wuckert95@ethereal.email",
+    to: "elena.wuckert95@ethereal.email", //Viewer.email
     subject: "Test",
     text: "Hola mundo",
   };
@@ -24,7 +26,7 @@ router.post("/", async (req, res, next) => {
     if (error) {
       res.status(500).send(error.message);
     } else {
-      res.status(200).json(req.body);
+      res.status(200).json(req.body); //shows <---> province
     }
   });
 });
