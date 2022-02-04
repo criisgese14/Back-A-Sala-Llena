@@ -91,8 +91,7 @@ const ShowsDb = [
     name: "Amame",
     genre: "Monologo",
     length: "120'",
-    image:
-      "https://puntomardelplata.com/admin/recursos/actividades/2019/9960-1.jpg",
+    image: "https://storage.lacapitalmdp.com/2018/12/AMAME-2.jpg",
     summary:
       "Una mujer deambula dentro de un mundo insomne. Nada parece cierto, las cosas se distancian. Todo parece una copia de una copia, de otra copia.",
     ticketsQty: 10,
@@ -107,7 +106,7 @@ const ShowsDb = [
     genre: "Drama",
     length: "90 min'",
     image:
-      "https://puntomardelplata.com/admin/recursos/actividades/2022/2022-viajeros-de-toda-sinrazon-1.jpg",
+      "https://storage.lacapitalmdp.com/2019/08/Viajeros-de-toda-sinrazon-1024x683.jpg",
     summary:
       "Será en Cuatro Elementos, en una puesta que busca que el público experimente la distancia de la acción. La obra traduce la atmósfera de la poesía de Santoro, un poeta desaparecido en 1977.",
     ticketsQty: 8,
@@ -122,7 +121,7 @@ const ShowsDb = [
     genre: "Drama",
     length: "120'",
     image:
-      "https://puntomardelplata.com/admin/recursos/actividades/2022/2022-funciones-ensayo-sobre-el-miedo-1.jpg",
+      "https://vivo.perfil.com/storage/uploads/shows/poster/175ba592d28e713b6fc33883c44967a0.jpg",
     summary:
       "Distopía grotesca sobre el fin del mundo. el mundo fue destruido por una epidemia de miedos. En un precario refugio, un grupo de sobrevivientes resiste y se debate en cavilaciones sobre qué hacer.",
     ticketsQty: 10,
