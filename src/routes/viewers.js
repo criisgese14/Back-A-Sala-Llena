@@ -3,6 +3,7 @@ const router = Router();
 const {
   postViewersRegistration,
   getAllViewers,
+  getViewersById,
 } = require("../Controllers/viewersControllers");
 const Viewers = require("../db");
 
@@ -25,8 +26,24 @@ router.post("/", async (req, res, next) => {
 });
 
 router.get("/", async (req, res, next) => {
-  const allViewers = await getAllViewers();
-  res.send(allViewers);
+  try {
+    const allViewers = await getAllViewers();
+    allViewers
+      ? res.status(200).send(allViewers)
+      : res.status(404).send("Error");
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const viewerId = await getViewersById(id);
+    viewerId ? res.status(200).json(viewerId) : res.status(404).send("Error");
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.put("/:id", async (req, res) => {

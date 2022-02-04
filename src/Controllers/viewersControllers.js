@@ -21,10 +21,24 @@ const postViewersRegistration = async (
   }
 };
 
-const getAllViewers = async () => await Viewers.findAll({
-  include: {
-    model: Tickets
-  }
-});
+const getAllViewers = async () =>
+  await Viewers.findAll({
+    include: {
+      model: Tickets,
+    },
+  });
 
-module.exports = { postViewersRegistration, getAllViewers };
+const getViewersById = async (id) => {
+  try {
+    let viewerID = await Viewers.findByPk(id, {
+      include: {
+        model: Tickets,
+      },
+    });
+    return viewerID;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+module.exports = { postViewersRegistration, getAllViewers, getViewersById };
