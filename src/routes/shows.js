@@ -5,7 +5,7 @@ const { Shows } = require("../db");
 
 router.post("/", async (req, res, next) => {
   const {
-    id,
+    theaterId,
     name,
     genre,
     length,
@@ -19,7 +19,7 @@ router.post("/", async (req, res, next) => {
   } = req.body;
   try {
     const addShow = await postShows(
-      id,
+      theaterId,
       name,
       genre,
       length,
@@ -47,32 +47,32 @@ router.get("/", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const datos = req.body
-  const {id} = req.params
+  const datos = req.body;
+  const { id } = req.params;
   try {
     await Shows.update(datos, {
       where: {
-        id: id
-      }
-    })
-    res.send("Show actualizado con éxito")
+        id: id,
+      },
+    });
+    res.send("Show actualizado con éxito");
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-})
+});
 
 router.delete("/:id", async (req, res) => {
-  const {id} = req.params;
+  const { id } = req.params;
   try {
     await Shows.destroy({
       where: {
-        id: id
-      }
-    })
-    res.send("Show eliminado con éxito")
+        id: id,
+      },
+    });
+    res.send("Show eliminado con éxito");
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-})
+});
 
 module.exports = router;

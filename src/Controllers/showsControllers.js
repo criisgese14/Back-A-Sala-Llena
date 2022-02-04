@@ -1,7 +1,7 @@
 const { Shows, Tickets, Reviews, Theaters } = require("../db");
 
 const postShows = async (
-  id,
+  theaterId,
   name,
   genre,
   length,
@@ -29,7 +29,7 @@ const postShows = async (
 
     const theater = await Theaters.findOne({
       where: {
-        id: id,
+        id: theaterId,
       },
     });
     await theater.addShows(newShow);
