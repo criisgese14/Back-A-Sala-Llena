@@ -56,7 +56,7 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+  // console.log(id);
   try {
     const detailTheater = await getTheater(id);
     res.send(detailTheater);
@@ -66,15 +66,15 @@ router.get("/:id", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const datos = req.body;
+  const changes = req.body;
   const { id } = req.params;
   try {
-    await Theaters.update(datos, {
+    await Theaters.update(changes, {
       where: {
         id: id,
       },
     });
-    res.send("Teatro actualizado con éxito");
+    res.send("Theater updated succesfully!");
   } catch (error) {
     console.log(error);
   }
@@ -88,7 +88,7 @@ router.delete("/:id", async (req, res) => {
         id: id,
       },
     });
-    res.send("Teatro eliminado con éxito");
+    res.send("Theater deleted succesfully");
   } catch (error) {
     console.log(error);
   }

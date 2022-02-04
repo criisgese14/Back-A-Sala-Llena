@@ -47,15 +47,15 @@ router.get("/", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const datos = req.body;
+  const changes = req.body;
   const { id } = req.params;
   try {
-    await Shows.update(datos, {
+    await Shows.update(changes, {
       where: {
         id: id,
       },
     });
-    res.send("Show actualizado con éxito");
+    res.send("Show updated succesfuly!");
   } catch (error) {
     console.log(error);
   }
@@ -69,7 +69,7 @@ router.delete("/:id", async (req, res) => {
         id: id,
       },
     });
-    res.send("Show eliminado con éxito");
+    res.send("Show deleted succesfully");
   } catch (error) {
     console.log(error);
   }

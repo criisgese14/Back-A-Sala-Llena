@@ -30,32 +30,32 @@ router.get("/", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const datos = req.body
-  const {id} = req.params
+  const changes = req.body;
+  const { id } = req.params;
   try {
-    await Viewers.update(datos, {
+    await Viewers.update(changes, {
       where: {
-        id: id
-      }
-    })
-    res.send("Viewer actualizado con éxito")
+        id: id,
+      },
+    });
+    res.send("Viewer updated succesfully!");
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-})
+});
 
 router.delete("/:id", async (req, res) => {
-  const {id} = req.params;
+  const { id } = req.params;
   try {
     await Viewers.destroy({
       where: {
-        id: id
-      }
-    })
-    res.send("Viewer eliminado con éxito")
+        id: id,
+      },
+    });
+    res.send("Viewer deleted succesfully");
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-})
+});
 
 module.exports = router;

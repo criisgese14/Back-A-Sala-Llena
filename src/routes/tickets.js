@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Tickets } = require("../db")
+const { Tickets } = require("../db");
 const {
   getAllTickets,
   postTickets,
@@ -26,19 +26,33 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
-  const { id } = req.params
+router.put("/:id", async (req, res) => {
+  const changes = req.body;
+  const { id } = req.params;
+  try {
+    await Tickets.update(changes, {
+      where: {
+        id: id,
+      },
+    });
+    res.send("Tickets updated succesfully!");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
   try {
     await Tickets.destroy({
       where: {
-        id: id
-      }
-    })
-    res.send('entrada eliminada')  
+        id: id,
+      },
+    });
+    res.send("entrada eliminada");
   } catch (error) {
-    console.log
+    console.log;
   }
-})
-
+});
 
 module.exports = router;
