@@ -11,7 +11,7 @@ const TheatersDb = [
       "https://3.bp.blogspot.com/_C8xKfakStZA/R_TgreWrDiI/AAAAAAAAABA/Vk9M3jTkNWY/s400/P1010810.JPG",
     phoneNumber: "5492219123180",
     seatsQTY: 50,
-    score: "4",
+    score: "3",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const TheatersDb = [
       "https://2.bp.blogspot.com/_Zxf8XATiwe8/TGri7qID_VI/AAAAAAAAAXk/1lodxTcqjbc/s1600/caja+frente.jpg",
     phoneNumber: "+54929995119",
     seatsQTY: 60,
-    score: "4",
+    score: "1",
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const TheatersDb = [
       "https://s3-media0.fl.yelpcdn.com/bphoto/IPxcyEyzmrVD0FtV0s1p7Q/l.jpg",
     phoneNumber: "+541143815498",
     seatsQTY: 50,
-    score: "4",
+    score: "2",
   },
 ];
 const ShowsDb = [
@@ -84,7 +84,7 @@ const ShowsDb = [
     rated: "Apta para mayores de 13 años",
     date: "10-04-22",
     time: "22:00",
-    score: "4",
+    score: "3",
     theaterId: 3,
   },
   {
@@ -98,7 +98,7 @@ const ShowsDb = [
     rated: "Apta para mayores de 16 años",
     date: "12-8-22",
     time: "21:00",
-    score: "4",
+    score: "5",
     theaterId: 2,
   },
   {
@@ -113,7 +113,7 @@ const ShowsDb = [
     rated: "Apta para mayores de 16 años",
     date: "12-8-22",
     time: "21:00",
-    score: "4",
+    score: "1",
     theaterId: 4,
   },
   {
@@ -128,7 +128,7 @@ const ShowsDb = [
     rated: "Apta para mayores de 16 años",
     date: "22-04-22",
     time: "22:00",
-    score: "4",
+    score: "3",
     theaterId: 3,
   },
 ];
