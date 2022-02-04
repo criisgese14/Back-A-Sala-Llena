@@ -37,6 +37,9 @@ const getTheater = async (id) => {
   const theater = await Theaters.findOne({
     where: {
       id: id
+    },
+    include: {
+      model: Shows
     }
   })
   return theater

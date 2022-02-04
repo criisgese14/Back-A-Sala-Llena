@@ -24,6 +24,10 @@ const postTickets = async (price, seatNumber, nameShow, nameViewer) => {
   }
 };
 
-const getAllTickets = async () => await Tickets.findAll({});
+const getAllTickets = async () => await Tickets.findAll({
+  include: {
+    model: Shows
+  }
+});
 
 module.exports = { postTickets, getAllTickets };

@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { Tickets } = require("../db")
 const {
   getAllTickets,
   postTickets,
@@ -24,5 +25,20 @@ router.post("/", async (req, res, next) => {
     console.log(error);
   }
 });
+
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params
+  try {
+    await Tickets.destroy({
+      where: {
+        id: id
+      }
+    })
+    res.send('entrada eliminada')  
+  } catch (error) {
+    console.log
+  }
+})
+
 
 module.exports = router;
