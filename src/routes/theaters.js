@@ -5,6 +5,7 @@ const { Theaters } = require("../db");
 const {
   postTheatersRegistration,
   getAllTheaters,
+  getTheater,
 } = require("../Controllers/theatersControllers");
 
 router.post("/", async (req, res, next) => {
@@ -50,6 +51,46 @@ router.get("/", async (req, res, next) => {
       : res.status(404).send("Error");
   } catch (err) {
     next(err);
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  try {
+    const detailTheater = await getTheater(id);
+    res.send(detailTheater);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  const datos = req.body;
+  const { id } = req.params;
+  try {
+    await Theaters.update(datos, {
+      where: {
+        id: id,
+      },
+    });
+    res.send("Teatro actualizado con éxito");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await Theaters.destroy({
+      where: {
+        id: id,
+      },
+    });
+    res.send("Teatro eliminado con éxito");
+  } catch (error) {
+    console.log(error);
   }
 });
 

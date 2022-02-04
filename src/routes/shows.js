@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const router = Router();
 const { postShows, getAllShows } = require("../Controllers/showsControllers");
+const { Shows } = require("../db");
 
 router.post("/", async (req, res, next) => {
   const {
-    CUIT,
+    id,
     name,
     genre,
     length,
@@ -18,7 +19,7 @@ router.post("/", async (req, res, next) => {
   } = req.body;
   try {
     const addShow = await postShows(
-      CUIT,
+      id,
       name,
       genre,
       length,
@@ -45,8 +46,33 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// router.get("/", async (req, res, next) => {
-//   res.send("Funciona?");
-// });
+router.put("/:id", async (req, res) => {
+  const datos = req.body
+  const {id} = req.params
+  try {
+    await Shows.update(datos, {
+      where: {
+        id: id
+      }
+    })
+    res.send("Show actualizado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+router.delete("/:id", async (req, res) => {
+  const {id} = req.params;
+  try {
+    await Shows.destroy({
+      where: {
+        id: id
+      }
+    })
+    res.send("Show eliminado con éxito")
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 module.exports = router;

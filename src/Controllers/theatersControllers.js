@@ -33,4 +33,13 @@ const postTheatersRegistration = async (
 
 const getAllTheaters = async () => await Theaters.findAll({});
 
-module.exports = { postTheatersRegistration, getAllTheaters };
+const getTheater = async (id) => {
+  const theater = await Theaters.findOne({
+    where: {
+      id: id
+    }
+  })
+  return theater
+}
+
+module.exports = { postTheatersRegistration, getAllTheaters, getTheater };
