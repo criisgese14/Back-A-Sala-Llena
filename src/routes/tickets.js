@@ -10,7 +10,7 @@ const router = Router();
   const mercadopago = require("mercadopago");
   // Agrega credenciales
   mercadopago.configure({
-    access_token: "PROD_ACCESS_TOKEN", //poner token
+    access_token: "APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
   });
 
 router.get("/", async (req, res, next) => {
@@ -37,13 +37,14 @@ router.post("/", async (req, res, next) => {
 router.post('/pay', async (req, res) => {
 
 const {id} = req.body
+//console.log(req.body)
 
-const ticket = Tickets.findOne({
+const ticket = await Tickets.findOne({
   where: {
     id : id
   }
 })
-
+//console.log(ticket)
 // Crea un objeto de preferencia
 let preference = {
     items: [
@@ -61,9 +62,18 @@ let preference = {
     auto_return: "approved",
   };
   const response = await mercadopago.preferences.create(preference);
+  console.log(response.body)
   const preferenceId = response.body.id;
   res.send({preferenceId})
 })
+
+router.get('/feedback', function(req, res) {
+	res.json({
+		Payment: req.query.payment_id,
+		Status: req.query.status,
+		MerchantOrder: req.query.merchant_order_id
+	});
+});
 
 router.put("/:id", async (req, res) => {
   const changes = req.body;
