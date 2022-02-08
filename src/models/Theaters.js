@@ -1,0 +1,74 @@
+const { DataTypes } = require("sequelize");
+
+module.exports = (sequelize) => {
+  // defino el modelo
+  sequelize.define("theaters", {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    CUIT: {
+      type: DataTypes.STRING,
+      allowNull: false, //Seria Pk???
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    province: {
+      type: DataTypes.ENUM(
+        "Buenos Aires",
+        "Cordoba",
+        "Santa Fe",
+        "Catamarca",
+        "Chaco",
+        "Chubut",
+        "Corrientes",
+        "Entre Rios",
+        "Formosa",
+        "Jujuy",
+        "La Pampa",
+        "La Rioja",
+        "Mendoza",
+        "Misiones",
+        "Neuquen",
+        "Rio Negro",
+        "Salta",
+        "San Juan",
+        "San Luis",
+        "Santa Cruz",
+        "Santiago del Estero",
+        "Tierra del Fuego",
+        "Tucuman",
+        "CABA"
+      ),
+      allowNull: false,
+    },
+    adress: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    phoneNumber: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    seatsQTY: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    score: {
+      type: DataTypes.ENUM("1", "2", "3", "4", "5"),
+    },
+    seatingLayout: {
+      type: DataTypes.TEXT,
+    },
+  });
+};
