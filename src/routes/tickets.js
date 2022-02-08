@@ -6,6 +6,13 @@ const {
 } = require("../Controllers/ticketsControllers");
 const router = Router();
 
+  // SDK de Mercado Pago
+  const mercadopago = require("mercadopago");
+  // Agrega credenciales
+  mercadopago.configure({
+    access_token: "PROD_ACCESS_TOKEN", //poner token
+  });
+
 router.get("/", async (req, res, next) => {
   const allTickets = await getAllTickets();
   res.send(allTickets);
@@ -26,6 +33,37 @@ router.post("/", async (req, res, next) => {
     console.log(error);
   }
 });
+
+router.post('/pay', async (req, res) => {
+
+const {id} = req.body
+
+const ticket = Tickets.findOne({
+  where: {
+    id : id
+  }
+})
+
+// Crea un objeto de preferencia
+let preference = {
+    items: [
+      {
+        title: ticket.seatNumber,
+        unit_price: ticket.price,
+        quantity: 1,
+      },
+    ],
+    back_urls: {
+      success: "http://localhost:3000/feedback",
+      failure: "http://localhost:3000/feedback",
+      pending: "http://localhost:3000/feedback",
+    },
+    auto_return: "approved",
+  };
+  const response = await mercadopago.preferences.create(preference);
+  const preferenceId = response.body.id;
+  res.send({preferenceId})
+})
 
 router.put("/:id", async (req, res) => {
   const changes = req.body;

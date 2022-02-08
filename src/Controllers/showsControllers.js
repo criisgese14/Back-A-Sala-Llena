@@ -43,9 +43,11 @@ const postShows = async (
 
 const getAllShows = async () =>
   await Shows.findAll({
-    include: {
+    include: [{
       model: Theaters,
-    },
+    }, {
+      model: Tickets,
+    }],
   });
 
 const getShowByName = async (name) => {
