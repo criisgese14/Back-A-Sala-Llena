@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 router.post("/:idViewer", async (req, res) => {
   const { idViewer } = req.params;
 
-  const { id, nameTheater } = req.body;
+  const { nameTheater } = req.body;
 
   const addFavorites = await Favorites.create({ nameTheater });
 
