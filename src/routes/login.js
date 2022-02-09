@@ -26,6 +26,7 @@ router.post("/theater", async (req, res) => {
         id: theater.id,
         password: theater.password,
         email: theater.email,
+        isTheater: theater.isTheater,
         token,
       });
     }
@@ -55,6 +56,7 @@ router.post("/viewer", async (req, res) => {
         id: viewer.id,
         password: viewer.password,
         email: viewer.email,
+        isViewer: viewer.isViewer,
         token,
       });
     }

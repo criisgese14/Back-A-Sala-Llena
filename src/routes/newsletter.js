@@ -17,10 +17,9 @@ router.post("/", async (req, res, next) => {
 
   const mailOption = {
     from: "A Sala Llena",
-    to: "fernandonaon@gmail.com", //Viewer.email
-    bcc: "elena.wuckert95@ethereal.email",
+    bcc: "fernandonaon@gmail.com, elena.wuckert95@ethereal.email", //Viewer.email
     subject: "Test",
-    text: "Hola mundo",
+    text: "Hola mundo es copia oculta",
   };
 
   transporter.sendMail(mailOption, (error, info) => {
