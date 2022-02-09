@@ -17,8 +17,8 @@ router.post("/", async (req, res, next) => {
 
   const mailOption = {
     from: "A Sala Llena",
-    to: "elena.wuckert95@ethereal.email", //Viewer.email
-    bcc: "bcc@xyz.com",
+    to: "fernandonaon@gmail.com", //Viewer.email
+    bcc: "elena.wuckert95@ethereal.email",
     subject: "Test",
     text: "Hola mundo",
   };

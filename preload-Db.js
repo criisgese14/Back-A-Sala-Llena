@@ -234,7 +234,7 @@ const loadTickets = () => {
     {
       id: 1,
       price: 1500,
-      seatNumber: "General",
+      seatNumber: "Palco",
       showId: 1,
       viewerId: 1,
       // nameShow: "Las penas saben nadar",
@@ -252,7 +252,7 @@ const loadTickets = () => {
     {
       id: 3,
       price: 1200,
-      seatNumber: "18",
+      seatNumber: "Platea",
       showId: 3,
       viewerId: 3,
       // nameShow: "Amame",
