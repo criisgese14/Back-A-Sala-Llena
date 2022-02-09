@@ -70,5 +70,9 @@ module.exports = (sequelize) => {
     seatingLayout: {
       type: DataTypes.TEXT,
     },
+    isTheater: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   });
 };

@@ -48,5 +48,9 @@ module.exports = (sequelize) => {
       ),
       allowNull: false,
     },
+    isViewer: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   });
 };
