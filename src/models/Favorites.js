@@ -1,10 +1,9 @@
-const { DataTypes } = require("sequelize")
-
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    sequelize.define('Favorites', {
-        nameShow: {
-            type: DataTypes.STRING,
-        }
-    })
-}
+  sequelize.define("Favorites", {
+    nameTheater: {
+      type: DataTypes.STRING,
+    },
+  });
+};

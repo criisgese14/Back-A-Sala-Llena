@@ -53,5 +53,9 @@ module.exports = (sequelize) => {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
+    isSubscribed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   });
 };

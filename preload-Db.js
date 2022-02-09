@@ -1,4 +1,12 @@
-const { Theaters, Shows, Reviews, Viewers, Tickets } = require("./src/db.js");
+const {
+  Theaters,
+  Shows,
+  Reviews,
+  Viewers,
+  Tickets,
+  Favorites,
+  FavoritesViewers,
+} = require("./src/db.js");
 
 const loadViewers = () => {
   const ViewersDb = [
@@ -9,6 +17,7 @@ const loadViewers = () => {
       image:
         "https://www.kindpng.com/picc/m/80-800188_random-user-random-icon-png-transparent-png.png",
       province: "Buenos Aires",
+      isSubscribed: true,
     },
     {
       name: "Tita",
@@ -17,6 +26,7 @@ const loadViewers = () => {
       image:
         "https://www.kindpng.com/picc/m/80-800188_random-user-random-icon-png-transparent-png.png",
       province: "Cordoba",
+      isSubscribed: false,
     },
     {
       name: "Tito",
@@ -25,6 +35,7 @@ const loadViewers = () => {
       image:
         "https://www.kindpng.com/picc/m/80-800188_random-user-random-icon-png-transparent-png.png",
       province: "CABA",
+      isSubscribed: false,
     },
   ];
   try {
@@ -36,6 +47,45 @@ const loadViewers = () => {
           password: el.password,
           image: el.image,
           province: el.province,
+          isSubscribed: el.isSubscribed,
+        },
+      });
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+const loadFavorites = () => {
+  const favoritesDb = [
+    {
+      nameTheater: "Casa Teatro el Altillo del Sur",
+    },
+  ];
+  try {
+    favoritesDb.forEach(async (el) => {
+      await Favorites.findOrCreate({
+        where: {
+          nameTheater: el.nameTheater,
+        },
+      });
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+const loadFavoriteViewers = () => {
+  const FavoritesViewersDb = [
+    {
+      viewerId: 1,
+      FavoriteId: 1,
+    },
+  ];
+  try {
+    FavoritesViewersDb.forEach(async (el) => {
+      await FavoritesViewers.findOrCreate({
+        where: {
+          viewerId: el.viewerId,
+          FavoriteId: el.FavoriteId,
         },
       });
     });
@@ -138,6 +188,7 @@ const loadShows = () => {
       time: "21:00",
       score: "4",
       theaterId: 1,
+      FavoriteId: 1,
     },
     {
       id: 2,
@@ -154,6 +205,7 @@ const loadShows = () => {
       time: "22:00",
       score: "3",
       theaterId: 2,
+      FavoriteId: 1,
     },
     {
       id: 3,
@@ -169,6 +221,7 @@ const loadShows = () => {
       time: "21:00",
       score: "5",
       theaterId: 2,
+      FavoriteId: 1,
     },
     {
       id: 4,
@@ -185,6 +238,7 @@ const loadShows = () => {
       time: "21:00",
       score: "1",
       theaterId: 3,
+      FavoriteId: 1,
     },
     {
       id: 5,
@@ -200,7 +254,8 @@ const loadShows = () => {
       date: "22-04-22",
       time: "22:00",
       score: "3",
-      theaterId: 4,
+      theaterId: 3,
+      FavoriteId: 1,
     },
   ];
   try {
@@ -218,6 +273,7 @@ const loadShows = () => {
           time: el.time,
           score: el.score,
           theaterId: el.theaterId,
+          FavoriteId: el.FavoriteId,
         },
         include: {
           model: Theaters,
@@ -362,4 +418,6 @@ module.exports = {
   loadShows,
   loadReviews,
   loadTickets,
+  loadFavoriteViewers,
+  loadFavorites,
 };

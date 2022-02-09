@@ -1,4 +1,4 @@
-const { Viewers, Shows, Tickets, Reviews } = require("../db");
+const { Viewers, Shows, Tickets, Reviews, Favorites } = require("../db");
 
 const postViewersRegistration = async (
   name,
@@ -8,7 +8,7 @@ const postViewersRegistration = async (
   province
 ) => {
   try {
-    console.log(Viewers)
+    console.log(Viewers);
     let newViewer = await Viewers.create({
       name,
       email,
@@ -16,7 +16,7 @@ const postViewersRegistration = async (
       image,
       province,
     });
-    console.log(Viewers)
+    console.log(Viewers);
     return newViewer;
   } catch (err) {
     console.error(err);
@@ -25,9 +25,14 @@ const postViewersRegistration = async (
 
 const getAllViewers = async () =>
   await Viewers.findAll({
-    include: [{
-      model: Tickets,
-    }]
+    include: [
+      {
+        model: Tickets,
+      },
+      {
+        model: Favorites,
+      },
+    ],
   });
 
 const getViewersById = async (id) => {
