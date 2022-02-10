@@ -48,17 +48,16 @@ router.get("/:id", async (req, res, next) => {
 
 router.put("/:id", async (req, res) => {
   const changes = req.body;
-  
+
   const { id } = req.params;
-  
+
   try {
-    
     await Viewers.update(changes, {
       where: {
         id: id,
       },
     });
-    res.send("Viewer updated succesfully!");
+    res.send(changes);
   } catch (error) {
     console.log(error);
   }

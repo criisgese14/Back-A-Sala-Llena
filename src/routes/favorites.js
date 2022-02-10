@@ -1,5 +1,4 @@
-const { Favorites, Shows } = require("../db");
-const Viewers = require("../models/Viewers");
+const { Favorites, Shows, Viewers } = require("../db");
 
 const router = require("express").Router();
 
@@ -19,14 +18,14 @@ router.post("/:idViewer", async (req, res) => {
   const { nameTheater } = req.body;
 
   const addFavorites = await Favorites.create({ nameTheater });
-
+  console.log(addFavorites);
   const viewer = await Viewers.findOne({
     where: {
       id: idViewer,
     },
-    include: {
-      model: Shows,
-    },
+    // include: {
+    //   model: Shows,
+    // },
   });
 
   await viewer.addFavorites(addFavorites);
