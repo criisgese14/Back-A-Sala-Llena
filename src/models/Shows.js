@@ -64,5 +64,8 @@ module.exports = (sequelize) => {
     score: {
       type: DataTypes.ENUM("1", "2", "3", "4", "5"),
     },
+    originPrice: {
+      type: DataTypes.INTEGER,
+    },
   });
 };
