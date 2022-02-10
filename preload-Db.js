@@ -314,6 +314,15 @@ const loadTickets = () => {
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
+    {
+      id: 4,
+      price: 1200,
+      seatNumber: "Platea",
+      showId: 3,
+      viewerId: 3,
+      // nameShow: "Amame",
+      // nameViewer: "Tito",
+    },
   ];
   try {
     TicketsDb.forEach(async (el) => {
