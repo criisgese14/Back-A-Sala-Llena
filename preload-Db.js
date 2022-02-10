@@ -60,6 +60,15 @@ const loadFavorites = () => {
     {
       nameTheater: "Casa Teatro el Altillo del Sur",
     },
+    {
+      nameTheater: "Teatro Abasto Social Club",
+    },
+    {
+      nameTheater: "Caja Magica, Centro de Artes Escenicas",
+    },
+    {
+      nameTheater: "Teatro Buenas Artes Social Club",
+    },
   ];
   try {
     favoritesDb.forEach(async (el) => {
@@ -78,6 +87,18 @@ const loadFavoriteViewers = () => {
     {
       viewerId: 1,
       FavoriteId: 1,
+    },
+    {
+      viewerId: 2,
+      FavoriteId: 3,
+    },
+    {
+      viewerId: 3,
+      FavoriteId: 2,
+    },
+    {
+      viewerId: 1,
+      FavoriteId: 4,
     },
   ];
   try {
@@ -188,7 +209,7 @@ const loadShows = () => {
       time: "21:00",
       score: "4",
       theaterId: 1,
-      FavoriteId: 1,
+      FavoriteId: 2,
     },
     {
       id: 2,
@@ -221,7 +242,7 @@ const loadShows = () => {
       time: "21:00",
       score: "5",
       theaterId: 2,
-      FavoriteId: 1,
+      FavoriteId: 3,
     },
     {
       id: 4,
@@ -238,7 +259,7 @@ const loadShows = () => {
       time: "21:00",
       score: "1",
       theaterId: 3,
-      FavoriteId: 1,
+      FavoriteId: 4,
     },
     {
       id: 5,
@@ -255,7 +276,7 @@ const loadShows = () => {
       time: "22:00",
       score: "3",
       theaterId: 3,
-      FavoriteId: 1,
+      FavoriteId: 2,
     },
   ];
   try {
