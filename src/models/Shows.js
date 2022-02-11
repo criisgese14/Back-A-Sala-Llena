@@ -43,6 +43,10 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    seatsAvailable: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
     rated: {
       type: DataTypes.ENUM(
         "Todas las edades",

@@ -127,7 +127,7 @@ const loadTheaters = () => {
       image:
         "https://3.bp.blogspot.com/_C8xKfakStZA/R_TgreWrDiI/AAAAAAAAABA/Vk9M3jTkNWY/s400/P1010810.JPG",
       phoneNumber: "5492219123180",
-      seatsQTY: 50,
+      seatsQTY: 80,
       score: "3",
     },
     {
@@ -140,7 +140,7 @@ const loadTheaters = () => {
       image:
         "https://s3-sa-east-1.amazonaws.com/zibilia/lugares/cover/950x/381.jpg?1404833002",
       phoneNumber: "5493514331670",
-      seatsQTY: 60,
+      seatsQTY: 80,
       score: "5",
     },
     {
@@ -153,7 +153,7 @@ const loadTheaters = () => {
       image:
         "https://2.bp.blogspot.com/_Zxf8XATiwe8/TGri7qID_VI/AAAAAAAAAXk/1lodxTcqjbc/s1600/caja+frente.jpg",
       phoneNumber: "+54929995119",
-      seatsQTY: 60,
+      seatsQTY: 80,
       score: "1",
     },
     {
@@ -166,7 +166,7 @@ const loadTheaters = () => {
       image:
         "https://s3-media0.fl.yelpcdn.com/bphoto/IPxcyEyzmrVD0FtV0s1p7Q/l.jpg",
       phoneNumber: "+541143815498",
-      seatsQTY: 50,
+      seatsQTY: 80,
       score: "2",
     },
   ];
@@ -203,7 +203,8 @@ const loadShows = () => {
         "https://www.revistagodot.com/wp-content/uploads/2021/10/Las_penas_saben_nadar_Godot_cartel.jpg",
       summary:
         "Las penas saben nadar es una obra que te ofrece un retrato agridulce de la vida y del mundo de la interpretación.Dentro del marco de un Festival de Monólogos, Greta, como le llaman algunos compañeros de trabajo, sale a escena sin previo aviso. Una vez allí, y con el pretexto siempre truncado de interpretar La voz humana, comienza a confesar, entre tragos, pedazos de la historia de su vida: la experiencia con diversos directores, actrices y actores; el recuerdo del entorno familiar y escolar; la añoranza por el distanciamiento de una hija a la que no ve hace años; las frustraciones amorosas; los deseos incumplidos; los sueños por realizar. Todo se devela sobre un círculo de profunda soledad, en medio de una vorágine de sentimientos, pero pleno ante la entereza de una mujer que ha dedicado gran parte de su existencia al muchas veces ingrato arte de la interpretación.",
-      ticketsQty: 8,
+      ticketsQty: 2,
+      seatsAvailable: ["2-8", "2-9"],
       rated: "Todas las edades",
       date: "2022-08-12",
       time: "21:00",
@@ -220,7 +221,8 @@ const loadShows = () => {
         "https://www.teatroateatro.com/wp-content/uploads/2019/02/Dos-mujeres.jpg",
       summary:
         "Transcurre una noche en el dto que comparten alejandra (Soledad Gonzalez) y clara (laura raiteri) en la cual esperan la llegada de German, un desconocido a quien han citado mediante un aviso de una revista. la tensa espera hace aflorar sentimientos y personalidades que subyacen en estas dos mujeres sumiodas en una tremenda rutina aplastadora. se juega una relacion indefinida entre las dos mujeres que...escalando los limites del nerviosismo y sus miserias internas mostraran su verdadera cara.",
-      ticketsQty: 8,
+      ticketsQty: 5,
+      seatsAvailable: ["4-8", "4-9", "2-8", "2-9", "1-2"],
       rated: "Apta para mayores de 13 años",
       date: "2022-04-10",
       time: "22:00",
@@ -236,7 +238,8 @@ const loadShows = () => {
       image: "https://storage.lacapitalmdp.com/2018/12/AMAME-2.jpg",
       summary:
         "Una mujer deambula dentro de un mundo insomne. Nada parece cierto, las cosas se distancian. Todo parece una copia de una copia, de otra copia.",
-      ticketsQty: 10,
+      ticketsQty: 5,
+      seatsAvailable: ["4-8", "4-9", "2-8", "2-9", "1-2"],
       rated: "Apta para mayores de 16 años",
       date: "2022-8-12",
       time: "21:00",
@@ -253,7 +256,8 @@ const loadShows = () => {
         "https://storage.lacapitalmdp.com/2019/08/Viajeros-de-toda-sinrazon-1024x683.jpg",
       summary:
         "Será en Cuatro Elementos, en una puesta que busca que el público experimente la distancia de la acción. La obra traduce la atmósfera de la poesía de Santoro, un poeta desaparecido en 1977.",
-      ticketsQty: 8,
+      ticketsQty: 4,
+      seatsAvailable: ["4-8", "4-9", "2-8", "2-9"],
       rated: "Apta para mayores de 16 años",
       date: "2022-8-12",
       time: "21:00",
@@ -270,7 +274,8 @@ const loadShows = () => {
         "https://vivo.perfil.com/storage/uploads/shows/poster/175ba592d28e713b6fc33883c44967a0.jpg",
       summary:
         "Distopía grotesca sobre el fin del mundo. el mundo fue destruido por una epidemia de miedos. En un precario refugio, un grupo de sobrevivientes resiste y se debate en cavilaciones sobre qué hacer.",
-      ticketsQty: 10,
+      ticketsQty: 2,
+      seatsAvailable: ["4-8", "4-9"],
       rated: "Apta para mayores de 16 años",
       date: "2022-04-22",
       time: "22:00",
@@ -289,6 +294,7 @@ const loadShows = () => {
           image: el.image,
           summary: el.summary,
           ticketsQty: el.ticketsQty,
+          seatsAvailable: el.seatsAvailable,
           rated: el.rated,
           date: el.date,
           time: el.time,
