@@ -43,7 +43,7 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    seatsAvalaible: {
+    seatsAvailable: {
       type: DataTypes.ARRAY(DataTypes.STRING)
     },
     rated: {
