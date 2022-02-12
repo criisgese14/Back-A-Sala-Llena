@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Tickets } = require("../db");
+const { Tickets, Shows, Viewers } = require("../db");
 const {
   getAllTickets,
   postTickets,
@@ -10,7 +10,8 @@ const router = Router();
   const mercadopago = require("mercadopago");
   // Agrega credenciales
   mercadopago.configure({
-    access_token: "APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
+    access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
+    //APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
   });
 
 router.get("/", async (req, res, next) => {
@@ -36,14 +37,30 @@ router.post("/", async (req, res, next) => {
 
 router.post('/pay', async (req, res) => {
 
-const {id} = req.body
+  const { price, seatNumber, nameShow, idViewer } = req.body;
 //console.log(req.body)
-if (id){
-const ticket = await Tickets.findOne({
-  where: {
-    id : id
-  }
+const ticket = await Tickets.create({
+  price: price,
+  seatNumber: seatNumber
 })
+
+if(nameShow){
+  let show = await Shows.findOne({
+    where: {
+      name: nameShow,
+    },
+  });
+  show.addTickets(ticket);
+  console.log(show)
+}
+  if(idViewer) {  
+  let viewer = await Viewers.findOne({
+    where: {
+      id: idViewer,
+    },
+  });
+  viewer.addTickets(ticket);
+}
 //console.log(ticket)
 // Crea un objeto de preferencia
 let preference = {
@@ -64,10 +81,7 @@ let preference = {
   const response = await mercadopago.preferences.create(preference);
   console.log(response.body)
   const preferenceId = response.body.id;
-  res.send({preferenceId})
-} else {
-  res.send('')
-}
+  res.send({preferenceId: preferenceId});
 })
 
 router.get('/feedback', function(req, res) {
