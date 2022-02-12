@@ -38,7 +38,7 @@ router.post('/pay', async (req, res) => {
 
 const {id} = req.body
 //console.log(req.body)
-
+if (id){
 const ticket = await Tickets.findOne({
   where: {
     id : id
@@ -65,6 +65,9 @@ let preference = {
   console.log(response.body)
   const preferenceId = response.body.id;
   res.send({preferenceId})
+} else {
+  res.send('')
+}
 })
 
 router.get('/feedback', function(req, res) {

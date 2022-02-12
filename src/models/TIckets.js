@@ -4,7 +4,7 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("tickets", {
     seatNumber: {
-      type: DataTypes.ENUM("Platea", "General", "Palco"),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
