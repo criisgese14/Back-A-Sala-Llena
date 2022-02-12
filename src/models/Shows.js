@@ -43,6 +43,9 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    seatsAvalaible: {
+      type: DataTypes.ARRAY(DataTypes.STRING)
+    },
     rated: {
       type: DataTypes.ENUM(
         "Todas las edades",
