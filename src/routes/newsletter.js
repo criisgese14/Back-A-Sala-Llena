@@ -4,6 +4,7 @@ const { Viewers, Favorites, Shows } = require("../db");
 const router = Router();
 
 router.post("/", async (req, res, next) => {
+  const { nameTheater } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
     port: 587,
@@ -18,7 +19,7 @@ router.post("/", async (req, res, next) => {
 
   let allViewers = await Viewers.findAll({
     where: {
-      isSubscribed: true,
+      isSubscribed: true, // buscar si esta suscripto y que tenga al teatro que hace el post como favorito
     },
     include: {
       model: Favorites,
@@ -26,6 +27,9 @@ router.post("/", async (req, res, next) => {
   });
 
   let allFavorites = await Favorites.findAll({
+    where: {
+      nameTheater: nameTheater,
+    },
     include: {
       model: Shows,
     },

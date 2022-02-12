@@ -21,6 +21,7 @@ router.post("/", async (req, res, next) => {
     date,
     time,
     score,
+    originPrice
   } = req.body;
   try {
     const addShow = await postShows(
@@ -34,7 +35,8 @@ router.post("/", async (req, res, next) => {
       rated,
       date,
       time,
-      score
+      score,
+      originPrice
     );
     postShows ? res.status(200).json(addShow) : res.status(404).send("Error");
   } catch (err) {

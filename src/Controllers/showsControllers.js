@@ -12,7 +12,8 @@ const postShows = async (
   rated,
   date,
   time,
-  score
+  score,
+  originPrice
 ) => {
   try {
     let newShow = await Shows.create({
@@ -26,6 +27,7 @@ const postShows = async (
       date,
       time,
       score,
+      originPrice
     });
 
     const theater = await Theaters.findOne({
