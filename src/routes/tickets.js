@@ -11,6 +11,7 @@ const router = Router();
   // Agrega credenciales
   mercadopago.configure({
     access_token: "APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
+    // access_token: "TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530"
   });
 
 router.get("/", async (req, res, next) => {
@@ -34,38 +35,79 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// router.post('/pay', async (req, res) => {
+
+// const {id} = req.body
+// // console.log(req.body)
+
+// const ticket = await Tickets.findOne({
+//   where: {
+//     id : id
+//   }
+// })
+// // console.log(ticket)
+// // Crea un objeto de preferencia
+// let preference = {
+//     items: [
+//       {
+//         title: ticket.seatNumber,
+//         unit_price: ticket.price,
+//         quantity: 1,
+//       },
+//     ],
+//     back_urls: {
+//       success: "http://localhost:3000/feedback",
+//       failure: "http://localhost:3000/feedback",
+//       pending: "http://localhost:3000/feedback",
+//     },
+//     auto_return: "approved",
+//   };
+//   const response = await mercadopago.preferences.create(preference);
+//   console.log(response.body)
+//   const preferenceId = response.body.id;
+//   // const preferenceId = response.body.sandbox_init_point
+//   console.log(response.body.id)
+//   res.send({preferenceId})
+//   // res.redirect(preferenceId)
+// })
+
+
 router.post('/pay', async (req, res) => {
 
-const {id} = req.body
-//console.log(req.body)
-
-const ticket = await Tickets.findOne({
-  where: {
-    id : id
-  }
-})
-//console.log(ticket)
-// Crea un objeto de preferencia
-let preference = {
-    items: [
-      {
-        title: ticket.seatNumber,
-        unit_price: ticket.price,
-        quantity: 1,
+  const {id} = req.body
+  //console.log(req.body)
+  if (id){
+  const ticket = await Tickets.findOne({
+    where: {
+      id : id
+    }
+  })
+  //console.log(ticket)
+  // Crea un objeto de preferencia
+  let preference = {
+      items: [
+        {
+          title: ticket.seatNumber,
+          unit_price: ticket.price,
+          quantity: 1,
+        },
+      ],
+      back_urls: {
+        success: "http://localhost:3000/feedback",
+        failure: "http://localhost:3000/feedback",
+        pending: "http://localhost:3000/feedback",
       },
-    ],
-    back_urls: {
-      success: "http://localhost:3000/feedback",
-      failure: "http://localhost:3000/feedback",
-      pending: "http://localhost:3000/feedback",
-    },
-    auto_return: "approved",
-  };
-  const response = await mercadopago.preferences.create(preference);
-  console.log(response.body)
-  const preferenceId = response.body.id;
-  res.send({preferenceId})
-})
+      auto_return: "approved",
+    };
+    const response = await mercadopago.preferences.create(preference);
+    console.log(response.body)
+    const preferenceId = response.body.id;
+    console.log('hola',preferenceId)
+    res.send({preferenceId})
+  } else {
+    res.send('')
+  }
+  })
 
 router.get('/feedback', function(req, res) {
 	res.json({
