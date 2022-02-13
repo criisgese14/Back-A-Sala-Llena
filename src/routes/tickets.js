@@ -74,9 +74,9 @@ router.post("/pay", async (req, res) => {
       },
     ],
     back_urls: {
-      success: "https://front-a-sala-llena-five.vercel.app/",
-      failure: "https://front-a-sala-llena-five.vercel.app/feedback",
-      pending: "https://front-a-sala-llena-five.vercel.app/feedback",
+      success: "https://front-a-sala-llena-black.vercel.app",
+      failure: "https://front-a-sala-llena-black.vercel.app/feedback",
+      pending: "https://front-a-sala-llena-black.vercel.app/feedback",
     },
     auto_return: "approved",
   };
