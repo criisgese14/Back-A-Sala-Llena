@@ -21,7 +21,7 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   const { price, seatNumber, nameShow, nameViewer } = req.body;
-  console.log(nameShow)
+  console.log(nameShow);
   try {
     const newTicket = await postTickets(
       price,
@@ -35,43 +35,42 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.post('/pay', async (req, res) => {
-
+router.post("/pay", async (req, res) => {
   const { price, seatNumber, nameShow, idViewer } = req.body;
-console.log(req.body)
-const ticket = await Tickets.create({
-  price: 1000,
-  seatNumber: '1-12'
-})
+  //console.log(req.body)
+  const ticket = await Tickets.create({
+    price: 1000,
+    seatNumber: "1-12",
+  });
 
-if(nameShow){
-  let show = await Shows.findOne({
-    where: {
-      name: nameShow,
-    },
-  });
-  show.addTickets(ticket);
-  console.log(show)
-}
-  if(idViewer) {  
-  let viewer = await Viewers.findOne({
-    where: {
-      id: idViewer,
-    },
-  });
-  viewer.addTickets(ticket);
-}
-//console.log(ticket)
-// Crea un objeto de preferencia
-let preference = {
+  if (nameShow) {
+    let show = await Shows.findOne({
+      where: {
+        name: nameShow,
+      },
+    });
+    show.addTickets(ticket);
+    console.log(show);
+  }
+  if (idViewer) {
+    let viewer = await Viewers.findOne({
+      where: {
+        id: idViewer,
+      },
+    });
+    viewer.addTickets(ticket);
+  }
+  //console.log(ticket)
+  // Crea un objeto de preferencia
+  let preference = {
     items: [
       {
-        title: ticket.seatNumber,
-        unit_price: ticket.price,
-        quantity: 1,
-        // title: 'Hola',
-        // unit_price: 1500,
+        // title: ticket.seatNumber,
+        // unit_price: ticket.price,
         // quantity: 1,
+        title: 'Hola',
+        unit_price: 1500,
+        quantity: 1,
       },
     ],
     back_urls: {
@@ -82,19 +81,17 @@ let preference = {
     auto_return: "approved",
   };
   const response = await mercadopago.preferences.create(preference);
-  console.log(response.body)
+  console.log(response.body);
   const preferenceId = response.body.sandbox_init_point;
   res.send(preferenceId);
-  // res.json({id: global.id, init_point: response.body.id})
-  // res.redirect(preferenceId)
-})
+});
 
-router.get('/feedback', function(req, res) {
-	res.json({
-		Payment: req.query.payment_id,
-		Status: req.query.status,
-		MerchantOrder: req.query.merchant_order_id
-	});
+router.get("/feedback", function (req, res) {
+  res.json({
+    Payment: req.query.payment_id,
+    Status: req.query.status,
+    MerchantOrder: req.query.merchant_order_id,
+  });
 });
 
 router.put("/:id", async (req, res) => {
