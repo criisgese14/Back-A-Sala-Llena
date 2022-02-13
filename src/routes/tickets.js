@@ -65,12 +65,12 @@ router.post("/pay", async (req, res) => {
   let preference = {
     items: [
       {
-        // title: ticket.seatNumber,
-        // unit_price: ticket.price,
-        // quantity: 1,
-        title: 'Hola',
-        unit_price: 1500,
+        title: ticket.seatNumber,
+        unit_price: ticket.price,
         quantity: 1,
+        // title: 'Hola',
+        // unit_price: 1500,
+        // quantity: 1,
       },
     ],
     back_urls: {
