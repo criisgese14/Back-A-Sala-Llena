@@ -249,6 +249,15 @@ const loadFavorites = () => {
     {
       nameTheater: "Casa Teatro el Altillo del Sur",
     },
+    {
+      nameTheater: "Teatro Abasto Social Club",
+    },
+    {
+      nameTheater: "Caja Magica, Centro de Artes Escenicas",
+    },
+    {
+      nameTheater: "Teatro Buenas Artes Social Club",
+    },
   ];
   try {
     favoritesDb.forEach(async (el) => {
@@ -267,6 +276,18 @@ const loadFavoriteViewers = () => {
     {
       viewerId: 1,
       FavoriteId: 1,
+    },
+    {
+      viewerId: 2,
+      FavoriteId: 3,
+    },
+    {
+      viewerId: 3,
+      FavoriteId: 2,
+    },
+    {
+      viewerId: 1,
+      FavoriteId: 4,
     },
   ];
   try {
@@ -928,13 +949,13 @@ const loadShows = () => {
       summary:
         "Las penas saben nadar es una obra que te ofrece un retrato agridulce de la vida y del mundo de la interpretación.Dentro del marco de un Festival de Monólogos, Greta, como le llaman algunos compañeros de trabajo, sale a escena sin previo aviso. Una vez allí, y con el pretexto siempre truncado de interpretar La voz humana, comienza a confesar, entre tragos, pedazos de la historia de su vida: la experiencia con diversos directores, actrices y actores; el recuerdo del entorno familiar y escolar; la añoranza por el distanciamiento de una hija a la que no ve hace años; las frustraciones amorosas; los deseos incumplidos; los sueños por realizar. Todo se devela sobre un círculo de profunda soledad, en medio de una vorágine de sentimientos, pero pleno ante la entereza de una mujer que ha dedicado gran parte de su existencia al muchas veces ingrato arte de la interpretación.",
       ticketsQty: 2,
-      seatsAvalaible: ["2-8", "2-9"],
+      seatsAvailable: ["2-8", "2-9"],
       rated: "Todas las edades",
       date: "2022-08-12",
       time: "21:00",
       score: "4",
       theaterId: 1,
-      FavoriteId: 1,
+      FavoriteId: 2,
     },
     {
       id: 2,
@@ -946,7 +967,7 @@ const loadShows = () => {
       summary:
         "Transcurre una noche en el dto que comparten alejandra (Soledad Gonzalez) y clara (laura raiteri) en la cual esperan la llegada de German, un desconocido a quien han citado mediante un aviso de una revista. la tensa espera hace aflorar sentimientos y personalidades que subyacen en estas dos mujeres sumiodas en una tremenda rutina aplastadora. se juega una relacion indefinida entre las dos mujeres que...escalando los limites del nerviosismo y sus miserias internas mostraran su verdadera cara.",
       ticketsQty: 3,
-      seatsAvalaible: ["1-7", "2-8", "4-3"],
+      seatsAvailable: ["1-7", "2-8", "4-3"],
       rated: "Apta para mayores de 13 años",
       date: "2022-04-10",
       time: "22:00",
@@ -963,13 +984,13 @@ const loadShows = () => {
       summary:
         "Una mujer deambula dentro de un mundo insomne. Nada parece cierto, las cosas se distancian. Todo parece una copia de una copia, de otra copia.",
       ticketsQty: 2,
-      seatsAvalaible: ["1-5", "1-8", "4-5"],
+      seatsAvailable: ["1-5", "1-8", "4-5"],
       rated: "Apta para mayores de 16 años",
       date: "2022-8-12",
       time: "21:00",
       score: "5",
       theaterId: 2,
-      FavoriteId: 1,
+      FavoriteId: 3,
     },
     {
       id: 4,
@@ -981,13 +1002,13 @@ const loadShows = () => {
       summary:
         "Será en Cuatro Elementos, en una puesta que busca que el público experimente la distancia de la acción. La obra traduce la atmósfera de la poesía de Santoro, un poeta desaparecido en 1977.",
       ticketsQty: 2,
-      seatsAvalaible: ["1-3", "1-5", "2-3"],
+      seatsAvailable: ["1-3", "1-5", "2-3"],
       rated: "Apta para mayores de 16 años",
       date: "2022-8-12",
       time: "21:00",
       score: "1",
       theaterId: 3,
-      FavoriteId: 1,
+      FavoriteId: 4,
     },
     {
       id: 5,
@@ -999,13 +1020,13 @@ const loadShows = () => {
       summary:
         "Distopía grotesca sobre el fin del mundo. el mundo fue destruido por una epidemia de miedos. En un precario refugio, un grupo de sobrevivientes resiste y se debate en cavilaciones sobre qué hacer.",
       ticketsQty: 4,
-      seatsAvalaible: ["1-5", "2-3", "2-7", "3-6"],
+      seatsAvailable: ["1-5", "2-3", "2-7", "3-6"],
       rated: "Apta para mayores de 16 años",
       date: "2022-04-22",
       time: "22:00",
       score: "3",
       theaterId: 3,
-      FavoriteId: 1,
+      FavoriteId: 2,
     },
     {
       id: 6,
@@ -1017,7 +1038,7 @@ const loadShows = () => {
       summary:
         "Selva, y su enigmática pareja, Horacio, llegan desde la gran ciudad a este remoto pueblo correntino en busca de un milagro. Se hospedan en un precario hotel regenteado por Celina, la hija de los dueños y Celeste, su amiga adolescente, que borda día y noche en el patio del hotel para terminar su traje de comparsera. Celina estudia para ingresar a la facultad e irse del pueblo, Hernán, su hermano ya se fue pero vuelve para participar del concurso de Compuesto Correntino en la fiesta de La Pilarcita. Cuando Selva comprende que, según la tradición, antes de pedir un milagro hay que ofrendar una muñeca creada especialmente para la ocasión, contrata a Celeste para que la ayude a confeccionarla. Mientras el pueblo entero se prepara para homenajear a la santita popular, Selva y Celeste trabarán una extraña amistad que cambiará sus destinos, ¿milagrosamente? Están los que creen que el milagro es algo que llega inesperada y arbitrariamente y están aquellos que lo construyen día a día, casi de manera artesanal...",
       ticketsQty: 3,
-      seatsAvalaible: ["1-8", "2-6", "2-7"],
+      seatsAvailable: ["1-8", "2-6", "2-7"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-15",
       time: "20:00",
@@ -1035,7 +1056,7 @@ const loadShows = () => {
       summary:
         "Isabel y Brian se conocieron a mediados de los ´90 en Madrid. Ella vivía en España y él, en Italia. Ella, una incipiente periodista y guionista de televisión que trabajaba en un bar como moza. Él un estudiante de cine con ilusión de poder algún día filmar. Ella argentina. El hijo de un papá desaparecido y exiliado desde pequeño en Italia. Hoy, el está casado y hoy vive en Río de Janeiro. Brian filma y estrena una película en Argentina 26 años después. Isabel, que ha retornado hace mucho tiempo, asiste a la función. Se encuentran. Esto podría ser una casualidad pero lo cierto es que él ha dirigido un film sobre la historia de un amor muy similar al que compartieron en Madrid: tan solo un día y una noche y después de 25 años de intentar el olvido. Isabel propone hacerle una entrevista para una conocida revista y él tiene que subirse a un taxi rumbo a Ezeiza.La entrevista pasará por la frivolidad y desencadenará en una profunda charla sobre sus vidas y búsquedas de la felicidad.El reencuentro supuestamente casual de Brian e Isabel derivará de la urgencia del reportaje al descubrimiento de por qué desde hace tantos años ninguno puede ser feliz.Así, una noche de pasión juvenil supuestamente intrascendente se convirtió por alguna razón en un acontecimiento que les marcó la vida.",
       ticketsQty: 4,
-      seatsAvalaible: ["1-6", "1-8", "2-3", "2-6"],
+      seatsAvailable: ["1-6", "1-8", "2-3", "2-6"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-14",
       time: "21:00",
@@ -1053,7 +1074,7 @@ const loadShows = () => {
       summary:
         "A Amanda lo que más le gusta es hamacarse y bailar. A veces se lamenta por ser la única niña de la casa, y porque los adultos están tan ocupados ¿Qué puede hacer para no aburrirse? Así es como Amanda le da vida a Gregorio, su amigo imaginario; quien según parece bajó de la luna y sabe moverse mejor por el aire que por la tierra. Amanda y Gregorio juegan, bailan, se transforman; ya no están solos, son el uno para el otro. Pero hay algo que preocupa a Gregorio. ¿Qué pasará con él cuando Amanda crezca?",
       ticketsQty: 2,
-      seatsAvalaible: ["1-8", "1-9"],
+      seatsAvailable: ["1-8", "1-9"],
       rated: "Todas las edades",
       date: "2022-02-13",
       time: "19:30",
@@ -1071,7 +1092,7 @@ const loadShows = () => {
       summary:
         "Buenos Aires, COVID 2020. Dos actores maduros en cuarentena, dialogando a la distancia, se enfrentan al desafío de continuar haciendo teatro en plena pandemia con las salas de teatro cerradas. La serie Fracaso YoTuve, en tono de comedia, narra los enredos tecnológicos y las controversias artístico-morales que tienen los personajes en la búsqueda de su objetivo: triunfar haciendo teatro por YouTube.",
       ticketsQty: 3,
-      seatsAvalaible: ["2-3", "2-6", "3-7"],
+      seatsAvailable: ["2-3", "2-6", "3-7"],
       rated: "Apta para mayores de 16 años",
       date: "2022-02-14",
       time: "21:00",
@@ -1089,7 +1110,7 @@ const loadShows = () => {
       summary:
         "“El Living de Karina: esto es amor o muerte” es un ciclo de entrevistas donde cada historia se vuelve un espectáculo de sensaciones, música y movimiento. Con el objetivo de exponer desde el humor y el sarcasmo, distintas realidades que suelen tratarse con frialdad, la artista y directora Sol Llorente, mezcla y hace convivir diversas ramas del arte en un espectáculo con un formato novedoso. Esta obra de teatro musical fue creada en colaboración con cantautoras y actrices de Argentina, Chile, Uruguay y Cuba. La música, las letras y la danza fueron compuestas originalmente para este proyecto por artistas que hace años trabajan en el underground de la cultura Hip Hop de diferentes países. “El Living de Karina: esto es amor o muerte” invita a los espectadores a vivir una experiencia diferente con gran impacto visual que nos remontará a pequeñas situaciones, aceptadas como cotidianas, que nos dejarán pensando. ¿Te animás a entrar en el juego?",
       ticketsQty: 2,
-      seatsAvalaible: ["3-4", "3-5"],
+      seatsAvailable: ["3-4", "3-5"],
       rated: "Apta para mayores de 16 años",
       date: "2022-02-21",
       time: "21:00",
@@ -1107,7 +1128,7 @@ const loadShows = () => {
       summary:
         "Por motivo del cumpleaños de su tío, Nino y sus amigxs, preparan un show de transformismo con música de rock. Esperan escandalizar a su madre, la reconocida actriz Gloria Arcana. Sin embargo, el cambio de vestimenta provoca algo más que el escándalo: una transición de género. Nino deviene en Niné y además de la atención de su madre, consigue atraer la mirada de Hernán Bartolomeo, reconocido intelectual del campo teatral. De a poco los vínculos estallan, a medida que todo en la vida de Niné se va de-construyendo.",
       ticketsQty: 4,
-      seatsAvalaible: ["2-2", "2-5", "3-4", "4-2"],
+      seatsAvailable: ["2-2", "2-5", "3-4", "4-2"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-13",
       time: "20:00",
@@ -1125,7 +1146,7 @@ const loadShows = () => {
       summary:
         "Pacha-Marita, el solsticio de una payasa es el unipersonal cómico-ritual en travesía de Leticia Leiva. Este trabajo fue producto de la residencia artística Raymipacha - teatralidades festivas llevada a cabo en junio y julio del 2018 coordinada por el grupo cultural Yama de Ecuador con el apoyo de Iberescena. Leticia fue seleccionada para la experiencia: vivir la celebración del Intiraymi en el Valle de Imbabura y generar una propuesta escénica a partir de ello. A raíz de su formación en clown, apuntó su investigación y eje de trabajo en el rol cómico dentro de la fiesta: la máscara del Aya huma y su respectivo mito, y la inquietud de cómo abordar desde la femeneidad esta tarea. Una vez finalizada la residencia, Leticia continuó su viaje por Ecuador y resto de Sudamérica, retroalimentando su creación con distintas experTencias y puntos de vista.",
       ticketsQty: 5,
-      seatsAvalaible: ["1-4", "2-4", "2-5", "3-5", "3-7"],
+      seatsAvailable: ["1-4", "2-4", "2-5", "3-5", "3-7"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-14",
       time: "18:00",
@@ -1143,7 +1164,7 @@ const loadShows = () => {
       summary:
         "Luego de presentarse por toda Argentina, Latinoamérica y España, y luego de hacer 50 shows diferentes por streaming durante la cuarentena: vuelve FURIA a los escenarios con una nueva propuesta: stand up, improvisación, humor negro, y un montón de delirio con el objetivo de que todos nos saquemos la FURIA riendo.",
       ticketsQty: 4,
-      seatsAvalaible: ["1-3", "1-7", "2-1", "2-3"],
+      seatsAvailable: ["1-3", "1-7", "2-1", "2-3"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-14",
       time: "22:00",
@@ -1161,7 +1182,7 @@ const loadShows = () => {
       summary:
         "VIATRIX, una palabra en latín que significa viajante; es un divertido viaje espacial, una vuelta por la galaxia tripulada por un payaso excéntrico. El espectáculo cuenta los deseos del protagonista de escaparse de lo conocido para aferrarse al sueño de empezar de nuevo... en la Luna. Como las cosas se pusieron feas acá en la Tierra el payaso Faina quiere irse a la Luna y se va en bicicleta. Se lleva la guitarra, el mate, destrezas y carcajadas. Al llegar, una comunidad de extraterrestres con habilidades especiales lo fascinaran con sus singulares destrezas.",
       ticketsQty: 5,
-      seatsAvalaible: ["1-3", "1-6", "2-3", "2-7", "3-1"],
+      seatsAvailable: ["1-3", "1-6", "2-3", "2-7", "3-1"],
       rated: "Todas las edades",
       date: "2022-02-15",
       time: "21:30",
@@ -1179,7 +1200,7 @@ const loadShows = () => {
       summary:
         "“Arlequín está enfermo. Una adivinadora del porvenir le predijo que el día que dedicara más tiempo al sueño que a la botella, moriría a las doce de la noche en punto. Son las ocho y aún duerme.A Pierrot, el mejor amigo de Arlequín, se le ocurre un plan: retrasa el reloj, aunque sea no más que dos horas. Pierrot recurre al Dottora mientras Arlequín se divierte. Colombina, que es la mujer de Pierrot, tiene una cita furtiva con Arlequín. Pierrot, lleno de celos decide vengarse adelantando el reloj. La muerte llega a las 12:00 de la noche... Las Cartas están echadas.”",
       ticketsQty: 3,
-      seatsAvalaible: ["1-4", "2-3", "3-6"],
+      seatsAvailable: ["1-4", "2-3", "3-6"],
       rated: "Apta para mayores de 16 años",
       date: "2022-02-18",
       time: "22:00",
@@ -1197,7 +1218,7 @@ const loadShows = () => {
       summary:
         "“Sin embargo, yo no” es un espectáculo unipersonal, cuyo trabajo surge del cruce entre el material de diferentes biografías de mujeres que hicieron historia, las pinturas de la serie “Mujeres” de la artista plástica Vanesa Martinelli, el juego escénico propuesto por Elina Martinelli en el escenario y Diego Vallarino en la dirección.",
       ticketsQty: 3,
-      seatsAvalaible: ["2-3", "3-5", "3-6"],
+      seatsAvailable: ["2-3", "3-5", "3-6"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-19",
       time: "20:30",
@@ -1215,7 +1236,7 @@ const loadShows = () => {
       summary:
         "La voluntad, teatro a distancia es una ficción en tiempos de la Campaña del Desierto que ironiza sobre los valores de la cultura. Los protagonistas son militares de un fortín perdido, junto a una actriz extranjera que recala por allí en gira con su elenco, en vísperas de los festejos del 25 de Mayo. Una comedia acerca de los malentendidos que surgen de la distancia entre las ideas y las personas, entre las consignas y los hechos.",
       ticketsQty: 2,
-      seatsAvalaible: ["2-1", "3-7"],
+      seatsAvailable: ["2-1", "3-7"],
       rated: "Apta para mayores de 13 años",
       date: "2022-02-19",
       time: "19:00",
@@ -1233,7 +1254,7 @@ const loadShows = () => {
       summary:
         "UNA es una voz que cuenta. El vaivén de un pensamiento. Un punto de vista, sólo uno de los tantos posibles de la que podría ser una historia cualquiera, la historia de cualquiera.",
       ticketsQty: 4,
-      seatsAvalaible: ["1-5", "1-7"],
+      seatsAvailable: ["1-5", "1-7"],
       rated: "Apta para mayores de 16 años",
       date: "2022-02-16",
       time: "20:30",
@@ -1251,7 +1272,7 @@ const loadShows = () => {
       summary:
         "Es un domingo en familia, ahí donde se tratan las viejas cuestiones o donde se afrontan situaciones nuevas.El espacio se ve atemporal. Una nobleza particular que cubre estos miserables héroes .Esta familia se propaga en un dudoso lujo. Una mentalidad medieval, impulsos de sueños americanos, romances torcidos, van de delirios imperiales a comportamientos de animales primitivos. Una tensión reina en este mundo donde todo parece posible.",
       ticketsQty: 4,
-      seatsAvalaible: ["2-4", "2-7", "2-9", "3-5"],
+      seatsAvailable: ["2-4", "2-7", "2-9", "3-5"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-21",
       time: "21:00",
@@ -1269,7 +1290,7 @@ const loadShows = () => {
       summary:
         "Una voz narradora de hechos que sucedieron en una ciudad, no esta definida la identidad de esa ciudad, su tiempo es también algo incierto aunque los acontecimientos reconocibles pueden pertenecer a nuestra época. El personaje narrador rememora historias que su madre le contaba y que fue memorizando. El final del relato como una serpiente muerde la cabeza del texto, cierra en espiral ese sin fin de situaciones dolorosas y afligidas que esta protagonista y toda una población debieron sufrir.",
       ticketsQty: 3,
-      seatsAvalaible: ["2-1", "2-5", "3-2"],
+      seatsAvailable: ["2-1", "2-5", "3-2"],
       rated: "Apta para mayores de 18 años",
       date: "2022-02-17",
       time: "12:00",
@@ -1287,7 +1308,7 @@ const loadShows = () => {
       summary:
         "Tarde noche de verano en el cementerio municipal del pueblo de Carhué, en el límite con Epecuén, provincia de Buenos Aires. Ante el acecho de una tormenta incipiente y cansadas de la rutina, dos mujeres encargadas del crematorio intentan terminar lo antes posible su jornada laboral. De repente el llamado de su jefe genera que aquellas heridas, ruinas y cenizas del pasado se remuevan y vuelvan a salir a luz.",
       ticketsQty: 3,
-      seatsAvalaible: ["1-5", "1-7", "2-3"],
+      seatsAvailable: ["1-5", "1-7", "2-3"],
       rated: "Apta para mayores de 16 años",
       date: "2022-02-16",
       time: "21:00",
@@ -1305,7 +1326,7 @@ const loadShows = () => {
       summary:
         "En un viejo loteo fracasado Caín, Abel, y su versión conurbana del mito. Caín productor morronero. Abel vagabundo, vendedor de carnada viva en una banquina del asfalto que va al Tigris. Hermanos a los bifes compartiendo ese terreno, su edén berreta, partido al medio, al que nunca podrán volver morada común. La dialéctica imperecedera entre el sedentario y el nómade. Y Tatita, siempre ausente, que regresa al fin ese domingo melancólico.",
       ticketsQty: 4,
-      seatsAvalaible: ["1-6", "1-9", "2-3", "2-6"],
+      seatsAvailable: ["1-6", "1-9", "2-3", "2-6"],
       rated: "Apta para mayores de 13 años",
       date: "2022-02-17",
       time: "20:00",
@@ -1323,7 +1344,7 @@ const loadShows = () => {
       summary:
         "Susana se acaba de quedar sin trabajo, va a cuanta entrevista de trabajo consigue. Hasta que llega a una agencia de colocación de empleo en donde conoce a un funcionario de la misma llamado Alberto. Cuando entra a la entrevista, Alberto la recibirá con recelo y prejuicio, Susana tendrá que hacer valer sus ideas para hacerle ver que ella lucha cada día por ser mejor persona y que su aspecto no determina de forma negativa lo que es por dentro. Alberto le tocará aprender una lección a través del testimonio de Susana, y al conocer la verdad de ella, él mismo se confrontará con la suya, dejando salir sus demonios para así reconciliarse con él mismo.",
       ticketsQty: 3,
-      seatsAvalaible: ["2-5", "2-7", "3-6"],
+      seatsAvailable: ["2-5", "2-7", "3-6"],
       rated: "Todas las edades",
       date: "2022-02-15",
       time: "22:00",
@@ -1342,7 +1363,7 @@ const loadShows = () => {
           image: el.image,
           summary: el.summary,
           ticketsQty: el.ticketsQty,
-          seatsAvalaible: el.seatsAvalaible,
+          seatsAvailable: el.seatsAvailable,
           rated: el.rated,
           date: el.date,
           time: el.time,

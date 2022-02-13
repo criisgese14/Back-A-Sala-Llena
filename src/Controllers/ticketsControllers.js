@@ -1,6 +1,6 @@
 const { Viewers, Shows, Tickets, Reviews } = require("../db");
 
-const postTickets = async (price, seatNumber, nameShow, nameViewer) => {
+const postTickets = async (price, seatNumber, nameShow, idViewer) => {
   
   try {
     let newTicket = await Tickets.create({
@@ -16,10 +16,10 @@ const postTickets = async (price, seatNumber, nameShow, nameViewer) => {
     show.addTickets(newTicket);
     console.log(show)
   }
-    if(nameViewer) {  
+    if(idViewer) {  
     let viewer = await Viewers.findOne({
       where: {
-        name: nameViewer,
+        id: idViewer,
       },
     });
     viewer.addTickets(newTicket);
