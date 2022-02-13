@@ -18,7 +18,7 @@ router.post("/theater", async (req, res) => {
         email: theater.email,
       };
 
-      const token = jwt.sign(userForToken, 123);
+      const token = jwt.sign(userForToken, "123");
       console.log(token);
       console.log(theater.password);
       console.log(theater.email);
@@ -50,7 +50,7 @@ router.post("/viewer", async (req, res) => {
         email: viewer.email,
       };
 
-      const token = jwt.sign(userForToken, 123);
+      const token = jwt.sign(userForToken, "123");
       console.log(token);
       res.send({
         id: viewer.id,
