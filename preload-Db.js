@@ -956,6 +956,7 @@ const loadShows = () => {
       score: "4",
       theaterId: 1,
       FavoriteId: 2,
+      originPrice: 1500
     },
     {
       id: 2,
@@ -974,6 +975,7 @@ const loadShows = () => {
       score: "3",
       theaterId: 2,
       FavoriteId: 1,
+      originPrice: 1300
     },
     {
       id: 3,
@@ -991,11 +993,12 @@ const loadShows = () => {
       score: "5",
       theaterId: 2,
       FavoriteId: 3,
+      originPrice: 1200
     },
     {
       id: 4,
       name: "Viajeros de toda Sinrazón",
-      genre: "Drama",
+      genre: "Tragedia",
       length: "90 min'",
       image:
         "https://storage.lacapitalmdp.com/2019/08/Viajeros-de-toda-sinrazon-1024x683.jpg",
@@ -1009,11 +1012,12 @@ const loadShows = () => {
       score: "1",
       theaterId: 3,
       FavoriteId: 4,
+      originPrice: 1400
     },
     {
       id: 5,
       name: "Ensayo sobre el miedo",
-      genre: "Drama",
+      genre: "Tragicomedia",
       length: "120'",
       image:
         "https://vivo.perfil.com/storage/uploads/shows/poster/175ba592d28e713b6fc33883c44967a0.jpg",
@@ -1027,6 +1031,7 @@ const loadShows = () => {
       score: "3",
       theaterId: 3,
       FavoriteId: 2,
+      originPrice: 1000
     },
     {
       id: 6,
@@ -1045,6 +1050,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 4,
       //FavoriteId: ,
+      originPrice: 1500
     },
     {
       id: 7,
@@ -1063,6 +1069,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 5,
       //FavoriteId: ,
+      originPrice: 1300
     },
     {
       id: 8,
@@ -1081,11 +1088,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 6,
       //FavoriteId: ,
+      originPrice: 1500
     },
     {
       id: 9,
       name: "Fracaso yotuve",
-      genre: "Comedia",
+      genre: "Monologo",
       length: "40 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/88/000235888.jpg",
@@ -1099,6 +1107,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 7,
       //FavoriteId: ,
+      originPrice: 1200
     },
     {
       id: 10,
@@ -1117,6 +1126,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 8,
       //FavoriteId: ,
+      originPrice: 1100
     },
     {
       id: 11,
@@ -1135,6 +1145,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 9,
       //FavoriteId: ,
+      originPrice: 1400
     },
     {
       id: 12,
@@ -1153,6 +1164,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 10,
       //FavoriteId: ,
+      originPrice: 1300
     },
     {
       id: 13,
@@ -1171,11 +1183,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 11,
       //FavoriteId: ,
+      originPrice: 1200
     },
     {
       id: 14,
       name: "Viatrix! Un payaso en la luna",
-      genre: "Comedia",
+      genre: "Ópera",
       length: "90 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/09/000243109.jpg",
@@ -1189,11 +1202,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 12,
       //FavoriteId: ,
+      originPrice: 1000
     },
     {
       id: 15,
       name: "Tamorto (Romance de Arlequín y la muerte)",
-      genre: "Danza",
+      genre: "Tragicomedia",
       length: "60 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/000166873.jpg",
@@ -1207,6 +1221,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 13,
       //FavoriteId: ,
+      originPrice: 1200
     },
     {
       id: 16,
@@ -1225,11 +1240,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 14,
       //FavoriteId: ,
+      originPrice: 1500
     },
     {
       id: 17,
       name: "La voluntad, teatro a distancia",
-      genre: "Comedia",
+      genre: "Tragedia",
       length: "70 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/59/000181359.jpg",
@@ -1243,6 +1259,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 15,
       //FavoriteId: ,
+      originPrice: 1400
     },
     {
       id: 18,
@@ -1261,6 +1278,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 16,
       //FavoriteId: ,
+      originPrice: 1500
     },
     {
       id: 19,
@@ -1279,6 +1297,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 17,
       //FavoriteId: ,
+      originPrice: 1100
     },
     {
       id: 20,
@@ -1297,6 +1316,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 18,
       //FavoriteId: ,
+      originPrice: 1200
     },
     {
       id: 21,
@@ -1315,11 +1335,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 19,
       //FavoriteId: ,
+      originPrice: 1400
     },
     {
       id: 22,
       name: "Terrenal",
-      genre: "Drama",
+      genre: "Tragedia",
       length: "90 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/33/000235133.jpg",
@@ -1333,11 +1354,12 @@ const loadShows = () => {
       //score: "",
       theaterId: 20,
       //FavoriteId: ,
+      originPrice: 1500
     },
     {
       id: 23,
       name: "Sobreviviré",
-      genre: "Comedia",
+      genre: "Musical",
       length: "55 minutos",
       image:
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/25/000244025.jpg",
@@ -1351,6 +1373,7 @@ const loadShows = () => {
       //score: "",
       theaterId: 21,
       //FavoriteId: ,
+      originPrice: 1200
     },
   ];
   try {
@@ -1370,6 +1393,7 @@ const loadShows = () => {
           //score: el.score,
           theaterId: el.theaterId,
           //FavoriteId: el.FavoriteId,
+          originPrice: el.originPrice
         },
         include: {
           model: Theaters,
@@ -1385,7 +1409,7 @@ const loadTickets = () => {
   const TicketsDb = [
     {
       id: 1,
-      price: 1500,
+      price: 1050,
       seatNumber: "2-8",
       showId: 1,
       viewerId: 1,
@@ -1394,7 +1418,7 @@ const loadTickets = () => {
     },
     {
       id: 2,
-      price: 1000,
+      price: 1200,
       seatNumber: "2-9",
       showId: 1,
       viewerId: 2,
@@ -1403,7 +1427,7 @@ const loadTickets = () => {
     },
     {
       id: 3,
-      price: 1200,
+      price: 910,
       seatNumber: "1-7",
       showId: 2,
       viewerId: 3,
@@ -1412,7 +1436,7 @@ const loadTickets = () => {
     },
     {
       id: 4,
-      price: 1200,
+      price: 1040,
       seatNumber: "2-8",
       showId: 2,
       viewerId: 2,
@@ -1421,16 +1445,16 @@ const loadTickets = () => {
     },
     {
       id: 5,
-      price: 1200,
+      price: 1170,
       seatNumber: "4-3",
       showId: 2,
-      viewerId: null,
+      viewerId: 3,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 6,
-      price: 1200,
+      price: 900,
       seatNumber: "1-5",
       showId: 3,
       viewerId: 2,
@@ -1439,7 +1463,7 @@ const loadTickets = () => {
     },
     {
       id: 7,
-      price: 1200,
+      price: 1020,
       seatNumber: "1-8",
       showId: 3,
       viewerId: 4,
@@ -1448,7 +1472,7 @@ const loadTickets = () => {
     },
     {
       id: 8,
-      price: 1200,
+      price: 1020,
       seatNumber: "4-5",
       showId: 3,
       viewerId: 3,
@@ -1457,7 +1481,7 @@ const loadTickets = () => {
     },
     {
       id: 9,
-      price: 1200,
+      price: 1120,
       seatNumber: "1-5",
       showId: 4,
       viewerId: 4,
@@ -1466,7 +1490,7 @@ const loadTickets = () => {
     },
     {
       id: 10,
-      price: 1200,
+      price: 1190,
       seatNumber: "2-3",
       showId: 4,
       viewerId: 5,
@@ -1475,7 +1499,7 @@ const loadTickets = () => {
     },
     {
       id: 11,
-      price: 1200,
+      price: 1190,
       seatNumber: "1-3",
       showId: 4,
       viewerId: 3,
@@ -1484,7 +1508,7 @@ const loadTickets = () => {
     },
     {
       id: 12,
-      price: 1200,
+      price: 750,
       seatNumber: "1-5",
       showId: 5,
       viewerId: 5,
@@ -1493,7 +1517,7 @@ const loadTickets = () => {
     },
     {
       id: 13,
-      price: 1200,
+      price: 800,
       seatNumber: "2-3",
       showId: 5,
       viewerId: 6,
@@ -1502,7 +1526,7 @@ const loadTickets = () => {
     },
     {
       id: 14,
-      price: 1200,
+      price: 800,
       seatNumber: "2-7",
       showId: 5,
       viewerId: 4,
@@ -1511,7 +1535,7 @@ const loadTickets = () => {
     },
     {
       id: 15,
-      price: 1200,
+      price: 900,
       seatNumber: "3-6",
       showId: 5,
       viewerId: 7,
@@ -1520,7 +1544,7 @@ const loadTickets = () => {
     },
     {
       id: 16,
-      price: 1200,
+      price: 1050,
       seatNumber: "1-8",
       showId: 6,
       viewerId: 6,
@@ -1547,7 +1571,7 @@ const loadTickets = () => {
     },
     {
       id: 19,
-      price: 1200,
+      price: 910,
       seatNumber: "1-6",
       showId: 7,
       viewerId: 7,
@@ -1556,7 +1580,7 @@ const loadTickets = () => {
     },
     {
       id: 20,
-      price: 1200,
+      price: 975,
       seatNumber: "1-8",
       showId: 7,
       viewerId: 8,
@@ -1565,7 +1589,7 @@ const loadTickets = () => {
     },
     {
       id: 21,
-      price: 1200,
+      price: 1170,
       seatNumber: "2-3",
       showId: 7,
       viewerId: 9,
@@ -1574,7 +1598,7 @@ const loadTickets = () => {
     },
     {
       id: 22,
-      price: 1200,
+      price: 1170,
       seatNumber: "2-6",
       showId: 7,
       viewerId: 10,
@@ -1601,7 +1625,7 @@ const loadTickets = () => {
     },
     {
       id: 25,
-      price: 1200,
+      price: 900,
       seatNumber: "2-3",
       showId: 9,
       viewerId: 9,
@@ -1610,7 +1634,7 @@ const loadTickets = () => {
     },
     {
       id: 26,
-      price: 1200,
+      price: 960,
       seatNumber: "2-6",
       showId: 9,
       viewerId: 10,
@@ -1619,7 +1643,7 @@ const loadTickets = () => {
     },
     {
       id: 27,
-      price: 1200,
+      price: 1020,
       seatNumber: "3-7",
       showId: 9,
       viewerId: 11,
@@ -1628,7 +1652,7 @@ const loadTickets = () => {
     },
     {
       id: 28,
-      price: 1200,
+      price: 825,
       seatNumber: "3-4",
       showId: 10,
       viewerId: 10,
@@ -1637,7 +1661,7 @@ const loadTickets = () => {
     },
     {
       id: 29,
-      price: 1200,
+      price: 825,
       seatNumber: "3-5",
       showId: 10,
       viewerId: 11,
@@ -1646,7 +1670,7 @@ const loadTickets = () => {
     },
     {
       id: 30,
-      price: 1200,
+      price: 980,
       seatNumber: "2-2",
       showId: 11,
       viewerId: 11,
@@ -1655,7 +1679,7 @@ const loadTickets = () => {
     },
     {
       id: 31,
-      price: 1200,
+      price: 980,
       seatNumber: "2-5",
       showId: 11,
       viewerId: 12,
@@ -1664,7 +1688,7 @@ const loadTickets = () => {
     },
     {
       id: 32,
-      price: 1200,
+      price: 1120,
       seatNumber: "3-4",
       showId: 11,
       viewerId: 13,
@@ -1673,7 +1697,7 @@ const loadTickets = () => {
     },
     {
       id: 33,
-      price: 1200,
+      price: 1260,
       seatNumber: "4-2",
       showId: 11,
       viewerId: 14,
@@ -1682,7 +1706,7 @@ const loadTickets = () => {
     },
     {
       id: 34,
-      price: 1200,
+      price: 910,
       seatNumber: "1-4",
       showId: 12,
       viewerId: 12,
@@ -1691,43 +1715,43 @@ const loadTickets = () => {
     },
     {
       id: 35,
-      price: 1200,
+      price: 910,
       seatNumber: "2-4",
       showId: 12,
-      viewerId: null,
+      viewerId: 13,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 36,
-      price: 1200,
+      price: 1040,
       seatNumber: "2-5",
       showId: 12,
-      viewerId: null,
+      viewerId: 14,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 37,
-      price: 1200,
+      price: 1105,
       seatNumber: "3-5",
       showId: 12,
-      viewerId: null,
+      viewerId: 15,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 38,
-      price: 1200,
+      price: 1105,
       seatNumber: "3-7",
       showId: 12,
-      viewerId: null,
+      viewerId: 16,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 39,
-      price: 1200,
+      price: 840,
       seatNumber: "1-3",
       showId: 13,
       viewerId: 13,
@@ -1736,34 +1760,34 @@ const loadTickets = () => {
     },
     {
       id: 40,
-      price: 1200,
+      price: 960,
       seatNumber: "2-1",
       showId: 13,
-      viewerId: null,
+      viewerId: 14,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 41,
-      price: 1200,
+      price: 960,
       seatNumber: "2-3",
       showId: 13,
-      viewerId: null,
+      viewerId: 14,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 42,
-      price: 1200,
+      price: 1020,
       seatNumber: "1-7",
       showId: 13,
-      viewerId: null,
+      viewerId: 15,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 43,
-      price: 1200,
+      price: 750,
       seatNumber: "1-3",
       showId: 14,
       viewerId: 14,
@@ -1772,43 +1796,43 @@ const loadTickets = () => {
     },
     {
       id: 44,
-      price: 1200,
+      price: 750,
       seatNumber: "1-6",
       showId: 14,
-      viewerId: null,
+      viewerId: 15,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 45,
-      price: 1200,
+      price: 850,
       seatNumber: "2-3",
       showId: 14,
-      viewerId: null,
+      viewerId: 16,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 46,
-      price: 1200,
+      price: 850,
       seatNumber: "2-7",
       showId: 14,
-      viewerId: null,
+      viewerId: 17,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 47,
-      price: 1200,
+      price: 900,
       seatNumber: "3-1",
       showId: 14,
-      viewerId: null,
+      viewerId: 18,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 48,
-      price: 1200,
+      price: 960,
       seatNumber: "1-4",
       showId: 15,
       viewerId: 15,
@@ -1817,25 +1841,25 @@ const loadTickets = () => {
     },
     {
       id: 49,
-      price: 1200,
+      price: 960,
       seatNumber: "2-3",
       showId: 15,
-      viewerId: null,
+      viewerId: 16,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 50,
-      price: 1200,
+      price: 1080,
       seatNumber: "3-6",
       showId: 15,
-      viewerId: null,
+      viewerId: 17,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 51,
-      price: 1200,
+      price: 1050,
       seatNumber: "2-3",
       showId: 16,
       viewerId: 16,
@@ -1847,7 +1871,7 @@ const loadTickets = () => {
       price: 1200,
       seatNumber: "3-5",
       showId: 16,
-      viewerId: null,
+      viewerId: 17,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1856,13 +1880,13 @@ const loadTickets = () => {
       price: 1200,
       seatNumber: "3-6",
       showId: 16,
-      viewerId: null,
+      viewerId: 17,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 54,
-      price: 1200,
+      price: 1120,
       seatNumber: "2-1",
       showId: 17,
       viewerId: 17,
@@ -1871,10 +1895,10 @@ const loadTickets = () => {
     },
     {
       id: 55,
-      price: 1200,
+      price: 1260,
       seatNumber: "3-7",
       showId: 17,
-      viewerId: null,
+      viewerId: 18,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1892,13 +1916,13 @@ const loadTickets = () => {
       price: 1200,
       seatNumber: "1-7",
       showId: 18,
-      viewerId: null,
+      viewerId: 19,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 58,
-      price: 1200,
+      price: 770,
       seatNumber: "2-4",
       showId: 19,
       viewerId: 19,
@@ -1907,34 +1931,34 @@ const loadTickets = () => {
     },
     {
       id: 59,
-      price: 1200,
+      price: 880,
       seatNumber: "2-7",
       showId: 19,
-      viewerId: null,
+      viewerId: 20,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 60,
-      price: 1200,
+      price: 880,
       seatNumber: "2-9",
       showId: 19,
-      viewerId: null,
+      viewerId: 21,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 61,
-      price: 1200,
+      price: 935,
       seatNumber: "3-5",
       showId: 19,
-      viewerId: null,
+      viewerId: 22,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 62,
-      price: 1200,
+      price: 840,
       seatNumber: "2-1",
       showId: 20,
       viewerId: 20,
@@ -1943,25 +1967,25 @@ const loadTickets = () => {
     },
     {
       id: 63,
-      price: 1200,
+      price: 900,
       seatNumber: "2-5",
       showId: 20,
-      viewerId: null,
+      viewerId: 21,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 64,
-      price: 1200,
+      price: 1020,
       seatNumber: "3-2",
       showId: 20,
-      viewerId: null,
+      viewerId: 22,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 65,
-      price: 1200,
+      price: 1050,
       seatNumber: "1-5",
       showId: 21,
       viewerId: 21,
@@ -1970,19 +1994,19 @@ const loadTickets = () => {
     },
     {
       id: 66,
-      price: 1200,
+      price: 1050,
       seatNumber: "1-7",
       showId: 21,
-      viewerId: null,
+      viewerId: 22,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 67,
-      price: 1200,
+      price: 1190,
       seatNumber: "2-3",
       showId: 21,
-      viewerId: null,
+      viewerId: 23,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2000,31 +2024,31 @@ const loadTickets = () => {
       price: 1200,
       seatNumber: "1-9",
       showId: 22,
-      viewerId: null,
+      viewerId: 23,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 70,
-      price: 1200,
+      price: 1275,
       seatNumber: "2-3",
       showId: 22,
-      viewerId: null,
+      viewerId: 24,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 71,
-      price: 1200,
+      price: 1275,
       seatNumber: "2-6",
       showId: 22,
-      viewerId: null,
+      viewerId: 24,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 72,
-      price: 1200,
+      price: 900,
       seatNumber: "2-5",
       showId: 23,
       viewerId: 23,
@@ -2033,19 +2057,19 @@ const loadTickets = () => {
     },
     {
       id: 73,
-      price: 1200,
+      price: 960,
       seatNumber: "2-7",
       showId: 23,
-      viewerId: null,
+      viewerId: 23,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
     {
       id: 74,
-      price: 1200,
+      price: 1080,
       seatNumber: "3-6",
       showId: 23,
-      viewerId: null,
+      viewerId: 24,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
