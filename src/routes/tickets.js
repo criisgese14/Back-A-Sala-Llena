@@ -74,9 +74,9 @@ router.post("/pay", async (req, res) => {
       },
     ],
     back_urls: {
-      success: "https://quizzical-colden-ae9e61.netlify.app",
-      failure: "https://quizzical-colden-ae9e61.netlify.app/feedback",
-      pending: "https://quizzical-colden-ae9e61.netlify.app/feedback",
+      success: "https://front-a-sala-llena-five.vercel.app",
+      failure: "https://front-a-sala-llena-five.vercel.app/feedback",
+      pending: "https://front-a-sala-llena-five.vercel.app/feedback",
     },
     auto_return: "approved",
   };
