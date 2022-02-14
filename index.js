@@ -1,5 +1,5 @@
 const server = require("./src/app.js");
-const {PORT} = process.env
+const { PORT } = process.env;
 const { conn } = require("./src/db.js");
 const {
   loadTheaters,
@@ -21,7 +21,7 @@ conn.sync({ force: false }).then(async () => {
   loadTickets();
   loadFavoriteViewers();
 
-  server.listen(PORT, () => {
+  server.listen(PORT || 3001, () => {
     console.log("%s listening at 3001 - Data base loaded."); // eslint-disable-line no-console
   });
 });
