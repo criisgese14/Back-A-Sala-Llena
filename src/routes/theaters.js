@@ -74,7 +74,8 @@ router.put("/:id", async (req, res) => {
         id: id,
       },
     });
-    res.send("Theater updated succesfully!");
+    res.send(changes);
+    console.log(changes);
   } catch (error) {
     console.log(error);
   }

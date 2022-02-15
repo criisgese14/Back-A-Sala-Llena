@@ -23,13 +23,10 @@ router.post("/", async (req, res, next) => {
     },
   });
 
-  console.log(viewerToReset);
-
   let mailOption = {
     from: "A Sala Llena",
     to: `${viewerToReset.email}`,
     subject: "Recupera tu contraseña",
-    // text: `Hola ${el.name} no te pierdas este show en el teatro`,
     html: `<h3>Hola ${viewerToReset.name}</h3> en el siguiente link podras recuperar tu contraseña </br>
         <a href="http://localhost:3000/resetPasswordViewer/${viewerToReset.id}" target="_blank">www.asalallena.com</a> </br>
         <h4>Sino solicitaste un cambio de contraseña, desestima este correo electronico</h4>`,
