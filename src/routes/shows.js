@@ -10,7 +10,7 @@ const { Shows } = require("../db");
 
 router.post("/", async (req, res, next) => {
   const {
-    theaterId,
+    theaterName, //requeris el nombre
     name,
     genre,
     length,
@@ -26,7 +26,7 @@ router.post("/", async (req, res, next) => {
   } = req.body;
   try {
     const addShow = await postShows(
-      theaterId,
+      theaterName,
       name,
       genre,
       length,

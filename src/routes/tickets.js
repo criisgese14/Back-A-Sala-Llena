@@ -39,8 +39,8 @@ router.post("/pay", async (req, res) => {
   const { price, seatNumber, nameShow, idViewer } = req.body;
   //console.log(req.body)
   const ticket = await Tickets.create({
-    price: 1000,
-    seatNumber: "1-12",
+    price: price,
+    seatNumber: seatNumber,
   });
 
   if (nameShow) {

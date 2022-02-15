@@ -1,6 +1,7 @@
-const { Theaters, Shows, Reviews } = require("../db");
+const { loadFavorites } = require("../../preload-Db");
+const { Theaters, Shows, Reviews, Favorites } = require("../db");
 
-const postTheatersRegistration = async (
+const postTheatersRegistration = async ( //a la hora de crear un teatro se agrega a favoritos
   name,
   CUIT,
   email,
@@ -13,6 +14,11 @@ const postTheatersRegistration = async (
   score
 ) => {
   try {
+    let newFavorite = await Favorites.findOrCreate({
+      where: {
+        nameTheater: name,
+      },
+  })
     let newTheater = await Theaters.create({
       name,
       CUIT,
@@ -25,7 +31,9 @@ const postTheatersRegistration = async (
       seatsQTY,
       score,
     });
-    return newTheater;
+    
+    console.log(newFavorite)
+    return newFavorite;
   } catch (err) {
     console.error(err);
   }

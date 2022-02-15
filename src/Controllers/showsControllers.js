@@ -1,8 +1,8 @@
-const { Shows, Tickets, Reviews, Theaters } = require("../db");
+const { Shows, Tickets, Reviews, Theaters, Favorites } = require("../db");
 const { Op } = require("sequelize");
 
 const postShows = async (
-  theaterId,
+  theaterName, //pasas el nombre del teatro
   name,
   genre,
   length,
@@ -34,10 +34,16 @@ const postShows = async (
 
     const theater = await Theaters.findOne({
       where: {
-        id: theaterId,
+        name: theaterName,
       },
     });
     await theater.addShows(newShow);
+    const favorite = await Favorites.findOne({
+      where: {
+        nameTheater: theaterName
+      }
+    })
+    await favorite.addShows(newShow)
 
     return newShow;
   } catch (err) {
