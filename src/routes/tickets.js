@@ -21,7 +21,7 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   const { price, seatNumber, nameShow, nameViewer } = req.body;
-  console.log(nameShow);
+  //console.log(req.body);
   try {
     const newTicket = await postTickets(
       price,

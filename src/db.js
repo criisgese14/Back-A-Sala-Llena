@@ -13,15 +13,9 @@ const sequelize = new Sequelize(
     // dialectOptions: {
     //   ssl: {
     //     require: true,
-<<<<<<< HEAD
-    //     rejectUnauthorized: false
-    //   }
-    // }
-=======
     //     rejectUnauthorized: false,
     //   },
     // },
->>>>>>> c1a5a6d703a0d9d14e8275985fffb4f5106d1708
   }
 );
 const basename = path.basename(__filename);

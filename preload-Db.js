@@ -247,9 +247,11 @@ const loadViewers = () => {
 const loadFavorites = () => {
   const favoritesDb = [
     {
+      id: 1,
       nameTheater: "Casa Teatro el Altillo del Sur",
     },
     {
+      id: 2,
       nameTheater: "Teatro Abasto Social Club",
     },
     {
@@ -955,7 +957,7 @@ const loadShows = () => {
       time: "21:00",
       score: "4",
       theaterId: 1,
-      FavoriteId: 2,
+      FavoriteId: 1,
       originPrice: 1500
     },
     {

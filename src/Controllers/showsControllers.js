@@ -31,19 +31,20 @@ const postShows = async (
       score,
       originPrice
     });
-
+    console.log(theaterName)
     const theater = await Theaters.findOne({
       where: {
         name: theaterName,
       },
     });
+    console.log(theater)
     await theater.addShows(newShow);
-    const favorite = await Favorites.findOne({
-      where: {
-        nameTheater: theaterName
-      }
-    })
-    await favorite.addShows(newShow)
+    // const favorite = await Favorites.findOne({
+    //   where: {
+    //     nameTheater: theaterName
+    //   }
+    // })
+    // await favorite.addShows(newShow)
 
     return newShow;
   } catch (err) {
