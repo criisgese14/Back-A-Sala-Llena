@@ -17,31 +17,30 @@ router.post("/", async (req, res, next) => {
   // Front => en Login(Viewer/Theater) => "Olvide mi contraseña" => Componente "ingrese su Email" dispatch action -
   // que envie un mail{Viewer.name, link que va a resetPassword/:id}  => componente reset password - dos inputs "password" "confirmPass"
   //action = put.Viewer => redirige a login(viewer/theater)
-  let viewerToReset = await Viewers.findAll({
+  let viewerToReset = await Viewers.findOne({
     where: {
       email: email,
     },
   });
 
   console.log(viewerToReset);
-  viewerToReset.map((el) => {
-    let mailOption = {
-      from: "A Sala Llena",
-      to: `${el.email}`,
-      subject: "Recupera tu contraseña",
-      // text: `Hola ${el.name} no te pierdas este show en el teatro`,
-      html: `<h3>Hola ${el.name}</h3> en el siguiente link podras recuperar tu contraseña </br>
-        <a>www.asalallena/resetpassword/${el.id}</a> </br>
-        <h4>Sino solicitaste un cambio de contraseña, desestima este correo electronico</h4>`,
-    };
 
-    transporter.sendMail(mailOption, (error, info) => {
-      if (error) {
-        res.status(500).send(error.message);
-      } else {
-        res.status(200).json(req.body);
-      }
-    });
+  let mailOption = {
+    from: "A Sala Llena",
+    to: `${viewerToReset.email}`,
+    subject: "Recupera tu contraseña",
+    // text: `Hola ${el.name} no te pierdas este show en el teatro`,
+    html: `<h3>Hola ${viewerToReset.name}</h3> en el siguiente link podras recuperar tu contraseña </br>
+        <a href="http://localhost:3000/resetPasswordViewer/${viewerToReset.id}" target="_blank">www.asalallena.com</a> </br>
+        <h4>Sino solicitaste un cambio de contraseña, desestima este correo electronico</h4>`,
+  };
+
+  transporter.sendMail(mailOption, (error, info) => {
+    if (error) {
+      res.status(500).send(error.message);
+    } else {
+      res.status(200).json(req.body);
+    }
   });
 });
 
