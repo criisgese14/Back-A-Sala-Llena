@@ -5,9 +5,10 @@ const shows = require("./shows");
 const theaters = require("./theaters");
 const tickets = require("./tickets");
 const viewers = require("./viewers");
-const login = require("./login")
+const login = require("./login");
 const newsletter = require("./newsletter");
-const favorites = require('./favorites')
+const resetPassword = require("./resetPassword");
+const favorites = require("./favorites");
 
 const router = Router();
 
@@ -20,6 +21,7 @@ router.use("/tickets", tickets);
 router.use("/viewers", viewers);
 router.use("/login", login);
 router.use("/newsletter", newsletter);
-router.use("/favorites", favorites)
+router.use("/resetPassword", resetPassword);
+router.use("/favorites", favorites);
 
 module.exports = router;
