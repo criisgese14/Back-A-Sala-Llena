@@ -246,22 +246,6 @@ const loadViewers = () => {
 };
 const loadFavorites = () => {
   const favoritesDb = [
-<<<<<<< HEAD
-    {
-      id: 1,
-      nameTheater: "Casa Teatro el Altillo del Sur",
-    },
-    {
-      id: 2,
-      nameTheater: "Teatro Abasto Social Club",
-    },
-    {
-      nameTheater: "Caja Magica, Centro de Artes Escenicas",
-    },
-    {
-      nameTheater: "Teatro Buenas Artes Social Club",
-    },
-=======
     { id: 1, nameTheater: "Casa Teatro el Altillo del Sur" },
     { id: 2, nameTheater: "Teatro Abasto Social Club" },
     { id: 3, nameTheater: "Caja Magica, Centro de Artes Escenicas" },
@@ -288,7 +272,6 @@ const loadFavorites = () => {
     { id: 24, nameTheater: "Teatro 25 de Mayo" },
     { id: 25, nameTheater: "Casa de la Cultura Sala Angela Loij" },
     { id: 26, nameTheater: "Teatro San Martín" },
->>>>>>> c259b006da0534aca84ea2d81625e65d7f5cfe5c
   ];
   try {
     favoritesDb.forEach(async (el) => {
@@ -996,11 +979,7 @@ const loadShows = () => {
       score: "4",
       theaterId: 1,
       FavoriteId: 1,
-<<<<<<< HEAD
-      originPrice: 1500
-=======
       originPrice: 1500,
->>>>>>> c259b006da0534aca84ea2d81625e65d7f5cfe5c
     },
     {
       id: 2,
