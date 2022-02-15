@@ -32,7 +32,7 @@ router.post("/theater", async (req, res) => {
       //   token,
       // });
 
-      res.status(200).json(`Theater logged: ${isLogged}`);
+      res.status(200).json({ isLogged });
     }
   } else {
     res.status(401).send({ error: "usuario o contraseña incorrectas" });
@@ -55,7 +55,7 @@ router.post("/viewer", async (req, res) => {
       // };
 
       let isLogged = true;
-      console.log(`Viewer logged ${isLogged}`);
+      console.log({ isLogged });
 
       // const token = jwt.sign(userForToken, "123");
       // console.log(token);
