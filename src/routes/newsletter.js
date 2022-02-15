@@ -17,6 +17,8 @@ router.post("/", async (req, res, next) => {
   // dispatch desde el front una action que sea el post newsletter
   // en el front put viewer actualizaria el isSusbcribed a true
 
+  // Favorites nombre del teatro, n
+
   let allViewers = await Viewers.findAll({
     where: {
       isSubscribed: true, // buscar si esta suscripto y que tenga al teatro que hace el post como favorito

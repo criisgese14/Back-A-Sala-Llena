@@ -246,6 +246,7 @@ const loadViewers = () => {
 };
 const loadFavorites = () => {
   const favoritesDb = [
+<<<<<<< HEAD
     {
       id: 1,
       nameTheater: "Casa Teatro el Altillo del Sur",
@@ -260,6 +261,34 @@ const loadFavorites = () => {
     {
       nameTheater: "Teatro Buenas Artes Social Club",
     },
+=======
+    { id: 1, nameTheater: "Casa Teatro el Altillo del Sur" },
+    { id: 2, nameTheater: "Teatro Abasto Social Club" },
+    { id: 3, nameTheater: "Caja Magica, Centro de Artes Escenicas" },
+    { id: 4, nameTheater: "Teatro Buenas Artes Social Club" },
+    { id: 5, nameTheater: "Cine Teatro Catamarca" },
+    { id: 6, nameTheater: "Centro Cultural Alternativo CECUAL" },
+    { id: 7, nameTheater: "Teatro de la Rosada" },
+    { id: 8, nameTheater: "Teatro de la Ciudad" },
+    { id: 9, nameTheater: "Teatro San Martín" },
+    { id: 10, nameTheater: "Teatro Italia Gualeguay" },
+    { id: 11, nameTheater: "La Mandinga Espacio Cultural" },
+    { id: 12, nameTheater: "Teatro Sociedad Española" },
+    { id: 13, nameTheater: "Teatro A.T.T.P. (Asoc. Trab. Tro Pampeano)" },
+    { id: 14, nameTheater: "Teatro Víctor María Caceres" },
+    { id: 15, nameTheater: "Teatro Independencia" },
+    { id: 16, nameTheater: "Anfitearo Manuel Antonio Ramírez" },
+    { id: 17, nameTheater: "Teatro El Viento" },
+    { id: 18, nameTheater: "Teatro de la Barda" },
+    { id: 19, nameTheater: "Teatro Provincial de Salta" },
+    { id: 20, nameTheater: "Cine Teatro Municipal" },
+    { id: 21, nameTheater: "Teatro Jorge A. Laffue" },
+    { id: 22, nameTheater: "Teatro Lazaro Urdin" },
+    { id: 23, nameTheater: "Teatro Español Reconquista" },
+    { id: 24, nameTheater: "Teatro 25 de Mayo" },
+    { id: 25, nameTheater: "Casa de la Cultura Sala Angela Loij" },
+    { id: 26, nameTheater: "Teatro San Martín" },
+>>>>>>> c259b006da0534aca84ea2d81625e65d7f5cfe5c
   ];
   try {
     favoritesDb.forEach(async (el) => {
@@ -366,14 +395,14 @@ const loadTheaters = () => {
       email: "jmjmartin36@gmail.com",
       password: "123456",
       province: "Catamarca",
-      adress: "San Martín 515 (San Fernando del Valle de Catamarca, Capital (Catamarca))",
-      image:
-        "http://occidentes.com.ar/imgs/lugares/cine-teatro-catamarca.jpg",
+      adress:
+        "San Martín 515 (San Fernando del Valle de Catamarca, Capital (Catamarca))",
+      image: "http://occidentes.com.ar/imgs/lugares/cine-teatro-catamarca.jpg",
       phoneNumber: "3834439129",
       seatsQTY: 80,
       score: "3",
     },
-        // {
+    // {
     //   name: "Teatro Urbano Girardi",
     //   CUIT: "28-34576314-4",
     //   email: "urbanoGirardi@gmail.com",
@@ -392,7 +421,8 @@ const loadTheaters = () => {
       email: "prensacecual@gmail.com",
       password: "123456",
       province: "Chaco",
-      adress: "Santa Maria de Oro 471 - CP 3500 (Resistencia, San Fernando (Chaco))",
+      adress:
+        "Santa Maria de Oro 471 - CP 3500 (Resistencia, San Fernando (Chaco))",
       image:
         "http://agenciafoco.com.ar/media/cache/resolve/quality/uploads/noticias/5f875e3f5fdcb725903996.jpg",
       phoneNumber: "3624452165",
@@ -412,7 +442,7 @@ const loadTheaters = () => {
     //   seatsQTY: 300,
     //   score: "2",
     // },
-        {
+    {
       name: "Teatro de la Rosada",
       CUIT: "24-20432981-3",
       email: "elteatrodelarosada@hotmail.com",
@@ -425,7 +455,7 @@ const loadTheaters = () => {
       seatsQTY: 80,
       score: "4",
     },
-        // {
+    // {
     //   name: "Teatro Astra",
     //   CUIT: "22-28343290-9",
     //   email: "hola@labibliotecadeastra.com",
@@ -438,20 +468,21 @@ const loadTheaters = () => {
     //   seatsQTY: 300,
     //   score: "5",
     // },
-        {
+    {
       name: "Teatro de la Ciudad",
       CUIT: "24-35932589-6",
       email: "teatro_delaciudad@hotmail.com",
       password: "123456",
       province: "Corrientes",
-      adress: "Pasaje Villanueva 1470 - Piso PB - CP 3400 (Corrientes, Capital (Corrientes))",
+      adress:
+        "Pasaje Villanueva 1470 - Piso PB - CP 3400 (Corrientes, Capital (Corrientes))",
       image:
         "https://infodelnea.com.ar/wp/wp-content/uploads/2021/09/teatrode-la-ciudad.jpg",
       phoneNumber: "3794452187",
       seatsQTY: 80,
       score: "3",
     },
-        // {
+    // {
     //   name: "Teatro Juan de Vera",
     //   CUIT: "27-37432059-3",
     //   email: "teatrovera@gmail.com",
@@ -464,7 +495,7 @@ const loadTheaters = () => {
     //   seatsQTY: 700,
     //   score: "4",
     // },
-        {
+    {
       name: "Teatro San Martín",
       CUIT: "25-38419290-9",
       email: "libertador.consultas@gmail.com",
@@ -476,8 +507,8 @@ const loadTheaters = () => {
       phoneNumber: "3514332312",
       seatsQTY: 80,
       score: "5",
-    },    
-        // {
+    },
+    // {
     //   name: "Teatro Griego",
     //   CUIT: "25-27890134-8",
     //   email: "areateatromunicipal@gmail.com",
@@ -490,20 +521,21 @@ const loadTheaters = () => {
     //   seatsQTY: 2000,
     //   score: "4",
     // },
-        {
+    {
       name: "Teatro Italia Gualeguay",
       CUIT: "27-39209432-5",
       email: "teatroitaliagualeguay@gmail.com",
       password: "123456",
       province: "Entre Rios",
-      adress: "Islas Malvinas 131 - CP 2840 (Gualeguay, Gualeguay (Entre Ríos))",
+      adress:
+        "Islas Malvinas 131 - CP 2840 (Gualeguay, Gualeguay (Entre Ríos))",
       image:
         "https://lh3.googleusercontent.com/p/AF1QipMaj5c6EUHxaYBrkzVPGh2rPhHoSvS5L6hOLOEo=s1600-w400",
       phoneNumber: "42669426698",
       seatsQTY: 80,
       score: "3",
     },
-        // {
+    // {
     //   name: "Teatro 3 de Febrero",
     //   CUIT: "32-30278431-4",
     //   email: "teatromunicipalparana@hotmail.com",
@@ -516,7 +548,7 @@ const loadTheaters = () => {
     //   seatsQTY: 800,
     //   score: "2",
     // },
-        {
+    {
       name: "La Mandinga Espacio Cultural",
       CUIT: "25-36721894-2",
       email: "murgalamandinga@hotmail.com",
@@ -529,7 +561,7 @@ const loadTheaters = () => {
       seatsQTY: 80,
       score: "4",
     },
-        // {
+    // {
     //   name: "Teatro de la Ciudad",
     //   CUIT: "37-38421905-8",
     //   email: "teatrodelaciudad@hotmail.com",
@@ -542,20 +574,21 @@ const loadTheaters = () => {
     //   seatsQTY: 350,
     //   score: "2",
     // },
-        {
+    {
       name: "Teatro Sociedad Española",
       CUIT: "24-35489120-5",
       email: "socespjujuy@hotmail.com",
       password: "123456",
       province: "Jujuy",
-      adress: "Gral. Belgrano 110 - CP 4600 (San Salvador de Jujuy, Dr. Manuel Belgrano (Jujuy))",
+      adress:
+        "Gral. Belgrano 110 - CP 4600 (San Salvador de Jujuy, Dr. Manuel Belgrano (Jujuy))",
       image:
         "https://us.cdn.eltribuno.com/082015/1487088849481.jpg?cw=600&ch=365",
       phoneNumber: "3884235128",
       seatsQTY: 80,
       score: "5",
     },
-        // {
+    // {
     //   name: "Teatro Mitre",
     //   CUIT: "20-29542892-5",
     //   email: "prensamitrejujuy@gmail.com",
@@ -568,20 +601,19 @@ const loadTheaters = () => {
     //   seatsQTY: 500,
     //   score: "5",
     // },
-        {
+    {
       name: "Teatro A.T.T.P. (Asoc. Trab. Tro Pampeano)",
       CUIT: "15-28432904-2",
       email: "teatroattp@gmail.com",
       password: "123456",
       province: "La Pampa",
       adress: "Bolivia 1286 - CP 6300 (Santa Rosa, Capital (La Pampa))",
-      image:
-        "http://photos.wikimapia.org/p/00/06/61/12/80_big.jpg",
+      image: "http://photos.wikimapia.org/p/00/06/61/12/80_big.jpg",
       phoneNumber: "2954419306",
       seatsQTY: 80,
       score: "1",
     },
-        // {
+    // {
     //   name: "Teatro Español",
     //   CUIT: "21-20431894-7",
     //   email: "murgalamandinga@hotmail.com",
@@ -594,11 +626,11 @@ const loadTheaters = () => {
     //   seatsQTY: 120,
     //   score: "3",
     // },
-        {
+    {
       name: "Teatro Víctor María Caceres",
-      CUIT: "16-24893290-1", 
+      CUIT: "16-24893290-1",
       email: "teatrovictormariacaceres@gmail.com",
-      password: "123456", 
+      password: "123456",
       province: "La Rioja",
       adress: "Av. Ortiz de Ocampo 1700 - CP 5300 ",
       image:
@@ -607,50 +639,50 @@ const loadTheaters = () => {
       seatsQTY: 80,
       score: "4",
     },
-        // {
+    // {
     //   name: "Espacio 73",
     //   CUIT: "18-28439217-4",
     //   email: "espacio_73@gmail.com",
     //   password: "123456",
     //   province: "La Rioja",
     //   adress: "Catamarca 73 - CP 5300",
-    //   image: 
+    //   image:
     //     "https://cdn-sp.radionacional.com.ar/wp-content/uploads/2017/05/Espacio-73.jpg",
     //   phoneNumber: "3804468432",
     //   seatsQTY: 250,
     //   score: "2"
     // },
-        {
+    {
       name: "Teatro Independencia",
       CUIT: "20-23589320-2",
       email: "teatroindependencia@mendoza.gov.ar",
       password: "123456",
       province: "Mendoza",
       adress: "Chile 1754 - CP 5500 (Mendoza, Capital (Mendoza)",
-      image: 
+      image:
         "https://www.mendozadenoche.com.ar/wp-content/uploads/2016/07/Independencia1.jpg",
       phoneNumber: "2614380644",
-      seatsQTY: 	80,
-      score: "4"
+      seatsQTY: 80,
+      score: "4",
     },
-        // {
+    // {
     //   name: "Teatro Leonardo Favio",
     //   CUIT: "25-35892431-6"
     //   email: "teatrochacras@gmail.com",
     //   password: "123456",
     //   province: "Mendoza",
     //   adress: "Viamonte 5453 - CP 5505 (Lujan de Cuyo, Lujan de Cuyo (Mendoza)",
-    //   image: 
+    //   image:
     //     "http://www.correveidile.com.ar/uploads/el-teatro-leonardo-favio.jpeg",
     //   phoneNumber: "2615546591",
     //   seatsQTY: 250,
     //   score: "5",
     // },
-        {
+    {
       name: "Anfitearo Manuel Antonio Ramírez",
       CUIT: "24-27432890-3",
       email: "christianurbieta@hotmail.com",
-      password: "123456", 
+      password: "123456",
       province: "Misiones",
       adress: "Av. Costanera 1778 - CP 3300",
       image: "https://mapio.net/images-p/22798835.jpg",
@@ -658,7 +690,7 @@ const loadTheaters = () => {
       seatsQTY: 80,
       score: "4",
     },
-        // {
+    // {
     //   name: "Sala Tempo",
     //   CUIT: "20-23789431-5",
     //   email: "asociacionrecuperar@gmail.com",
@@ -670,19 +702,20 @@ const loadTheaters = () => {
     //   seatsQTY:200,
     //   score: "2"
     //},
-        {
+    {
       name: "Teatro El Viento",
       CUIT: "27-31290432-4",
       email: "equipodelteatro@gmail.com",
       password: "123456",
       province: "Neuquen",
       adress: "Juan B. Justo 648 - CP 8300 (Neuquen, Confluencia (Neuquén))",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9uRem0LyVYgLRM50twHyy8Ikde-xa_B2lWmr9hv5cI6-KJjFngatg9c4Nkmo8eg_2zU8&usqp=CAU",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9uRem0LyVYgLRM50twHyy8Ikde-xa_B2lWmr9hv5cI6-KJjFngatg9c4Nkmo8eg_2zU8&usqp=CAU",
       phoneNumber: "2994485628",
       seatsQTY: 80,
-      score: "3"
+      score: "3",
     },
-        // {
+    // {
     //   name: "Teatro San José",
     //   CUIT: "22-28423929-5",
     //   email: "culturasmandes@neuquen.gov.ar",
@@ -694,14 +727,15 @@ const loadTheaters = () => {
     //   seatsQTY:100,
     //   score: "4"
     //},
-     {
+    {
       name: "Teatro de la Barda",
       CUIT: "22-31488219-1",
       email: "teatrodelabarda@hotmail.com",
       password: "123456",
       province: "Rio Negro",
       adress: "Sarmiento 473 - CP 8138",
-      image: "https://scontent.flpg1-1.fna.fbcdn.net/v/t1.18169-9/21430_172773132906852_1947363324_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=qPqeW8ydghwAX-2uUXc&_nc_oc=AQl_asXEY5Lnl1JtYF4SgMDuLWFpRDCoZHXgimPqHulU3V7zEXqNOtnjDBDewYrqq2o&_nc_ht=scontent.flpg1-1.fna&oh=00_AT_AXht5s4TqU0KCaFYQwzUjkgnpUNAEu-lBzaOZ3wcZDA&oe=622C20DE",
+      image:
+        "https://scontent.flpg1-1.fna.fbcdn.net/v/t1.18169-9/21430_172773132906852_1947363324_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=qPqeW8ydghwAX-2uUXc&_nc_oc=AQl_asXEY5Lnl1JtYF4SgMDuLWFpRDCoZHXgimPqHulU3V7zEXqNOtnjDBDewYrqq2o&_nc_ht=scontent.flpg1-1.fna&oh=00_AT_AXht5s4TqU0KCaFYQwzUjkgnpUNAEu-lBzaOZ3wcZDA&oe=622C20DE",
       phoneNumber: "029812827212",
       seatsQTY: 80,
       score: "3",
@@ -718,17 +752,18 @@ const loadTheaters = () => {
     //   seatsQTY:100,
     //   score: "4",
     //},
-       {
+    {
       name: "Teatro Provincial de Salta",
       CUIT: "27-32489124-8",
       email: "teatroprovincial@culturasalta.gov.ar",
       password: "123456",
       province: "Salta",
       adress: "Zuviria 70 - CP 4400 (Salta, Capital (Salta))",
-      image: "https://prensa.salta.gob.ar/public/images/noticias/teatro_provincial_286399479.jpg",
+      image:
+        "https://prensa.salta.gob.ar/public/images/noticias/teatro_provincial_286399479.jpg",
       phoneNumber: "3874224515",
       seatsQTY: 80,
-      score: "3"
+      score: "3",
     },
     //    {
     //   name: "Teatro de la Fundación Salta",
@@ -742,18 +777,19 @@ const loadTheaters = () => {
     //   seatsQTY: 340,
     //   score: "2"
     // },
-      {
+    {
       name: "Cine Teatro Municipal",
-      CUIT: "19-31478219-8", 
+      CUIT: "19-31478219-8",
       email: "andreaterranova@gmail.com",
-      password:"123456",
+      password: "123456",
       province: "San Juan",
       adress: "Bartolome Mitre 1 - CP 5402",
-      image: "https://elsoldesanjuan.com.ar/wp-content/uploads/2019/05/teatro-municipal-san-juan.jpg",
+      image:
+        "https://elsoldesanjuan.com.ar/wp-content/uploads/2019/05/teatro-municipal-san-juan.jpg",
       phoneNumber: "2644213295",
       seatsQTY: 80,
-      score: "4"
-    }, 
+      score: "4",
+    },
     // {
     //   name: "Instituto Goethe",
     //   CUIT: "27-28432904-7",
@@ -770,14 +806,15 @@ const loadTheaters = () => {
       name: "Teatro Jorge A. Laffue",
       CUIT: "20-38431903-5",
       email: "teatrojorgealaffue@gmail.com",
-      password:"123456",
+      password: "123456",
       province: "San Luis",
       adress: "9 de Julio 1431 - CP 5700 (San Luis, La Capital (San Luis))",
-      image: "http://www.gruposlots.com.ar/upload/servicios/shows/amerian/3.jpg",
+      image:
+        "http://www.gruposlots.com.ar/upload/servicios/shows/amerian/3.jpg",
       phoneNumber: "2664442222",
       seatsQTY: 80,
       score: "3",
-    }, 
+    },
     // {
     //   name: "Teatro Independiente Mercedes T.I.M.",
     //   CUIT: "21-32894210-0",
@@ -790,18 +827,19 @@ const loadTheaters = () => {
     //   seatsQTY:180,
     //   score: "2",
     // },
-      {
+    {
       name: "Teatro Lazaro Urdin",
       CUIT: "24-28432904-7",
       email: "josesilva@argentina.com",
-      password:"123456",
+      password: "123456",
       province: "Santa Cruz",
       adress: "Savedra y Rivadavia - Piso 1° - CP 9015 ",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Cine_Teatro_L%C3%A1zaro_Urd%C3%ADn_desde_las_butacas.jpg/600px-Cine_Teatro_L%C3%A1zaro_Urd%C3%ADn_desde_las_butacas.jpg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Cine_Teatro_L%C3%A1zaro_Urd%C3%ADn_desde_las_butacas.jpg/600px-Cine_Teatro_L%C3%A1zaro_Urd%C3%ADn_desde_las_butacas.jpg",
       phoneNumber: "2974990048",
       seatsQTY: 80,
-      score: "4" 
-    }, 
+      score: "4",
+    },
     // {
     //   name: "Cacho Camino",
     //   CUIT: "20-21784390-9",
@@ -818,13 +856,14 @@ const loadTheaters = () => {
       name: "Teatro Español Reconquista",
       CUIT: "23-28431903-5",
       email: "teatroespanol.reconquista26@gmail.com",
-      password:"123456",
+      password: "123456",
       province: "Santa Fe",
-      adress: "Habegger 545 - CP 3560 (Reconquista, General Obligado (Santa Fe))",
+      adress:
+        "Habegger 545 - CP 3560 (Reconquista, General Obligado (Santa Fe))",
       image: "https://argentinafirm.com/photo/28240.jpg",
       phoneNumber: "3482421286",
       seatsQTY: 80,
-      score: "1"
+      score: "1",
     },
     // {
     //   name: "Teatro Municipal Dante Aligieri",
@@ -838,19 +877,20 @@ const loadTheaters = () => {
     //   seatsQTY: "380",
     //   score: "4"
     // },
-      {
+    {
       name: "Teatro 25 de Mayo",
       CUIT: "24-32782942",
       email: "contacto@teatro25.com.ar",
-      password:"123456",
+      password: "123456",
       province: "Santiago del Estero",
       adress: "Avellaneda 387 - CP 4200",
-      image: "http://www.santiagotur.com/wp-content/uploads/2018/05/3435666666.jpg",
+      image:
+        "http://www.santiagotur.com/wp-content/uploads/2018/05/3435666666.jpg",
       phoneNumber: "3854224515",
       seatsQTY: 80,
-      score: "3"
-    }, 
-    // { 
+      score: "3",
+    },
+    // {
     //   name: "DIVAS Diversidad Valiente Santiagueña",
     //   CUIT: "25-34783902-9",
     //   email: "divasantiagodelestero@gmail.com",
@@ -862,19 +902,21 @@ const loadTheaters = () => {
     //   seatsQTY:70,
     //   score: "2"
     // },
-    { 
+    {
       name: "Casa de la Cultura Sala Angela Loij",
       CUIT: "23-30429531-6",
       email: "cultura@riogrande.gov.ar",
-      password:"123456",
+      password: "123456",
       province: "Tierra del Fuego",
-      adress: "Sebastián Elcano 50 - CP 9420 (Rio Grande, Rio Grande (Tierra del Fuego)",
-      image: "https://cloudfront-us-east-1.images.arcpublishing.com/eluniverso/ZYPHYRSPM5ELLDM7LY4EBMM4KY.png",
+      adress:
+        "Sebastián Elcano 50 - CP 9420 (Rio Grande, Rio Grande (Tierra del Fuego)",
+      image:
+        "https://cloudfront-us-east-1.images.arcpublishing.com/eluniverso/ZYPHYRSPM5ELLDM7LY4EBMM4KY.png",
       phoneNumber: "2964436208",
       seatsQTY: 80,
-      score: "5"
+      score: "5",
     },
-    // { 
+    // {
     //   name: "Tierra de Teatro",
     //   CUIT: "26-25843902-5",
     //   email: "tierradeteatro@yahoo.com.ar",
@@ -886,19 +928,21 @@ const loadTheaters = () => {
     //   seatsQTY:80,
     //   score: "3"
     // },
-    { 
+    {
       name: "Teatro San Martín",
       CUIT: "23-24783892-8",
       email: "teatrosanmartin.tuc@gmail.com",
-      password:"123456",
+      password: "123456",
       province: "Tucuman",
-      adress: "Av. Sarmiento 601 - CP 4000 (San Miguel de Tucuman, Capital (Tucumán)",
-      image: "https://enteculturaltucuman.gob.ar/gestor/wp-content/uploads/2016/12/313015267WHJEkD_ph.jpg",
+      adress:
+        "Av. Sarmiento 601 - CP 4000 (San Miguel de Tucuman, Capital (Tucumán)",
+      image:
+        "https://enteculturaltucuman.gob.ar/gestor/wp-content/uploads/2016/12/313015267WHJEkD_ph.jpg",
       phoneNumber: "0381 4522579",
       seatsQTY: 80,
-      score: "5"
+      score: "5",
     },
-    // { 
+    // {
     //   name: "Teatro en la Luna",
     //   CUIT: "28-20437821-2",
     //   email: "carajoteatro@yahoo.com.ar",
@@ -909,13 +953,7 @@ const loadTheaters = () => {
     //   phoneNumber: "3814010351",
     //   seatsQTY:150,
     //   score: "4"
-    // },         
-  
-
-    
-    
-  
-
+    // },
   ];
   try {
     TheatersDb.forEach(async (el) => {
@@ -958,7 +996,11 @@ const loadShows = () => {
       score: "4",
       theaterId: 1,
       FavoriteId: 1,
+<<<<<<< HEAD
       originPrice: 1500
+=======
+      originPrice: 1500,
+>>>>>>> c259b006da0534aca84ea2d81625e65d7f5cfe5c
     },
     {
       id: 2,
@@ -976,8 +1018,8 @@ const loadShows = () => {
       time: "22:00",
       score: "3",
       theaterId: 2,
-      FavoriteId: 1,
-      originPrice: 1300
+      FavoriteId: 2,
+      originPrice: 1300,
     },
     {
       id: 3,
@@ -993,9 +1035,9 @@ const loadShows = () => {
       date: "2022-8-12",
       time: "21:00",
       score: "5",
-      theaterId: 2,
+      theaterId: 3,
       FavoriteId: 3,
-      originPrice: 1200
+      originPrice: 1200,
     },
     {
       id: 4,
@@ -1012,9 +1054,9 @@ const loadShows = () => {
       date: "2022-8-12",
       time: "21:00",
       score: "1",
-      theaterId: 3,
+      theaterId: 4,
       FavoriteId: 4,
-      originPrice: 1400
+      originPrice: 1400,
     },
     {
       id: 5,
@@ -1031,9 +1073,9 @@ const loadShows = () => {
       date: "2022-04-22",
       time: "22:00",
       score: "3",
-      theaterId: 3,
-      FavoriteId: 2,
-      originPrice: 1000
+      theaterId: 5,
+      FavoriteId: 5,
+      originPrice: 1000,
     },
     {
       id: 6,
@@ -1049,10 +1091,10 @@ const loadShows = () => {
       rated: "Apta para mayores de 18 años",
       date: "2022-02-15",
       time: "20:00",
-      //score: "",
-      theaterId: 4,
-      //FavoriteId: ,
-      originPrice: 1500
+      score: 4,
+      theaterId: 6,
+      FavoriteId: 6,
+      originPrice: 1500,
     },
     {
       id: 7,
@@ -1069,9 +1111,9 @@ const loadShows = () => {
       date: "2022-02-14",
       time: "21:00",
       //score: "",
-      theaterId: 5,
-      //FavoriteId: ,
-      originPrice: 1300
+      theaterId: 7,
+      FavoriteId: 7,
+      originPrice: 1300,
     },
     {
       id: 8,
@@ -1088,9 +1130,9 @@ const loadShows = () => {
       date: "2022-02-13",
       time: "19:30",
       //score: "",
-      theaterId: 6,
-      //FavoriteId: ,
-      originPrice: 1500
+      theaterId: 8,
+      FavoriteId: 8,
+      originPrice: 1500,
     },
     {
       id: 9,
@@ -1107,9 +1149,9 @@ const loadShows = () => {
       date: "2022-02-14",
       time: "21:00",
       //score: "",
-      theaterId: 7,
-      //FavoriteId: ,
-      originPrice: 1200
+      theaterId: 9,
+      FavoriteId: 9,
+      originPrice: 1200,
     },
     {
       id: 10,
@@ -1126,9 +1168,9 @@ const loadShows = () => {
       date: "2022-02-21",
       time: "21:00",
       //score: "",
-      theaterId: 8,
-      //FavoriteId: ,
-      originPrice: 1100
+      theaterId: 9,
+      FavoriteId: 9,
+      originPrice: 1100,
     },
     {
       id: 11,
@@ -1145,9 +1187,9 @@ const loadShows = () => {
       date: "2022-02-13",
       time: "20:00",
       //score: "",
-      theaterId: 9,
-      //FavoriteId: ,
-      originPrice: 1400
+      theaterId: 10,
+      FavoriteId: 10,
+      originPrice: 1400,
     },
     {
       id: 12,
@@ -1164,9 +1206,9 @@ const loadShows = () => {
       date: "2022-02-14",
       time: "18:00",
       //score: "",
-      theaterId: 10,
-      //FavoriteId: ,
-      originPrice: 1300
+      theaterId: 11,
+      FavoriteId: 11,
+      originPrice: 1300,
     },
     {
       id: 13,
@@ -1183,9 +1225,9 @@ const loadShows = () => {
       date: "2022-02-14",
       time: "22:00",
       //score: "",
-      theaterId: 11,
-      //FavoriteId: ,
-      originPrice: 1200
+      theaterId: 12,
+      FavoriteId: 12,
+      originPrice: 1200,
     },
     {
       id: 14,
@@ -1202,9 +1244,9 @@ const loadShows = () => {
       date: "2022-02-15",
       time: "21:30",
       //score: "",
-      theaterId: 12,
-      //FavoriteId: ,
-      originPrice: 1000
+      theaterId: 13,
+      FavoriteId: 13,
+      originPrice: 1000,
     },
     {
       id: 15,
@@ -1221,9 +1263,9 @@ const loadShows = () => {
       date: "2022-02-18",
       time: "22:00",
       //score: "",
-      theaterId: 13,
-      //FavoriteId: ,
-      originPrice: 1200
+      theaterId: 14,
+      FavoriteId: 14,
+      originPrice: 1200,
     },
     {
       id: 16,
@@ -1240,9 +1282,9 @@ const loadShows = () => {
       date: "2022-02-19",
       time: "20:30",
       //score: "",
-      theaterId: 14,
-      //FavoriteId: ,
-      originPrice: 1500
+      theaterId: 15,
+      FavoriteId: 15,
+      originPrice: 1500,
     },
     {
       id: 17,
@@ -1259,9 +1301,9 @@ const loadShows = () => {
       date: "2022-02-19",
       time: "19:00",
       //score: "",
-      theaterId: 15,
-      //FavoriteId: ,
-      originPrice: 1400
+      theaterId: 16,
+      FavoriteId: 16,
+      originPrice: 1400,
     },
     {
       id: 18,
@@ -1278,9 +1320,9 @@ const loadShows = () => {
       date: "2022-02-16",
       time: "20:30",
       //score: "",
-      theaterId: 16,
-      //FavoriteId: ,
-      originPrice: 1500
+      theaterId: 17,
+      FavoriteId: 17,
+      originPrice: 1500,
     },
     {
       id: 19,
@@ -1297,9 +1339,9 @@ const loadShows = () => {
       date: "2022-02-21",
       time: "21:00",
       //score: "",
-      theaterId: 17,
-      //FavoriteId: ,
-      originPrice: 1100
+      theaterId: 18,
+      FavoriteId: 18,
+      originPrice: 1100,
     },
     {
       id: 20,
@@ -1316,9 +1358,9 @@ const loadShows = () => {
       date: "2022-02-17",
       time: "12:00",
       //score: "",
-      theaterId: 18,
-      //FavoriteId: ,
-      originPrice: 1200
+      theaterId: 19,
+      FavoriteId: 19,
+      originPrice: 1200,
     },
     {
       id: 21,
@@ -1335,9 +1377,9 @@ const loadShows = () => {
       date: "2022-02-16",
       time: "21:00",
       //score: "",
-      theaterId: 19,
-      //FavoriteId: ,
-      originPrice: 1400
+      theaterId: 20,
+      FavoriteId: 20,
+      originPrice: 1400,
     },
     {
       id: 22,
@@ -1354,9 +1396,9 @@ const loadShows = () => {
       date: "2022-02-17",
       time: "20:00",
       //score: "",
-      theaterId: 20,
-      //FavoriteId: ,
-      originPrice: 1500
+      theaterId: 21,
+      FavoriteId: 21,
+      originPrice: 1500,
     },
     {
       id: 23,
@@ -1373,9 +1415,9 @@ const loadShows = () => {
       date: "2022-02-15",
       time: "22:00",
       //score: "",
-      theaterId: 21,
-      //FavoriteId: ,
-      originPrice: 1200
+      theaterId: 22,
+      FavoriteId: 22,
+      originPrice: 1200,
     },
   ];
   try {
@@ -1394,8 +1436,8 @@ const loadShows = () => {
           time: el.time,
           //score: el.score,
           theaterId: el.theaterId,
-          //FavoriteId: el.FavoriteId,
-          originPrice: el.originPrice
+          FavoriteId: el.FavoriteId,
+          originPrice: el.originPrice,
         },
         include: {
           model: Theaters,
@@ -2075,7 +2117,6 @@ const loadTickets = () => {
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
-
   ];
   try {
     TicketsDb.forEach(async (el) => {
