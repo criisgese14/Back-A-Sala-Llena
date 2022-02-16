@@ -36,43 +36,26 @@ router.post("/", async (req, res, next) => {
 });
 
 router.post("/pay", async (req, res) => {
-  const { price, seatNumber, nameShow, idViewer } = req.body;
-  //console.log(req.body)
-  const ticket = await Tickets.create({
-    price: price,
-    seatNumber: seatNumber,
-  });
-
-  if (nameShow) {
-    let show = await Shows.findOne({
-      where: {
-        name: nameShow,
-      },
-    });
-    show.addTickets(ticket);
-    console.log(show);
-  }
+  console.log(req.body)
+  const { seatNumber, showId, idViewer } = req.body;
+  const allTickets = await Tickets.findAll({
+    where: {
+      showId: showId,
+    }
+  })
+  const tickets = allTickets.filter( t => seatNumber.find(s => s === t.seatNumber))
+  console.log(tickets)
+  
   if (idViewer) {
     let viewer = await Viewers.findOne({
       where: {
         id: idViewer,
       },
     });
-    viewer.addTickets(ticket);
+    viewer.addTickets(tickets);
   }
-  //console.log(ticket)
-  // Crea un objeto de preferencia
   let preference = {
-    items: [
-      {
-        title: ticket.seatNumber,
-        unit_price: ticket.price,
-        quantity: 1,
-        // title: 'Hola',
-        // unit_price: 1500,
-        // quantity: 1,
-      },
-    ],
+    items: [],
     back_urls: {
       success: "https://quizzical-colden-ae9e61.netlify.app",
       failure: "https://quizzical-colden-ae9e61.netlify.app/feedback",
@@ -80,6 +63,15 @@ router.post("/pay", async (req, res) => {
     },
     auto_return: "approved",
   };
+ 
+  tickets?.forEach(e => {
+    preference.items.push({
+      title: e.seatNumber,
+      unit_price: e.price,
+      quantity: 1
+    })
+  });
+  console.log(preference.items)
   const response = await mercadopago.preferences.create(preference);
   console.log(response.body);
   const preferenceId = response.body.sandbox_init_point;
