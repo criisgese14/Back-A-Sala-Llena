@@ -2179,6 +2179,7 @@ const loadTickets = () => {
           seatNumber: el.seatNumber,
           showId: el.showId,
           viewerId: el.viewerId,
+          sold: el.sold
           //   nameShow: el.nameShow,
           //   nameViewer: el.nameViewer,
         },
