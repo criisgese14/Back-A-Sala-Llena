@@ -63,5 +63,9 @@ module.exports = (sequelize) => {
     originPrice: {
       type: DataTypes.INTEGER,
     },
+    released: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   });
 };

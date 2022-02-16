@@ -1,7 +1,30 @@
-// const jwt = require("jsonwebtoken");
-// const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const router = require("express").Router();
 const { Viewers, Theaters } = require("../db");
+const { OAuth2Client } = require('google-auth-library');
+
+const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID)
+
+const users = [];
+
+function upsert(array, item) {
+  const i = array.findIndex(el => el.item === item.email);
+  if (i > -1) array[i] = item;
+  else array.push(item);
+}
+
+router.post('/google', async (req, res) => {
+  const { token } = req.body;
+  const ticket = await client.verifyIdToken({
+    idToken: token,
+    audience: process.env.CLIENT_ID,
+  });
+  const { name, email, picture } = ticket.getPayload();
+  //console.log(ticket.getPayload());
+  upsert(users, { name, email, picture })
+  res.status(201).send({ name, email, picture })
+})
+
 
 router.post("/theater", async (req, res) => {
   const { email, password } = req.body;
@@ -13,24 +36,21 @@ router.post("/theater", async (req, res) => {
   });
   if (theater) {
     if (password === theater.password && email === theater.email) {
-      // const userForToken = {
-      //   id: theater.id,
-      //   email: theater.email,
-      // };
-
-      let isLogged = true;
-      console.log(`Logeado ${isLogged}`);
-      // const token = jwt.sign(userForToken, "123");
-      // console.log(token);
+      const userForToken = {
+        id: theater.id,
+        email: theater.email,
+      };
+      const token = jwt.sign(userForToken, "123");
+      console.log(token);
       console.log(theater.password);
       console.log(theater.email);
-      // res.send({
-      //   id: theater.id,
-      //   password: theater.password,
-      //   email: theater.email,
-      //   isTheater: theater.isTheater,
-      //   token,
-      // });
+      res.send({
+        id: theater.id,
+        password: theater.password,
+        email: theater.email,
+        isTheater: theater.isTheater,
+        token,
+      });
 
       res.status(200).json({ isLogged });
     }
@@ -49,23 +69,19 @@ router.post("/viewer", async (req, res) => {
   });
   if (viewer) {
     if (password === viewer.password && email === viewer.email) {
-      // const userForToken = {
-      //   id: viewer.id,
-      //   email: viewer.email,
-      // };
-
-      let isLogged = true;
-      console.log({ isLogged });
-
-      // const token = jwt.sign(userForToken, "123");
-      // console.log(token);
-      // res.send({
-      //   id: viewer.id,
-      //   password: viewer.password,
-      //   email: viewer.email,
-      //   isViewer: viewer.isViewer,
-      //   token,
-      // });
+      const userForToken = {
+        id: viewer.id,
+        email: viewer.email,
+      };
+      const token = jwt.sign(userForToken, "123");
+      console.log(token);
+      res.send({
+        id: viewer.id,
+        password: viewer.password,
+        email: viewer.email,
+        isViewer: viewer.isViewer,
+        token,
+      });
       res.status(200).json(`Viewer logged: ${isLogged}`);
     }
   } else {
