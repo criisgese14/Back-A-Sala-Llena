@@ -3,18 +3,19 @@ const router = require("express").Router();
 const { Viewers, Theaters } = require("../db");
 const { OAuth2Client } = require('google-auth-library');
 
-const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID)
+const client = new OAuth2Client("506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.apps.googleusercontent.com")
 
-const users = [];
+//const users = [];
 
-function upsert(array, item) {
-  const i = array.findIndex(el => el.item === item.email);
-  if (i > -1) array[i] = item;
-  else array.push(item);
-}
+// function upsert(array, item) {
+//   const i = array.findIndex(el => el.item === item.email);
+//   if (i > -1) array[i] = item;
+//   else array.push(item);
+// }
 
 router.post('/google', async (req, res) => {
   const { token } = req.body;
+  console.log('token',token)
   const ticket = await client.verifyIdToken({
     idToken: token,
     audience: process.env.CLIENT_ID,
