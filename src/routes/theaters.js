@@ -21,6 +21,7 @@ router.post("/", async (req, res, next) => {
     seatsQTY,
     score,
   } = req.body;
+  console.log("esto llega del body ", req.body)
   try {
     const addTheater = await postTheatersRegistration(
       name,

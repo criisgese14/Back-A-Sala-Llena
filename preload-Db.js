@@ -271,13 +271,11 @@ const loadFavorites = () => {
     { id: 23, nameTheater: "Teatro Español Reconquista" },
     { id: 24, nameTheater: "Teatro 25 de Mayo" },
     { id: 25, nameTheater: "Casa de la Cultura Sala Angela Loij" },
-    { id: 26, nameTheater: "Teatro San Martín" },
   ];
   try {
     favoritesDb.forEach(async (el) => {
       await Favorites.findOrCreate({
         where: {
-          id: el.id,
           nameTheater: el.nameTheater,
         },
       });
@@ -938,8 +936,8 @@ const loadTheaters = () => {
     //   seatsQTY:150,
     //   score: "4"
     // },
-  ];
-  try {
+    ];
+    try {
     TheatersDb.forEach(async (el) => {
       await Theaters.findOrCreate({
         where: {

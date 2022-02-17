@@ -31,8 +31,8 @@ const postTheatersRegistration = async ( //a la hora de crear un teatro se agreg
       seatsQTY,
       score,
     });
-    
-    console.log(newFavorite)
+    console.log("este es el teatro creado ", newTheater)
+    console.log("teatro agreado a favoritos ", newFavorite)
     return newFavorite;
   } catch (err) {
     console.error(err);
