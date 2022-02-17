@@ -13,7 +13,7 @@ const client = new OAuth2Client("506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.a
 //   else array.push(item);
 // }
 
-router.post('/google', async (req, res) => {
+router.post('/google/viewer', async (req, res) => {
   const { token } = req.body;
   console.log('token',token)
   const ticket = await client.verifyIdToken({
@@ -28,16 +28,27 @@ router.post('/google', async (req, res) => {
       email,
     }
   })
-  if (!user) {
-    const theater = await Theaters.findOne({
-      where: {
-        email
-      }
-    })
-    theater ? res.status(201).send({ id: theater.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
-  }
-  res.status(201).send({ id: user.id, token })
+  
+  user ? res.status(201).send({ id: user.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
 
+})
+
+router.post('/google/theater', async (req, res) => {
+  const { token } = req.body;
+  console.log('token',token)
+  const ticket = await client.verifyIdToken({
+    idToken: token,
+    audience: process.env.CLIENT_ID,
+  });
+  const { email } = ticket.getPayload();
+  //console.log(ticket.getPayload());
+  //upsert(users, { name, email, picture })
+  const theater = await Theaters.findOne({
+    where:{
+      email,
+    }
+  })
+    theater ? res.status(201).send({ id: theater.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
 })
 
 router.post("/theater", async (req, res) => {
