@@ -277,6 +277,7 @@ const loadFavorites = () => {
     favoritesDb.forEach(async (el) => {
       await Favorites.findOrCreate({
         where: {
+          id: el.id,
           nameTheater: el.nameTheater,
         },
       });
@@ -1426,6 +1427,7 @@ const loadShows = () => {
     ShowsDb.forEach(async (el) => {
       await Shows.findOrCreate({
         where: {
+          id: el.id,
           name: el.name,
           genre: el.genre,
           length: el.length,
@@ -2265,6 +2267,7 @@ const loadReviews = () => {
     ReviewsDb.forEach(async (el) => {
       await Reviews.findOrCreate({
         where: {
+          id: el.id,
           review: el.review,
           theaterScore: el.theaterScore,
           showScore: el.showScore,

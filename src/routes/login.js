@@ -19,12 +19,25 @@ router.post('/google', async (req, res) => {
     idToken: token,
     audience: process.env.CLIENT_ID,
   });
-  const { name, email, picture } = ticket.getPayload();
+  const { email } = ticket.getPayload();
   //console.log(ticket.getPayload());
-  upsert(users, { name, email, picture })
-  res.status(201).send({ name, email, picture })
-})
+  //upsert(users, { name, email, picture })
+  const user = await Viewers.findOne({
+    where:{
+      email,
+    }
+  })
+  if (!user) {
+    const theater = await Theaters.findOne({
+      where: {
+        email
+      }
+    })
+    theater ? res.status(201).send({ id: theater.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
+  }
+  res.status(201).send({ id: user.id, token })
 
+})
 
 router.post("/theater", async (req, res) => {
   const { email, password } = req.body;

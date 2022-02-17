@@ -10,8 +10,8 @@ const router = Router();
   const mercadopago = require("mercadopago");
   // Agrega credenciales
   mercadopago.configure({
-    // access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
-    access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
+    access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
+    //access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
   });
 
 router.get("/", async (req, res, next) => {
@@ -36,7 +36,8 @@ router.post("/", async (req, res, next) => {
 });
 
 router.post("/pay", async (req, res) => {
-  console.log(req.body)
+
+  //console.log(req.body)
   const { seatNumber, showId, idViewer } = req.body;
   const allTickets = await Tickets.findAll({
     where: {
@@ -44,7 +45,6 @@ router.post("/pay", async (req, res) => {
     }
   })
   const tickets = allTickets.filter( t => seatNumber.find(s => s === t.seatNumber))
-  console.log(tickets)
   
   if (idViewer) {
     let viewer = await Viewers.findOne({
@@ -57,13 +57,13 @@ router.post("/pay", async (req, res) => {
   let preference = {
     items: [],
     back_urls: {
-      success: "https://quizzical-colden-ae9e61.netlify.app",
-      failure: "https://quizzical-colden-ae9e61.netlify.app/feedback",
-      pending: "https://quizzical-colden-ae9e61.netlify.app/feedback",
+      success: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
+      failure: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
+      pending: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
     },
     auto_return: "approved",
   };
- 
+    
   tickets?.forEach(e => {
     preference.items.push({
       title: e.seatNumber,
@@ -71,18 +71,49 @@ router.post("/pay", async (req, res) => {
       quantity: 1
     })
   });
-  console.log(preference.items)
+  //console.log(preference.items)
   const response = await mercadopago.preferences.create(preference);
-  console.log(response.body);
+  //console.log(response.body);
   const preferenceId = response.body.sandbox_init_point;
   res.send(preferenceId);
 });
 
-router.get("/feedback", function (req, res) {
+router.get("/finish/:showId/:idViewer/:seatNumber", async function (req, res) {
+  console.log("esto viene por params ", req.params)
+  console.log("esto viene por query ", req.query)
+
+  const { status } = req.query
+  
+  const { showId, seatNumber } = req.params
+  
+  const array = seatNumber.split(",")
+
+  if(status === "approved"){
+    const show = await Shows.findOne({ //busco el show
+      where: {
+        id : showId
+      }
+    })
+    const asientos = show.seatsAvailable // me guardo los asientos que figuran disponibles
+    const actualizacion = asientos?.filter( el => { // los comparo con los que voy a comprar y los saco del array
+      if (array.indexOf(el) < 0) return el
+    });
+  
+    const updateShow = show.dataValues // entro a los datos del show
+    for (let clave in updateShow){
+      if (clave === "seatsAvailable"){
+        updateShow[clave] = actualizacion // si encuentro la key de los asientos disponibles, lo reemplazo por el nuevo array
+      }
+    }
+
+    await Shows.update(updateShow, { // actualizo el show
+      where: {
+        id: showId,
+      },
+    })
+  }
   res.json({
-    Payment: req.query.payment_id,
     Status: req.query.status,
-    MerchantOrder: req.query.merchant_order_id,
   });
 });
 
