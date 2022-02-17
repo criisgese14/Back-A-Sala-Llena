@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { Viewers, Theaters } = require("../db");
 const { OAuth2Client } = require('google-auth-library');
 
-const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID)
+const client = new OAuth2Client("506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.apps.googleusercontent.com")
 
 const users = [];
 
@@ -15,14 +15,26 @@ function upsert(array, item) {
 
 router.post('/google', async (req, res) => {
   const { token } = req.body;
+  console.log('token',token)
   const ticket = await client.verifyIdToken({
     idToken: token,
     audience: process.env.CLIENT_ID,
   });
-  const { name, email, picture } = ticket.getPayload();
-  //console.log(ticket.getPayload());
-  upsert(users, { name, email, picture })
-  res.status(201).send({ name, email, picture })
+  const { email } = ticket.getPayload();
+  console.log(ticket.getPayload());
+  //upsert(users, { name, email, picture })
+  const user = await Viewers.findOne({
+      where: {email}
+  })
+
+  if(user){
+    res.status(201).send({ 
+      id: user.id,
+      token })
+  }else{
+    res.status(401).send({ error: "usuario o contraseña incorrectas" });
+  }
+  
 })
 
 
