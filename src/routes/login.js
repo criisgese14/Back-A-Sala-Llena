@@ -1,4 +1,5 @@
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcrypt");
 const router = require("express").Router();
 const { Viewers, Theaters } = require("../db");
 const { OAuth2Client } = require('google-auth-library');
@@ -53,7 +54,7 @@ router.post('/google/theater', async (req, res) => {
 
 router.post("/theater", async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  console.log('teatro',req.body);
   const theater = await Theaters.findOne({
     where: {
       email,
@@ -61,21 +62,24 @@ router.post("/theater", async (req, res) => {
   });
   if (theater) {
     if (password === theater.password && email === theater.email) {
-      const userForToken = {
-        id: theater.id,
-        email: theater.email,
-      };
-      const token = jwt.sign(userForToken, "123");
-      console.log(token);
-      console.log(theater.password);
-      console.log(theater.email);
-      res.send({
-        id: theater.id,
-        password: theater.password,
-        email: theater.email,
-        isTheater: theater.isTheater,
-        token,
-      });
+      // const userForToken = {
+      //   id: theater.id,
+      //   email: theater.email,
+      // };
+
+      let isLogged = true;
+      // console.log(Logeado ${isLogged});
+      // const token = jwt.sign(userForToken, "123");
+      // console.log(token);
+      // console.log(theater.password);
+      // console.log(theater.email);
+      // res.send({
+      //   id: theater.id,
+      //   password: theater.password,
+      //   email: theater.email,
+      //   isTheater: theater.isTheater,
+      //   token,
+      // });
 
       res.status(200).json({ isLogged });
     }
@@ -94,20 +98,24 @@ router.post("/viewer", async (req, res) => {
   });
   if (viewer) {
     if (password === viewer.password && email === viewer.email) {
-      const userForToken = {
-        id: viewer.id,
-        email: viewer.email,
-      };
-      const token = jwt.sign(userForToken, "123");
-      console.log(token);
-      res.send({
-        id: viewer.id,
-        password: viewer.password,
-        email: viewer.email,
-        isViewer: viewer.isViewer,
-        token,
-      });
-      res.status(200).json(`Viewer logged: ${isLogged}`);
+      // const userForToken = {
+      //   id: viewer.id,
+      //   email: viewer.email,
+      // };
+
+      let isLogged = true;
+      // console.log(Viewer logged{isLogged});
+
+      // const token = jwt.sign(userForToken, "123");
+      //console.log(token);
+      // res.send({
+      //   id: viewer.id,
+      //   password: viewer.password,
+      //   email: viewer.email,
+      //   isViewer: viewer.isViewer,
+      //   token,
+      // });
+      res.status(200).json({ isLogged });
     }
   } else {
     res.status(401).send({ error: "usuario o contraseña incorrectas" });
