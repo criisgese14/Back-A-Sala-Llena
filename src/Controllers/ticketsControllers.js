@@ -1,5 +1,7 @@
 const { Viewers, Shows, Tickets, Reviews } = require("../db");
 
+const api = require("../../db.json")
+
 const postTickets = async (price, seatNumber, nameShow, idViewer) => {
   //console.log(nameShow)
   //console.log('hola')
@@ -31,12 +33,19 @@ const postTickets = async (price, seatNumber, nameShow, idViewer) => {
   }
 };
 
-const getAllTickets = async () => await Tickets.findAll({
+const getAllTickets = async () => {
+  const allTickets = await Tickets.findAll({
   include: [{
     model: Shows
   },{
     model: Viewers
   }]
 });
+  if (!allTickets.length) {
+    const allTicketsdb = await Tickets.bulkCreate(api.tickets);
+    return allTicketsdb;
+  }
+  return allTickets;
+}
 
 module.exports = { postTickets, getAllTickets };

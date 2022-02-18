@@ -1,6 +1,8 @@
 const { Shows, Tickets, Reviews, Theaters, Favorites } = require("../db");
 const { Op } = require("sequelize");
 
+const api = require("../../db.json")
+
 const postShows = async (
   theaterName, //pasas el nombre del teatro
   name,
@@ -52,17 +54,23 @@ const postShows = async (
   }
 };
 
-const getAllShows = async () =>
-  await Shows.findAll({
-    include: [
-      {
-        model: Theaters,
-      },
-      {
-        model: Tickets,
-      },
-    ],
+const getAllShows = async () => {
+  //console.log("esto es api.shows ", api.shows)
+  const allShows = await Shows.findAll({
+    include: [{
+      model: Theaters,
+    }, {
+      model: Tickets,
+    }],
   });
+
+  if (!allShows.length) {
+    const allShowsdb = await Shows.bulkCreate(api.shows)
+    return allShowsdb
+  }
+  //console.log(allShows)
+  return allShows;
+}
 
 const getShowByName = async (name) => {
   try {

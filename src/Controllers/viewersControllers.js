@@ -1,4 +1,5 @@
-const { Viewers, Shows, Tickets, Reviews, Favorites } = require("../db");
+const { Viewers, Tickets,Favorites } = require("../db");
+const api = require("../../db.json")
 
 const postViewersRegistration = async (
   name,
@@ -23,18 +24,28 @@ const postViewersRegistration = async (
   }
 };
 
-const getAllViewers = async () =>
-  await Viewers.findAll({
-    include: [
-      {
-        model: Tickets,
-      },
-      {
-        model: Favorites,
-      },
-    ],
-  });
+const getAllViewers = async () =>{
+  try {
+    const allViewers = await Viewers.findAll({
+      include: [
+        {
+          model: Tickets,
+        },
+        {
+          model: Favorites,
+        },
+      ],
+    });
 
+    if(!allViewers.length) {
+      const allViewersdb = await Viewers.bulkCreate(api.usuarios)
+      return allViewersdb
+    }
+    return allViewers
+  } catch (error) {
+    console.log(error)
+  }
+}
 const getViewersById = async (id) => {
   try {
     let viewerID = await Viewers.findByPk(id, {

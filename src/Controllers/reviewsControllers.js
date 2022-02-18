@@ -1,5 +1,7 @@
 const { Reviews, Viewers, Shows, Theaters } = require("../db");
 
+const api = require("../../db.json")
+
 const postReviews = async (
   review,
   theaterScore,
@@ -48,7 +50,8 @@ const postReviews = async (
   }
 };
 
-const getAllReviews = async () => await Reviews.findAll({
+const getAllReviews = async () => {
+  const allReviews = await Reviews.findAll({
   include: [{
     model: Theaters
   },
@@ -59,5 +62,10 @@ const getAllReviews = async () => await Reviews.findAll({
   model: Viewers
 }]
 });
-
+  if(!allReviews.length){ 
+    const allReviewsdb = await Reviews.bulkCreate(api.reviews)
+    return allReviewsdb
+  }
+  return allReviews
+}
 module.exports = { postReviews, getAllReviews };
