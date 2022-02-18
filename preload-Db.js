@@ -1425,7 +1425,7 @@ const loadShows = () => {
     ShowsDb.forEach(async (el) => {
       await Shows.findOrCreate({
         where: {
-          id: el.id,
+          //id: el.id,
           name: el.name,
           genre: el.genre,
           length: el.length,

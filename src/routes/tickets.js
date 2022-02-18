@@ -57,9 +57,9 @@ router.post("/pay", async (req, res) => {
   let preference = {
     items: [],
     back_urls: {
-      success: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
-      failure: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
-      pending: `http://localhost:3000/showDetail/${showId}/${idViewer}/${seatNumber}`,
+      success: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      failure: `http://localhost:3000/ticket/finish/showDetail/${showId}/${idViewer}/${seatNumber}`,
+      pending: `http://localhost:3000/ticket/finish/showDetail/${showId}/${idViewer}/${seatNumber}`,
     },
     auto_return: "approved",
   };

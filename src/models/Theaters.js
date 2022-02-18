@@ -62,10 +62,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    seatsQTY: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     score: {
       type: DataTypes.ENUM("1", "2", "3", "4", "5"),
     },
