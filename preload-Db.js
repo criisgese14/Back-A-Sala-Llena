@@ -2294,6 +2294,108 @@ const loadReviews = () => {
   }
 };
 
+// {
+//   "id": 24,
+//   "name": "ART",
+//   "genre": "Comedia",
+//   "length": "90 min",
+//   "image":
+//   "https://www.multiteatro.com.ar/img/obras/272-foto-sm.jpg",
+//   "summary":
+//   "Serge, Marc e Ivan son amigos desde siempre. La compra de un cuadro blanco, hace tambalear los valores que creían compartir, ¿Cuánto conocemos, en realidad, a nuestros mejores amigos? En la historia de esta amistad ninguno volverá a ser el de antes, aunque entre amigos siempre queda lugar para el perdón y, tal vez, para un nuevo comienzo.",
+//   "ticketsQty": 4,
+//   "seatsAvailable": ["1-5","2-8", "2-9", "3-7"],
+//   "rated": "Apta para mayores de 13 años",
+//   "date": "2022-02-24",
+//   "time": "20:30",
+//   "score": "4",
+//   "theaterId": 1,
+//   "FavoriteId": 1,
+//   "originPrice": 1400,
+//   "released": false
+// },
+// {
+//   "id": 25,
+//   "name": "Brujas",
+//   "genre": "Comedia",
+//   "length": "80 min",
+//   "image":
+//   "https://www.multiteatro.com.ar/img/obras/269-foto-sm.jpg",
+//   "summary":
+//   "Una historia de cinco ex-compañeras de un colegio religioso que se juntan después de mucho tiempo para cenar en la casa de una de ellas y se desata una noche imperdible.",
+//   "ticketsQty": 3,
+//   "seatsAvailable": ["1-8","2-3", "2-4"],
+//   "rated": "Apta para mayores de 13 años",
+//   "date": "2022-02-25",
+//   "time": "18:30",
+//   "score": "4",
+//   "theaterId": 1,
+//   "FavoriteId": 1,
+//   "originPrice": 1200,
+//   "released": false
+// },
+// {
+//   "id": 26,
+//   "name": "Tito",
+//   "genre": "Drama",
+//   "length": "100 min",
+//   "image":
+//   "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/tito.jpg",
+//   "summary":
+//   "Serge, Marc e Ivan son amigos desde siempre. La compra de un cuadro blanco, hace tambalear los valores que creían compartir, ¿Cuánto conocemos, en realidad, a nuestros mejores amigos? En la historia de esta amistad ninguno volverá a ser el de antes, aunque entre amigos siempre queda lugar para el perdón y, tal vez, para un nuevo comienzo.",
+//   "ticketsQty": 4,
+//   "seatsAvailable": ["1-5","2-8", "2-9", "3-7"],
+//   "rated": "Apta para mayores de 13 años",
+//   "date": "2022-02-24",
+//   "time": "20:30",
+//   "score": "4",
+//   "theaterId": 1,
+//   "FavoriteId": 1,
+//   "originPrice": 1400,
+//   "released": false
+// },
+// {
+//   "id": 27,
+//   "name": "ART",
+//   "genre": "Comedia",
+//   "length": "90 min",
+//   "image":
+//   "https://www.multiteatro.com.ar/img/obras/272-foto-sm.jpg",
+//   "summary":
+//   "Serge, Marc e Ivan son amigos desde siempre. La compra de un cuadro blanco, hace tambalear los valores que creían compartir, ¿Cuánto conocemos, en realidad, a nuestros mejores amigos? En la historia de esta amistad ninguno volverá a ser el de antes, aunque entre amigos siempre queda lugar para el perdón y, tal vez, para un nuevo comienzo.",
+//   "ticketsQty": 4,
+//   "seatsAvailable": ["1-5","2-8", "2-9", "3-7"],
+//   "rated": "Apta para mayores de 13 años",
+//   "date": "2022-02-24",
+//   "time": "20:30",
+//   "score": "4",
+//   "theaterId": 1,
+//   "FavoriteId": 1,
+//   "originPrice": 1400,
+//   "released": false
+// },
+// {
+//   "id": 28,
+//   "name": "ART",
+//   "genre": "Comedia",
+//   "length": "90 min",
+//   "image":
+//   "https://www.multiteatro.com.ar/img/obras/272-foto-sm.jpg",
+//   "summary":
+//   "Serge, Marc e Ivan son amigos desde siempre. La compra de un cuadro blanco, hace tambalear los valores que creían compartir, ¿Cuánto conocemos, en realidad, a nuestros mejores amigos? En la historia de esta amistad ninguno volverá a ser el de antes, aunque entre amigos siempre queda lugar para el perdón y, tal vez, para un nuevo comienzo.",
+//   "ticketsQty": 4,
+//   "seatsAvailable": ["1-5","2-8", "2-9", "3-7"],
+//   "rated": "Apta para mayores de 13 años",
+//   "date": "2022-02-24",
+//   "time": "20:30",
+//   "score": "4",
+//   "theaterId": 1,
+//   "FavoriteId": 1,
+//   "originPrice": 1400,
+//   "released": false
+// }
+
+
 module.exports = {
   loadTheaters,
   loadViewers,
