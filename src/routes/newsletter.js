@@ -39,19 +39,18 @@ router.post("/", async (req, res, next) => {
 
   // console.log(allFavorites.dataValues.shows);
   // console.log(allViewers);
-  allViewers.map((viewers) => {
-    allFavorites.map((fav) => {
-      console.log(fav.shows);
-
+  allViewers?.map((viewers) => {
+    allFavorites?.map((fav) => {
       let mailOption = {
         from: "A Sala Llena",
         to: `${viewers.email}`,
-        subject: "Test",
-        // text: `Hola ${el.name} no te pierdas este show en el teatro`,
-        html: `<h3>Hola ${viewers.name}</h3> <br/> <h5>No te pierdas <b>"${fav.shows[0].name}"</b> en el teatro ${fav.nameTheater}</h5> <br/>
-        <h5>Tenes 24hs para adquirir tus entradas en <b>www.asalallena.com</b></h5> 
-        </br> <img  src=${fav.shows[0].image}/> `,
+        subject: "Hay una nueva obra en tu teatro favorito",
+        html: `<h3>Hola ${viewers.name}</h3> <br/> 
+          <h4>${fav.nameTheater} acaba de publicar una obra</h4> <br/>
+          <h4>Entra a este link para ver mas informacion</h4> <br/>
 
+          <a href="http://localhost:3000" target="_blank">www.asalallena.com</a> </br>
+         `,
         // attachments: [
         //   {
         //     filename: "image.png",
