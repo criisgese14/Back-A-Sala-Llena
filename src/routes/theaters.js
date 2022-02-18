@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { Theaters } = require("../db");
+const { Theaters, Shows, Reviews, Favorites } = require("../db");
 
 const {
   postTheatersRegistration,
@@ -85,11 +85,32 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
+
+    await Reviews.destroy({
+      where: {
+        theaterId: id,
+      }
+    })
+
+    await Shows.destroy({
+      where: {
+        theaterId: id,
+      }
+    })
+
+    await Favorites.destroy({
+      where: {
+        id: id,
+      }
+
+    })
+
     await Theaters.destroy({
       where: {
         id: id,
       },
     });
+    
     res.send("Theater deleted succesfully");
   } catch (error) {
     console.log(error);

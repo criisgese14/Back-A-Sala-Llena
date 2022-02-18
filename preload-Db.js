@@ -949,7 +949,7 @@ const loadTheaters = () => {
           adress: el.adress,
           image: el.image,
           phoneNumber: el.phoneNumber,
-          seatsQTY: el.seatsQTY,
+          //seatsQTY: el.seatsQTY,
           score: el.score,
         },
       });
