@@ -13,7 +13,7 @@ const postViewersRegistration = async (
       name,
       email,
       password,
-      image,
+      image: image !== '' ? image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwu1xab-FP5z_TqMTXJVTC3mSQDrsVGuSpSkuIkSd4AUFZ5QSoiQYkFJ6JSRmj-0CBBI&usqp=CAU",
       province,
     });
     console.log(Viewers);

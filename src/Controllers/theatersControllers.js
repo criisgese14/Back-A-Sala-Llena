@@ -26,7 +26,7 @@ const postTheatersRegistration = async ( //a la hora de crear un teatro se agreg
       password,
       province,
       adress,
-      image,
+      image: image !== '' ? image : "https://us.123rf.com/450wm/pinkcandy/pinkcandy1512/pinkcandy151200027/50002583-siga-el-clavo-rojo-silla-en-un-teatro-gen%C3%A9rica.jpg?ver=6",
       phoneNumber,
       seatsQTY,
       score,
