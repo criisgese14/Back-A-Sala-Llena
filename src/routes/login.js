@@ -54,7 +54,7 @@ router.post('/google/theater', async (req, res) => {
 
 router.post("/theater", async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  console.log('teatro',req.body);
   const theater = await Theaters.findOne({
     where: {
       email,
@@ -107,7 +107,7 @@ router.post("/viewer", async (req, res) => {
       // console.log(Viewer logged{isLogged});
 
       // const token = jwt.sign(userForToken, "123");
-      console.log(token);
+      //console.log(token);
       // res.send({
       //   id: viewer.id,
       //   password: viewer.password,
