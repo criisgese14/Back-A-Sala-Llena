@@ -5,7 +5,7 @@ const {
   getAllViewers,
   getViewersById,
 } = require("../Controllers/viewersControllers");
-const { Viewers } = require("../db");
+const { Viewers, Reviews } = require("../db");
 
 router.post("/", async (req, res, next) => {
   const { name, email, password, image, province } = req.body;
@@ -68,6 +68,13 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
+
+    await Reviews.destroy({
+      where: {
+        viewerId: id,
+      }
+    })
+
     await Viewers.destroy({
       where: {
         id: id,
