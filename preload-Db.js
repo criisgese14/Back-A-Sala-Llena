@@ -936,8 +936,8 @@ const loadTheaters = () => {
     //   seatsQTY:150,
     //   score: "4"
     // },
-    ];
-    try {
+  ];
+  try {
     TheatersDb.forEach(async (el) => {
       await Theaters.findOrCreate({
         where: {
@@ -949,7 +949,7 @@ const loadTheaters = () => {
           adress: el.adress,
           image: el.image,
           phoneNumber: el.phoneNumber,
-          seatsQTY: el.seatsQTY,
+          // seatsQTY: el.seatsQTY,
           score: el.score,
         },
       });
@@ -1460,7 +1460,7 @@ const loadTickets = () => {
       seatNumber: "2-8",
       showId: 1,
       viewerId: 1,
-      sold: true
+      sold: true,
       // nameShow: "Las penas saben nadar",
       // nameViewer: "Tita",
     },
@@ -1470,7 +1470,7 @@ const loadTickets = () => {
       seatNumber: "2-9",
       showId: 1,
       viewerId: 2,
-      sold: true
+      sold: true,
       // nameShow: "Dos Mujeres",
       // nameViewer: "Pepe",
     },
@@ -1480,7 +1480,7 @@ const loadTickets = () => {
       seatNumber: "1-7",
       showId: 2,
       viewerId: 3,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1490,7 +1490,7 @@ const loadTickets = () => {
       seatNumber: "2-8",
       showId: 2,
       viewerId: 2,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1500,7 +1500,7 @@ const loadTickets = () => {
       seatNumber: "4-3",
       showId: 2,
       viewerId: 3,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1510,7 +1510,7 @@ const loadTickets = () => {
       seatNumber: "1-5",
       showId: 3,
       viewerId: 2,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1520,7 +1520,7 @@ const loadTickets = () => {
       seatNumber: "1-8",
       showId: 3,
       viewerId: 4,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1530,7 +1530,7 @@ const loadTickets = () => {
       seatNumber: "4-5",
       showId: 3,
       viewerId: 3,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1540,7 +1540,7 @@ const loadTickets = () => {
       seatNumber: "1-5",
       showId: 4,
       viewerId: 4,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1550,7 +1550,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 4,
       viewerId: 5,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1560,7 +1560,7 @@ const loadTickets = () => {
       seatNumber: "1-3",
       showId: 4,
       viewerId: 3,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1570,7 +1570,7 @@ const loadTickets = () => {
       seatNumber: "1-5",
       showId: 5,
       viewerId: 5,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1580,7 +1580,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 5,
       viewerId: 6,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1590,7 +1590,7 @@ const loadTickets = () => {
       seatNumber: "2-7",
       showId: 5,
       viewerId: 4,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1600,7 +1600,7 @@ const loadTickets = () => {
       seatNumber: "3-6",
       showId: 5,
       viewerId: 7,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1610,7 +1610,7 @@ const loadTickets = () => {
       seatNumber: "1-8",
       showId: 6,
       viewerId: 6,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1620,7 +1620,7 @@ const loadTickets = () => {
       seatNumber: "2-6",
       showId: 6,
       viewerId: 7,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1630,7 +1630,7 @@ const loadTickets = () => {
       seatNumber: "2-7",
       showId: 6,
       viewerId: 8,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1640,7 +1640,7 @@ const loadTickets = () => {
       seatNumber: "1-6",
       showId: 7,
       viewerId: 7,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1650,7 +1650,7 @@ const loadTickets = () => {
       seatNumber: "1-8",
       showId: 7,
       viewerId: 8,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1660,7 +1660,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 7,
       viewerId: 9,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1670,7 +1670,7 @@ const loadTickets = () => {
       seatNumber: "2-6",
       showId: 7,
       viewerId: 10,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1680,7 +1680,7 @@ const loadTickets = () => {
       seatNumber: "1-8",
       showId: 8,
       viewerId: 8,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1690,7 +1690,7 @@ const loadTickets = () => {
       seatNumber: "1-9",
       showId: 8,
       viewerId: 9,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1700,7 +1700,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 9,
       viewerId: 9,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1710,7 +1710,7 @@ const loadTickets = () => {
       seatNumber: "2-6",
       showId: 9,
       viewerId: 10,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1720,7 +1720,7 @@ const loadTickets = () => {
       seatNumber: "3-7",
       showId: 9,
       viewerId: 11,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1730,7 +1730,7 @@ const loadTickets = () => {
       seatNumber: "3-4",
       showId: 10,
       viewerId: 10,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1740,7 +1740,7 @@ const loadTickets = () => {
       seatNumber: "3-5",
       showId: 10,
       viewerId: 11,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1750,7 +1750,7 @@ const loadTickets = () => {
       seatNumber: "2-2",
       showId: 11,
       viewerId: 11,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1760,7 +1760,7 @@ const loadTickets = () => {
       seatNumber: "2-5",
       showId: 11,
       viewerId: 12,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1770,7 +1770,7 @@ const loadTickets = () => {
       seatNumber: "3-4",
       showId: 11,
       viewerId: 13,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1780,7 +1780,7 @@ const loadTickets = () => {
       seatNumber: "4-2",
       showId: 11,
       viewerId: 14,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1790,7 +1790,7 @@ const loadTickets = () => {
       seatNumber: "1-4",
       showId: 12,
       viewerId: 12,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1800,7 +1800,7 @@ const loadTickets = () => {
       seatNumber: "2-4",
       showId: 12,
       viewerId: 13,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1810,7 +1810,7 @@ const loadTickets = () => {
       seatNumber: "2-5",
       showId: 12,
       viewerId: 14,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1820,7 +1820,7 @@ const loadTickets = () => {
       seatNumber: "3-5",
       showId: 12,
       viewerId: 15,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1830,7 +1830,7 @@ const loadTickets = () => {
       seatNumber: "3-7",
       showId: 12,
       viewerId: 16,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1840,7 +1840,7 @@ const loadTickets = () => {
       seatNumber: "1-3",
       showId: 13,
       viewerId: 13,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1850,7 +1850,7 @@ const loadTickets = () => {
       seatNumber: "2-1",
       showId: 13,
       viewerId: 14,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1860,7 +1860,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 13,
       viewerId: 14,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1870,7 +1870,7 @@ const loadTickets = () => {
       seatNumber: "1-7",
       showId: 13,
       viewerId: 15,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1880,7 +1880,7 @@ const loadTickets = () => {
       seatNumber: "1-3",
       showId: 14,
       viewerId: 14,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1890,7 +1890,7 @@ const loadTickets = () => {
       seatNumber: "1-6",
       showId: 14,
       viewerId: 15,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1900,7 +1900,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 14,
       viewerId: 16,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1910,7 +1910,7 @@ const loadTickets = () => {
       seatNumber: "2-7",
       showId: 14,
       viewerId: 17,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1920,7 +1920,7 @@ const loadTickets = () => {
       seatNumber: "3-1",
       showId: 14,
       viewerId: 18,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1930,7 +1930,7 @@ const loadTickets = () => {
       seatNumber: "1-4",
       showId: 15,
       viewerId: 15,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1940,7 +1940,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 15,
       viewerId: 16,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1950,7 +1950,7 @@ const loadTickets = () => {
       seatNumber: "3-6",
       showId: 15,
       viewerId: 17,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1960,7 +1960,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 16,
       viewerId: 16,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1970,7 +1970,7 @@ const loadTickets = () => {
       seatNumber: "3-5",
       showId: 16,
       viewerId: 17,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1980,7 +1980,7 @@ const loadTickets = () => {
       seatNumber: "3-6",
       showId: 16,
       viewerId: 17,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -1990,7 +1990,7 @@ const loadTickets = () => {
       seatNumber: "2-1",
       showId: 17,
       viewerId: 17,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2000,7 +2000,7 @@ const loadTickets = () => {
       seatNumber: "3-7",
       showId: 17,
       viewerId: 18,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2010,7 +2010,7 @@ const loadTickets = () => {
       seatNumber: "1-5",
       showId: 18,
       viewerId: 18,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2020,7 +2020,7 @@ const loadTickets = () => {
       seatNumber: "1-7",
       showId: 18,
       viewerId: 19,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2030,7 +2030,7 @@ const loadTickets = () => {
       seatNumber: "2-4",
       showId: 19,
       viewerId: 19,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2040,7 +2040,7 @@ const loadTickets = () => {
       seatNumber: "2-7",
       showId: 19,
       viewerId: 20,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2050,7 +2050,7 @@ const loadTickets = () => {
       seatNumber: "2-9",
       showId: 19,
       viewerId: 21,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2060,7 +2060,7 @@ const loadTickets = () => {
       seatNumber: "3-5",
       showId: 19,
       viewerId: 22,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2070,7 +2070,7 @@ const loadTickets = () => {
       seatNumber: "2-1",
       showId: 20,
       viewerId: 20,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2080,7 +2080,7 @@ const loadTickets = () => {
       seatNumber: "2-5",
       showId: 20,
       viewerId: 21,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2090,7 +2090,7 @@ const loadTickets = () => {
       seatNumber: "3-2",
       showId: 20,
       viewerId: 22,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2100,7 +2100,7 @@ const loadTickets = () => {
       seatNumber: "1-5",
       showId: 21,
       viewerId: 21,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2110,7 +2110,7 @@ const loadTickets = () => {
       seatNumber: "1-7",
       showId: 21,
       viewerId: 22,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2120,7 +2120,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 21,
       viewerId: 23,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2130,7 +2130,7 @@ const loadTickets = () => {
       seatNumber: "1-6",
       showId: 22,
       viewerId: 22,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2140,7 +2140,7 @@ const loadTickets = () => {
       seatNumber: "1-9",
       showId: 22,
       viewerId: 23,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2150,7 +2150,7 @@ const loadTickets = () => {
       seatNumber: "2-3",
       showId: 22,
       viewerId: 24,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2160,7 +2160,7 @@ const loadTickets = () => {
       seatNumber: "2-6",
       showId: 22,
       viewerId: 24,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2170,7 +2170,7 @@ const loadTickets = () => {
       seatNumber: "2-5",
       showId: 23,
       viewerId: 23,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2180,7 +2180,7 @@ const loadTickets = () => {
       seatNumber: "2-7",
       showId: 23,
       viewerId: 23,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2190,7 +2190,7 @@ const loadTickets = () => {
       seatNumber: "3-6",
       showId: 23,
       viewerId: 24,
-      sold: true
+      sold: true,
       // nameShow: "Amame",
       // nameViewer: "Tito",
     },
@@ -2203,7 +2203,7 @@ const loadTickets = () => {
           seatNumber: el.seatNumber,
           showId: el.showId,
           viewerId: el.viewerId,
-          sold: el.sold
+          sold: el.sold,
           //   nameShow: el.nameShow,
           //   nameViewer: el.nameViewer,
         },

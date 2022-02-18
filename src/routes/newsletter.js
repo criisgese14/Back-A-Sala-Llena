@@ -36,9 +36,13 @@ router.post("/", async (req, res, next) => {
       model: Shows,
     },
   });
-  console.log(allViewers);
+
+  // console.log(allFavorites.dataValues.shows);
+  // console.log(allViewers);
   allViewers.map((viewers) => {
     allFavorites.map((fav) => {
+      console.log(fav.shows);
+
       let mailOption = {
         from: "A Sala Llena",
         to: `${viewers.email}`,

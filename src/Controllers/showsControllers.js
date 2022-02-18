@@ -29,22 +29,22 @@ const postShows = async (
       date,
       time,
       score,
-      originPrice
+      originPrice,
     });
-    console.log(theaterName)
+    console.log(theaterName);
     const theater = await Theaters.findOne({
       where: {
         name: theaterName,
       },
     });
-    console.log(theater)
+    console.log(theater);
     await theater.addShows(newShow);
-    // const favorite = await Favorites.findOne({
-    //   where: {
-    //     nameTheater: theaterName
-    //   }
-    // })
-    // await favorite.addShows(newShow)
+    const favorite = await Favorites.findOne({
+      where: {
+        nameTheater: theaterName,
+      },
+    });
+    await favorite.addShows(newShow);
 
     return newShow;
   } catch (err) {
@@ -54,11 +54,14 @@ const postShows = async (
 
 const getAllShows = async () =>
   await Shows.findAll({
-    include: [{
-      model: Theaters,
-    }, {
-      model: Tickets,
-    }],
+    include: [
+      {
+        model: Theaters,
+      },
+      {
+        model: Tickets,
+      },
+    ],
   });
 
 const getShowByName = async (name) => {
