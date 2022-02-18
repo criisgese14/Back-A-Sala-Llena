@@ -1,6 +1,7 @@
 const { Favorites, Shows, Viewers, Theaters } = require("../db");
 
 const router = require("express").Router();
+const api = require("../../db.json")
 
 router.get("/", async (req, res) => {
   const favorites = await Favorites.findAll({
@@ -9,9 +10,11 @@ router.get("/", async (req, res) => {
       model: Shows,
     },
   });
-
+  if(!favorites.length){
+    const favoritesDb = await Favorites.bulkCreate(api.favoritos)
+    res.send(favoritesDb);
+  }
   //hacer coincidir id del teatro con los shows de ese teatro
-
   res.send(favorites);
 });
 

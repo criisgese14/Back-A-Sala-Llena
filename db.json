@@ -590,20 +590,20 @@
     ],
     "favoritesViewers": [
         {
-            "viewerid": 1,
-            "Favoriteid": 1
+            "viewerId": 1,
+            "FavoriteId": 1
         },
         {
-            "viewerid": 2,
-            "Favoriteid": 3
+            "viewerId": 2,
+            "FavoriteId": 3
         },
         {
-            "viewerid": 3,
-            "Favoriteid": 2
+            "viewerId": 3,
+            "FavoriteId": 2
         },
         {
-            "viewerid": 1,
-            "Favoriteid": 4
+            "viewerId": 1,
+            "FavoriteId": 4
         }
     ],
     "tickets": [
@@ -611,592 +611,592 @@
             "id": 1,
             "price": 1050,
             "seatNumber": "2-8",
-            "showid": 1,
-            "viewerid": 1,
+            "showId": 1,
+            "viewerId": 1,
             "sold": true
         },
         {
             "id": 2,
             "price": 1200,
             "seatNumber": "2-9",
-            "showid": 1,
-            "viewerid": 2,
+            "showId": 1,
+            "viewerId": 2,
             "sold": true
         },
         {
             "id": 3,
             "price": 910,
             "seatNumber": "1-7",
-            "showid": 2,
-            "viewerid": 3,
+            "showId": 2,
+            "viewerId": 3,
             "sold": true
         },
         {
             "id": 4,
             "price": 1040,
             "seatNumber": "2-8",
-            "showid": 2,
-            "viewerid": 2,
+            "showId": 2,
+            "viewerId": 2,
             "sold": true
         },
         {
             "id": 5,
             "price": 1170,
             "seatNumber": "4-3",
-            "showid": 2,
-            "viewerid": 3,
+            "showId": 2,
+            "viewerId": 3,
             "sold": true
         },
         {
             "id": 6,
             "price": 900,
             "seatNumber": "1-5",
-            "showid": 3,
-            "viewerid": 2,
+            "showId": 3,
+            "viewerId": 2,
             "sold": true
         },
         {
             "id": 7,
             "price": 1020,
             "seatNumber": "1-8",
-            "showid": 3,
-            "viewerid": 4,
+            "showId": 3,
+            "viewerId": 4,
             "sold": true
         },
         {
             "id": 8,
             "price": 1020,
             "seatNumber": "4-5",
-            "showid": 3,
-            "viewerid": 3,
+            "showId": 3,
+            "viewerId": 3,
             "sold": true
         },
         {
             "id": 9,
             "price": 1120,
             "seatNumber": "1-5",
-            "showid": 4,
-            "viewerid": 4,
+            "showId": 4,
+            "viewerId": 4,
             "sold": true
         },
         {
             "id": 10,
             "price": 1190,
             "seatNumber": "2-3",
-            "showid": 4,
-            "viewerid": 5,
+            "showId": 4,
+            "viewerId": 5,
             "sold": true
         },
         {
             "id": 11,
             "price": 1190,
             "seatNumber": "1-3",
-            "showid": 4,
-            "viewerid": 3,
+            "showId": 4,
+            "viewerId": 3,
             "sold": true
         },
         {
             "id": 12,
             "price": 750,
             "seatNumber": "1-5",
-            "showid": 5,
-            "viewerid": 5,
+            "showId": 5,
+            "viewerId": 5,
             "sold": true
         },
         {
             "id": 13,
             "price": 800,
             "seatNumber": "2-3",
-            "showid": 5,
-            "viewerid": 6,
+            "showId": 5,
+            "viewerId": 6,
             "sold": true
         },
         {
             "id": 14,
             "price": 800,
             "seatNumber": "2-7",
-            "showid": 5,
-            "viewerid": 4,
+            "showId": 5,
+            "viewerId": 4,
             "sold": true
         },
         {
             "id": 15,
             "price": 900,
             "seatNumber": "3-6",
-            "showid": 5,
-            "viewerid": 7,
+            "showId": 5,
+            "viewerId": 7,
             "sold": true
         },
         {
             "id": 16,
             "price": 1050,
             "seatNumber": "1-8",
-            "showid": 6,
-            "viewerid": 6,
+            "showId": 6,
+            "viewerId": 6,
             "sold": true
         },
         {
             "id": 17,
             "price": 1200,
             "seatNumber": "2-6",
-            "showid": 6,
-            "viewerid": 7,
+            "showId": 6,
+            "viewerId": 7,
             "sold": true
         },
         {
             "id": 18,
             "price": 1200,
             "seatNumber": "2-7",
-            "showid": 6,
-            "viewerid": 8,
+            "showId": 6,
+            "viewerId": 8,
             "sold": true
         },
         {
             "id": 19,
             "price": 910,
             "seatNumber": "1-6",
-            "showid": 7,
-            "viewerid": 7,
+            "showId": 7,
+            "viewerId": 7,
             "sold": true
         },
         {
             "id": 20,
             "price": 975,
             "seatNumber": "1-8",
-            "showid": 7,
-            "viewerid": 8,
+            "showId": 7,
+            "viewerId": 8,
             "sold": true
         },
         {
             "id": 21,
             "price": 1170,
             "seatNumber": "2-3",
-            "showid": 7,
-            "viewerid": 9,
+            "showId": 7,
+            "viewerId": 9,
             "sold": true
         },
         {
             "id": 22,
             "price": 1170,
             "seatNumber": "2-6",
-            "showid": 7,
-            "viewerid": 10,
+            "showId": 7,
+            "viewerId": 10,
             "sold": true
         },
         {
             "id": 23,
             "price": 1200,
             "seatNumber": "1-8",
-            "showid": 8,
-            "viewerid": 8,
+            "showId": 8,
+            "viewerId": 8,
             "sold": true
         },
         {
             "id": 24,
             "price": 1200,
             "seatNumber": "1-9",
-            "showid": 8,
-            "viewerid": 9,
+            "showId": 8,
+            "viewerId": 9,
             "sold": true
         },
         {
             "id": 25,
             "price": 900,
             "seatNumber": "2-3",
-            "showid": 9,
-            "viewerid": 9,
+            "showId": 9,
+            "viewerId": 9,
             "sold": true
         },
         {
             "id": 26,
             "price": 960,
             "seatNumber": "2-6",
-            "showid": 9,
-            "viewerid": 10,
+            "showId": 9,
+            "viewerId": 10,
             "sold": true
         },
         {
             "id": 27,
             "price": 1020,
             "seatNumber": "3-7",
-            "showid": 9,
-            "viewerid": 11,
+            "showId": 9,
+            "viewerId": 11,
             "sold": true
         },
         {
             "id": 28,
             "price": 825,
             "seatNumber": "3-4",
-            "showid": 10,
-            "viewerid": 10,
+            "showId": 10,
+            "viewerId": 10,
             "sold": true
         },
         {
             "id": 29,
             "price": 825,
             "seatNumber": "3-5",
-            "showid": 10,
-            "viewerid": 11,
+            "showId": 10,
+            "viewerId": 11,
             "sold": true
         },
         {
             "id": 30,
             "price": 980,
             "seatNumber": "2-2",
-            "showid": 11,
-            "viewerid": 11,
+            "showId": 11,
+            "viewerId": 11,
             "sold": true
         },
         {
             "id": 31,
             "price": 980,
             "seatNumber": "2-5",
-            "showid": 11,
-            "viewerid": 12,
+            "showId": 11,
+            "viewerId": 12,
             "sold": true
         },
         {
             "id": 32,
             "price": 1120,
             "seatNumber": "3-4",
-            "showid": 11,
-            "viewerid": 13,
+            "showId": 11,
+            "viewerId": 13,
             "sold": true
         },
         {
             "id": 33,
             "price": 1260,
             "seatNumber": "4-2",
-            "showid": 11,
-            "viewerid": 14,
+            "showId": 11,
+            "viewerId": 14,
             "sold": true
         },
         {
             "id": 34,
             "price": 910,
             "seatNumber": "1-4",
-            "showid": 12,
-            "viewerid": 12,
+            "showId": 12,
+            "viewerId": 12,
             "sold": true
         },
         {
             "id": 35,
             "price": 910,
             "seatNumber": "2-4",
-            "showid": 12,
-            "viewerid": 13,
+            "showId": 12,
+            "viewerId": 13,
             "sold": true
         },
         {
             "id": 36,
             "price": 1040,
             "seatNumber": "2-5",
-            "showid": 12,
-            "viewerid": 14,
+            "showId": 12,
+            "viewerId": 14,
             "sold": true
         },
         {
             "id": 37,
             "price": 1105,
             "seatNumber": "3-5",
-            "showid": 12,
-            "viewerid": 15,
+            "showId": 12,
+            "viewerId": 15,
             "sold": true
         },
         {
             "id": 38,
             "price": 1105,
             "seatNumber": "3-7",
-            "showid": 12,
-            "viewerid": 16,
+            "showId": 12,
+            "viewerId": 16,
             "sold": true
         },
         {
             "id": 39,
             "price": 840,
             "seatNumber": "1-3",
-            "showid": 13,
-            "viewerid": 13,
+            "showId": 13,
+            "viewerId": 13,
             "sold": true
         },
         {
             "id": 40,
             "price": 960,
             "seatNumber": "2-1",
-            "showid": 13,
-            "viewerid": 14,
+            "showId": 13,
+            "viewerId": 14,
             "sold": true
         },
         {
             "id": 41,
             "price": 960,
             "seatNumber": "2-3",
-            "showid": 13,
-            "viewerid": 14,
+            "showId": 13,
+            "viewerId": 14,
             "sold": true
         },
         {
             "id": 42,
             "price": 1020,
             "seatNumber": "1-7",
-            "showid": 13,
-            "viewerid": 15,
+            "showId": 13,
+            "viewerId": 15,
             "sold": true
         },
         {
             "id": 43,
             "price": 750,
             "seatNumber": "1-3",
-            "showid": 14,
-            "viewerid": 14,
+            "showId": 14,
+            "viewerId": 14,
             "sold": true
         },
         {
             "id": 44,
             "price": 750,
             "seatNumber": "1-6",
-            "showid": 14,
-            "viewerid": 15,
+            "showId": 14,
+            "viewerId": 15,
             "sold": true
         },
         {
             "id": 45,
             "price": 850,
             "seatNumber": "2-3",
-            "showid": 14,
-            "viewerid": 16,
+            "showId": 14,
+            "viewerId": 16,
             "sold": true
         },
         {
             "id": 46,
             "price": 850,
             "seatNumber": "2-7",
-            "showid": 14,
-            "viewerid": 17,
+            "showId": 14,
+            "viewerId": 17,
             "sold": true
         },
         {
             "id": 47,
             "price": 900,
             "seatNumber": "3-1",
-            "showid": 14,
-            "viewerid": 18,
+            "showId": 14,
+            "viewerId": 18,
             "sold": true
         },
         {
             "id": 48,
             "price": 960,
             "seatNumber": "1-4",
-            "showid": 15,
-            "viewerid": 15,
+            "showId": 15,
+            "viewerId": 15,
             "sold": true
         },
         {
             "id": 49,
             "price": 960,
             "seatNumber": "2-3",
-            "showid": 15,
-            "viewerid": 16,
+            "showId": 15,
+            "viewerId": 16,
             "sold": true
         },
         {
             "id": 50,
             "price": 1080,
             "seatNumber": "3-6",
-            "showid": 15,
-            "viewerid": 17,
+            "showId": 15,
+            "viewerId": 17,
             "sold": true
         },
         {
             "id": 51,
             "price": 1050,
             "seatNumber": "2-3",
-            "showid": 16,
-            "viewerid": 16,
+            "showId": 16,
+            "viewerId": 16,
             "sold": true
         },
         {
             "id": 52,
             "price": 1200,
             "seatNumber": "3-5",
-            "showid": 16,
-            "viewerid": 17,
+            "showId": 16,
+            "viewerId": 17,
             "sold": true
         },
         {
             "id": 53,
             "price": 1200,
             "seatNumber": "3-6",
-            "showid": 16,
-            "viewerid": 17,
+            "showId": 16,
+            "viewerId": 17,
             "sold": true
         },
         {
             "id": 54,
             "price": 1120,
             "seatNumber": "2-1",
-            "showid": 17,
-            "viewerid": 17,
+            "showId": 17,
+            "viewerId": 17,
             "sold": true
         },
         {
             "id": 55,
             "price": 1260,
             "seatNumber": "3-7",
-            "showid": 17,
-            "viewerid": 18,
+            "showId": 17,
+            "viewerId": 18,
             "sold": true
         },
         {
             "id": 56,
             "price": 1200,
             "seatNumber": "1-5",
-            "showid": 18,
-            "viewerid": 18,
+            "showId": 18,
+            "viewerId": 18,
             "sold": true
         },
         {
             "id": 57,
             "price": 1200,
             "seatNumber": "1-7",
-            "showid": 18,
-            "viewerid": 19,
+            "showId": 18,
+            "viewerId": 19,
             "sold": true
         },
         {
             "id": 58,
             "price": 770,
             "seatNumber": "2-4",
-            "showid": 19,
-            "viewerid": 19,
+            "showId": 19,
+            "viewerId": 19,
             "sold": true
         },
         {
             "id": 59,
             "price": 880,
             "seatNumber": "2-7",
-            "showid": 19,
-            "viewerid": 20,
+            "showId": 19,
+            "viewerId": 20,
             "sold": true
         },
         {
             "id": 60,
             "price": 880,
             "seatNumber": "2-9",
-            "showid": 19,
-            "viewerid": 21,
+            "showId": 19,
+            "viewerId": 21,
             "sold": true
         },
         {
             "id": 61,
             "price": 935,
             "seatNumber": "3-5",
-            "showid": 19,
-            "viewerid": 22,
+            "showId": 19,
+            "viewerId": 22,
             "sold": true
         },
         {
             "id": 62,
             "price": 840,
             "seatNumber": "2-1",
-            "showid": 20,
-            "viewerid": 20,
+            "showId": 20,
+            "viewerId": 20,
             "sold": true
         },
         {
             "id": 63,
             "price": 900,
             "seatNumber": "2-5",
-            "showid": 20,
-            "viewerid": 21,
+            "showId": 20,
+            "viewerId": 21,
             "sold": true
         },
         {
             "id": 64,
             "price": 1020,
             "seatNumber": "3-2",
-            "showid": 20,
-            "viewerid": 22,
+            "showId": 20,
+            "viewerId": 22,
             "sold": true
         },
         {
             "id": 65,
             "price": 1050,
             "seatNumber": "1-5",
-            "showid": 21,
-            "viewerid": 21,
+            "showId": 21,
+            "viewerId": 21,
             "sold": true
         },
         {
             "id": 66,
             "price": 1050,
             "seatNumber": "1-7",
-            "showid": 21,
-            "viewerid": 22,
+            "showId": 21,
+            "viewerId": 22,
             "sold": true
         },
         {
             "id": 67,
             "price": 1190,
             "seatNumber": "2-3",
-            "showid": 21,
-            "viewerid": 23,
+            "showId": 21,
+            "viewerId": 23,
             "sold": true
         },
         {
             "id": 68,
             "price": 1200,
             "seatNumber": "1-6",
-            "showid": 22,
-            "viewerid": 22,
+            "showId": 22,
+            "viewerId": 22,
             "sold": true
         },
         {
             "id": 69,
             "price": 1200,
             "seatNumber": "1-9",
-            "showid": 22,
-            "viewerid": 23,
+            "showId": 22,
+            "viewerId": 23,
             "sold": true
         },
         {
             "id": 70,
             "price": 1275,
             "seatNumber": "2-3",
-            "showid": 22,
-            "viewerid": 24,
+            "showId": 22,
+            "viewerId": 24,
             "sold": true
         },
         {
             "id": 71,
             "price": 1275,
             "seatNumber": "2-6",
-            "showid": 22,
-            "viewerid": 24,
+            "showId": 22,
+            "viewerId": 24,
             "sold": true
         },
         {
             "id": 72,
             "price": 900,
             "seatNumber": "2-5",
-            "showid": 23,
-            "viewerid": 23,
+            "showId": 23,
+            "viewerId": 23,
             "sold": true
         },
         {
             "id": 73,
             "price": 960,
             "seatNumber": "2-7",
-            "showid": 23,
-            "viewerid": 23,
+            "showId": 23,
+            "viewerId": 23,
             "sold": true
         },
         {
             "id": 74,
             "price": 1080,
             "seatNumber": "3-6",
-            "showid": 23,
-            "viewerid": 24,
+            "showId": 23,
+            "viewerId": 24,
             "sold": true
         }
     ],
@@ -1204,30 +1204,30 @@
         {
             "id": 1,
             "review": "Espectacular!!!",
-            "theaterscore": "5",
-            "showscore": "4",
+            "theaterScore": "5",
+            "showScore": "4",
             "nameTheater": "Casa Teatro el Altillo del Sur",
-            "viewerid": 1,
-            "theaterid": 1,
-            "showid": 1
+            "viewerId": 1,
+            "theaterId": 1,
+            "showId": 1
         },
         {
             "id": 2,
             "review": "Un poco flojo!",
-            "theaterscore": "2",
-            "showscore": "1",
-            "viewerid": 2,
-            "theaterid": 2,
-            "showid": 2
+            "theaterScore": "2",
+            "showScore": "1",
+            "viewerId": 2,
+            "theaterId": 2,
+            "showId": 2
         },
         {
             "id": 3,
             "review": "10 puntos!",
-            "theaterscore": "4",
-            "showscore": "2",
-            "viewerid": 3,
-            "theaterid": 3,
-            "showid": 3
+            "theaterScore": "4",
+            "showScore": "2",
+            "viewerId": 3,
+            "theaterId": 3,
+            "showId": 3
         }
     ],
     "shows": [
@@ -1246,9 +1246,9 @@
             "date": "2022-02-24",
             "time": "21:00",
             "score": "4",
-            "theaterid": 1,
-            "Favoriteid": 1,
-            "originprice": 1500,
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1500,
             "released": false
         },
         {
@@ -1266,9 +1266,9 @@
             "date": "2022-02-25",
             "time": "22:00",
             "score": "3",
-            "theaterid": 2,
-            "Favoriteid": 2,
-            "originprice": 1300,
+            "theaterId": 2,
+            "FavoriteId": 2,
+            "originPrice": 1300,
             "released": false
         },
         {
@@ -1285,9 +1285,9 @@
             "date": "2022-02-24",
             "time": "21:00",
             "score": "5",
-            "theaterid": 3,
-            "Favoriteid": 3,
-            "originprice": 1200,
+            "theaterId": 3,
+            "FavoriteId": 3,
+            "originPrice": 1200,
             "released": false
         },
         {
@@ -1305,9 +1305,9 @@
             "date": "2022-02-25",
             "time": "21:00",
             "score": "1",
-            "theaterid": 4,
-            "Favoriteid": 4,
-            "originprice": 1400,
+            "theaterId": 4,
+            "FavoriteId": 4,
+            "originPrice": 1400,
             "released": false
         },
         {
@@ -1325,9 +1325,9 @@
             "date": "2022-02-26",
             "time": "22:00",
             "score": "3",
-            "theaterid": 5,
-            "Favoriteid": 5,
-            "originprice": 1000,
+            "theaterId": 5,
+            "FavoriteId": 5,
+            "originPrice": 1000,
             "released": false
         },
         {
@@ -1344,10 +1344,10 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-25",
             "time": "20:00",
-            "score": 4,
-            "theaterid": 6,
-            "Favoriteid": 6,
-            "originprice": 1500,
+            "score": "4",
+            "theaterId": 6,
+            "FavoriteId": 6,
+            "originPrice": 1500,
             "released": false
         },
         {
@@ -1364,9 +1364,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-24",
             "time": "21:00",
-            "theaterid": 7,
-            "Favoriteid": 7,
-            "originprice": 1300,
+            "theaterId": 7,
+            "FavoriteId": 7,
+            "originPrice": 1300,
             "released": false
         },
         {
@@ -1383,9 +1383,9 @@
             "rated": "Todas las edades",
             "date": "2022-02-26",
             "time": "19:30",
-            "theaterid": 8,
-            "Favoriteid": 8,
-            "originprice": 1500,
+            "theaterId": 8,
+            "FavoriteId": 8,
+            "originPrice": 1500,
             "released": false
         },
         {
@@ -1402,9 +1402,9 @@
             "rated": "Apta para mayores de 16 años",
             "date": "2022-02-24",
             "time": "21:00",
-            "theaterid": 9,
-            "Favoriteid": 9,
-            "originprice": 1200,
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1200,
             "released": false
         },
         {
@@ -1421,9 +1421,9 @@
             "rated": "Apta para mayores de 16 años",
             "date": "2022-02-25",
             "time": "21:00",
-            "theaterid": 9,
-            "Favoriteid": 9,
-            "originprice": 1100,
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1100,
             "released": false
         },
         {
@@ -1440,9 +1440,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-25",
             "time": "20:00",
-            "theaterid": 10,
-            "Favoriteid": 10,
-            "originprice": 1400,
+            "theaterId": 10,
+            "FavoriteId": 10,
+            "originPrice": 1400,
             "released": false
         },
         {
@@ -1459,9 +1459,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-24",
             "time": "18:00",
-            "theaterid": 11,
-            "Favoriteid": 11,
-            "originprice": 1300,
+            "theaterId": 11,
+            "FavoriteId": 11,
+            "originPrice": 1300,
             "released": false
         },
         {
@@ -1478,9 +1478,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-25",
             "time": "22:00",
-            "theaterid": 12,
-            "Favoriteid": 12,
-            "originprice": 1200,
+            "theaterId": 12,
+            "FavoriteId": 12,
+            "originPrice": 1200,
             "released": false
         },
         {
@@ -1497,9 +1497,9 @@
             "rated": "Todas las edades",
             "date": "2022-02-25",
             "time": "21:30",
-            "theaterid": 13,
-            "Favoriteid": 13,
-            "originprice": 1000,
+            "theaterId": 13,
+            "FavoriteId": 13,
+            "originPrice": 1000,
             "released": false
         },
         {
@@ -1516,9 +1516,9 @@
             "rated": "Apta para mayores de 16 años",
             "date": "2022-02-26",
             "time": "22:00",
-            "theaterid": 14,
-            "Favoriteid": 14,
-            "originprice": 1200,
+            "theaterId": 14,
+            "FavoriteId": 14,
+            "originPrice": 1200,
             "released": false
         },
         {
@@ -1535,9 +1535,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-26",
             "time": "20:30",
-            "theaterid": 15,
-            "Favoriteid": 15,
-            "originprice": 1500,
+            "theaterId": 15,
+            "FavoriteId": 15,
+            "originPrice": 1500,
             "released": false
         },
         {
@@ -1554,9 +1554,9 @@
             "rated": "Apta para mayores de 13 años",
             "date": "2022-02-24",
             "time": "19:00",
-            "theaterid": 16,
-            "Favoriteid": 16,
-            "originprice": 1400,
+            "theaterId": 16,
+            "FavoriteId": 16,
+            "originPrice": 1400,
             "released": false
         },
         {
@@ -1573,9 +1573,9 @@
             "rated": "Apta para mayores de 16 años",
             "date": "2022-02-26",
             "time": "20:30",
-            "theaterid": 17,
-            "Favoriteid": 17,
-            "originprice": 1500,
+            "theaterId": 17,
+            "FavoriteId": 17,
+            "originPrice": 1500,
             "released": false
         },
         {
@@ -1592,9 +1592,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-25",
             "time": "21:00",
-            "theaterid": 18,
-            "Favoriteid": 18,
-            "originprice": 1100,
+            "theaterId": 18,
+            "FavoriteId": 18,
+            "originPrice": 1100,
             "released": false
         },
         {
@@ -1611,9 +1611,9 @@
             "rated": "Apta para mayores de 18 años",
             "date": "2022-02-25",
             "time": "12:00",
-            "theaterid": 19,
-            "Favoriteid": 19,
-            "originprice": 1200,
+            "theaterId": 19,
+            "FavoriteId": 19,
+            "originPrice": 1200,
             "released": false
         },
         {
@@ -1630,9 +1630,9 @@
             "rated": "Apta para mayores de 16 años",
             "date": "2022-02-16",
             "time": "19:00",
-            "theaterid": 20,
-            "Favoriteid": 20,
-            "originprice": 1400,
+            "theaterId": 20,
+            "FavoriteId": 20,
+            "originPrice": 1400,
             "released": true
         },
         {
@@ -1649,9 +1649,9 @@
             "rated": "Apta para mayores de 13 años",
             "date": "2022-02-14",
             "time": "20:00",
-            "theaterid": 21,
-            "Favoriteid": 21,
-            "originprice": 1500,
+            "theaterId": 21,
+            "FavoriteId": 21,
+            "originPrice": 1500,
             "released": true
         },
         {
@@ -1668,9 +1668,9 @@
             "rated": "Todas las edades",
             "date": "2022-02-15",
             "time": "22:00",
-            "theaterid": 22,
-            "Favoriteid": 22,
-            "originprice": 1200,
+            "theaterId": 22,
+            "FavoriteId": 22,
+            "originPrice": 1200,
             "released": true
         }
     ]

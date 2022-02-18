@@ -1,5 +1,6 @@
 const { loadFavorites } = require("../../preload-Db");
 const { Theaters, Shows, Reviews, Favorites } = require("../db");
+const api = require("../../db.json")
 
 const postTheatersRegistration = async ( //a la hora de crear un teatro se agrega a favoritos
   name,
@@ -39,9 +40,14 @@ const postTheatersRegistration = async ( //a la hora de crear un teatro se agreg
   }
 };
 
-const getAllTheaters = async () => await Theaters.findAll({
-  
-});
+const getAllTheaters = async () => {
+  const allTheaters = await Theaters.findAll({});
+  if (!allTheaters.length) {
+    const allTheatersdb = await Theaters.bulkCreate(api.teatros)
+    return allTheatersdb
+  }
+  return allTheaters
+}
 
 const getTheater = async (id) => {
   const theater = await Theaters.findOne({
