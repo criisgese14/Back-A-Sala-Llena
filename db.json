@@ -1598,7 +1598,7 @@
         {
             "name": "ART",
             "genre": "Comedia",
-            "length": "90 min",
+            "length": "90 minutos",
             "image":
             "https://www.multiteatro.com.ar/img/obras/272-foto-sm.jpg",
             "summary":
@@ -1616,7 +1616,7 @@
         {
             "name": "Brujas",
             "genre": "Comedia",
-            "length": "80 min",
+            "length": "80 minutos",
             "image":
             "https://www.multiteatro.com.ar/img/obras/269-foto-sm.jpg",
             "summary":
@@ -1634,7 +1634,7 @@
         {
             "name": "Tito",
             "genre": "Drama",
-            "length": "100 min",
+            "length": "100 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/tito.jpg",
             "summary":
@@ -1652,7 +1652,7 @@
             {
             "name": "Toc toc",
             "genre": "Comedia",
-            "length": "105 min",
+            "length": "105 minutos",
             "image":
             "https://www.multiteatro.com.ar/img/obras/270-foto.jpg",
             "summary":
@@ -1670,7 +1670,7 @@
         {
             "name": "Casi normales",
             "genre": "Musical",
-            "length": "85 min",
+            "length": "85 minutos",
             "image":
             "https://www.multiteatro.com.ar/img/obras/281-foto.jpg",
             "summary":
@@ -1688,7 +1688,7 @@
         {
             "name": "La desgracia",
             "genre": "Musical",
-            "length": "90 min",
+            "length": "90 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/la-desgracia.jpg",
             "summary":
@@ -1706,7 +1706,7 @@
         {
             "name": "Petroleo",
             "genre": "Tragicomedia",
-            "length": "100 min",
+            "length": "100 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/petroleo-_.jpg",
             "summary":
@@ -1724,7 +1724,7 @@
         {
             "name": "Una casa llena de agua",
             "genre": "Drama",
-            "length": "60 min",
+            "length": "60 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/una-casa-llena-de-agua.jpg",
             "summary":
@@ -1742,7 +1742,7 @@
         {
             "name": "El cuarto de Veronica",
             "genre": "Drama",
-            "length": "70 min",
+            "length": "70 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/el-cuarto-de-veronica.jpg",
             "summary":
@@ -1755,6 +1755,186 @@
             "theaterId": 1,
             "FavoriteId": 1,
             "originPrice": 1500,
+            "released":false
+        },
+        {
+            "name": "Inestable",
+            "genre": "Monologo",
+            "length": "70 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/pablo-fabregas-presenta-inestable.jpg",
+            "summary":
+            "La economía es inestable. Las parejas son inestables. La conexión es inestable. Las relaciones humanas son inestables. La paz es inestable. El equilibrio del mundo es inestable.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["2-4", "3-5", "4-3", "4-4"],
+            "rated": "Apta para mayores de 16 años",
+            "date": "2022-02-25",
+            "time": "21:15",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1500,
+            "released":false
+        },
+        {
+            "name": "Clara",
+            "genre": "Tragicomedia",
+            "length": "90 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/clara.jpg",
+            "summary":
+            "2001: Sólo hay un neurocirujano en el país que puede salvar la vida de Clara. Este se niega y su familia decide vengarse escarchando la vida privada del doctor. El plan se complica, convirtiendo a los justicieros en delincuentes. Un thriller de placard devenido en comedia romántica. Nadie es lo que parece, todos somos abrumantes y desesperados.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["2-5", "2-8", "3-6", "3-7"],
+            "rated": "Apta para mayores de 18 años",
+            "date": "2022-02-24",
+            "time": "22:30",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1300,
+            "released":false
+        },
+        {
+            "name": "Me duele una mujer",
+            "genre": "Comedia",
+            "length": "105 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/me-duele-una-mujer.jpg",
+            "summary":
+            "Miguel Sánchez, un joven profesor de filosofía, es abandonado por su novia Paula y vive los primeros seis meses en ese abandono. Una psicoanalista recibe a Miguel en las diversas etapas de su tratamiento, marcando con su particular humor e ironía una paliza terapéutica. Miguel está siempre acompañado por Martín, su amigo inseparable, o acaso sean los dos la misma  persona. La obsesión por Paula provoca que vea en cada mujer al paso a su ex pareja y sólo al final sabremos si logra nuevamente transitar por esa esquina que hoy no se atreve a pasar.",
+            "ticketsQty": 3,
+            "seatsAvailable": ["3-5", "3-8", "4-1"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-26",
+            "time": "18:15",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1000,
+            "released":false
+        },
+        {
+            "name": "El acompañamiento",
+            "genre": "Comedia",
+            "length": "60 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/el-acompanamiento_.jpg",
+            "summary":
+            "Tuco y Sebastián son dos amigos de toda la vida. Tuco trabaja en una metalúrgica y Sebastián tiene un kiosco de cigarrillos y golosinas. Después de una broma que le juega a Tuco un compañero de fábrica (el Mingo) este decide renunciar a su trabajo para dedicarse al canto. Para ello, se encierra en el altillo de su casa, armado con un cuchillo y aislado por completo de su familia, esperando al acompañamiento musical que el Mingo 'prometió' mandarle para ensayar y así triunfar en la televisión.",
+            "ticketsQty": 5,
+            "seatsAvailable": ["1-5", "3-5", "3-6", "4-5", "4-8"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-25",
+            "time": "18:45",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1200,
+            "released":false
+        },
+        {
+            "name": "Mujeres en el baño",
+            "genre": "Musical",
+            "length": "80 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/450x220/mujeres-en-el-bano.jpg",
+            "summary":
+            "Partiendo de la famosa pregunta ¿Qué hacen tanto tiempo las mujeres en el baño? La obra despliega un universo en el cual cinco mujeres exponen sus fantasías, se transforman en estrellas de rock, recitan reggaeton, cantan, se tocan, se divierten, se cuestionan y bailan en un espacio en constante mutación.",
+            "ticketsQty": 3,
+            "seatsAvailable": ["3-5", "3-6", "4-1"],
+            "rated": "Apta para mayores de 16 años",
+            "date": "2022-02-25",
+            "time": "20:30",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1100,
+            "released":false
+        },
+        {
+            "name": "El amateur",
+            "genre": "Comedia",
+            "length": "80 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/1440x500/el-amateur---segunda-vuelta.jpg",
+            "summary":
+            "'El amateur, segunda vuelta' es la obra emblemática de Mauricio Dayub. El Pájaro y Lopecito, sus protagonistas, logran encontrar un objetivo común y arriesgan todo lo que tienen para lograrlo. Juntos producen un milagro: que el sueño de uno se transforme en el sueño del otro. La amistad, la pasión y dar la vida sin esperar nada a cambio. Esa es la esencia de El amateur.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["2-5", "3-4", "3-6", "4-1"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-25",
+            "time": "19:15",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1200,
+            "released":false
+        },
+        {
+            "name": "Claveles rojos",
+            "genre": "Drama",
+            "length": "85 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/450x220/claveles-rojos.jpg",
+            "summary":
+            "Una familia tradicional, movida por oscuros intereses económicos, inicia juicio contra una de sus integrantes para declararla incapaz. La joven, pese a sus limitaciones, es defendida por un abogado combativo que pone en cuestión el concepto de normalidad y el criterio esencial de la saludable vida humana.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["2-5", "2-8", "3-1", "3-6"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2002-02-26",
+            "time": "19:00",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1100,
+            "released":false
+        },
+        {
+            "name": "Dracula",
+            "genre": "Musical",
+            "length": "100 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/144x70/dracula.jpg",
+            "summary":
+            "Drácula, el musical es uno de los musicales argentinos más importantes. Fue escrito y dirigido por la dupla conformada por Pepe Cibrián y Ángel Mahler y producido por Tito Lectoure.",
+            "ticketsQty": 5,
+            "seatsAvailable": ["2-4", "2-7", "3-1", "3-5", "3-8"],
+            "rated": "Todas las edades",
+            "date": "2022-02-25",
+            "time": "21:00",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1300,
+            "released":false
+        },
+        {
+            "name": "Pequeñas cosas fundamentales",
+            "genre": "Monologo",
+            "length": "60 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/450x220/pablo-molinari--pequenas-cosas-fundamentales.jpg",
+            "summary":
+            "",
+            "ticketsQty": 5,
+            "seatsAvailable": ["1-4", "3-5", "3-8", "4-2", "4-5"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-24",
+            "time": "19:15",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1200,
+            "released":false
+        },
+        {
+            "name": "Eva y victoria",
+            "genre": "Drama",
+            "length": "80 minutos",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/450x220/claveles-rojos.jpg",
+            "summary":
+            "Eva y Victoria es una imaginaria reunión entre Eva Perón y Victoria Ocampo, Eva acude a ver a Victoria con la excusa de obtener apoyo para tratar en el Congreso de la Nación el proyecto de ley que permita votar a las mujeres. Pero realmente es el encuentro de dos clases sociales, de dos formas de pensar la vida y el país a todas luces antagónicas, mostrando las ideas irreconciliables que durante décadas nos dividió como nación y llevado por una esgrima verbal digna de aquellas dos formidables adversarias.",
+            "ticketsQty": 3,
+            "seatsAvailable": ["2-5", "3-1", "3-5"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-24",
+            "time": "19:45",
+            "theaterId": 9,
+            "FavoriteId": 9,
+            "originPrice": 1300,
             "released":false
         }
         
