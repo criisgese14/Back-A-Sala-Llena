@@ -36,6 +36,9 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    ticketsSold: {
+      type: DataTypes.INTEGER,
+    },
     seatsAvailable: {
       type: DataTypes.ARRAY(DataTypes.STRING)
     },
