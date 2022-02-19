@@ -1672,6 +1672,178 @@
             "FavoriteId": 22,
             "originPrice": 1200,
             "released": true
+        },
+        {
+            "id": 24,
+            "name": "ART",
+            "genre": "Comedia",
+            "length": "90 min",
+            "image":
+            "https://www.multiteatro.com.ar/img/obras/272-foto-sm.jpg",
+            "summary":
+            "Serge, Marc e Ivan son amigos desde siempre. La compra de un cuadro blanco, hace tambalear los valores que creían compartir, ¿Cuánto conocemos, en realidad, a nuestros mejores amigos? En la historia de esta amistad ninguno volverá a ser el de antes, aunque entre amigos siempre queda lugar para el perdón y, tal vez, para un nuevo comienzo.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["1-5","2-8", "2-9", "3-7"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-24",
+            "time": "20:30",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1400,
+            "released": false
+        },
+        {
+            "id": 25,
+            "name": "Brujas",
+            "genre": "Comedia",
+            "length": "80 min",
+            "image":
+            "https://www.multiteatro.com.ar/img/obras/269-foto-sm.jpg",
+            "summary":
+            "Una historia de cinco ex-compañeras de un colegio religioso que se juntan después de mucho tiempo para cenar en la casa de una de ellas y se desata una noche imperdible.",
+            "ticketsQty": 3,
+            "seatsAvailable": ["1-8","2-3", "2-4"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-25",
+            "time": "18:30",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1200,
+            "released": false
+        },
+        {
+            "id": 26,
+            "name": "Tito",
+            "genre": "Drama",
+            "length": "100 min",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/tito.jpg",
+            "summary":
+            "Tras una larga guerra, el general Tito Andrónico vuelve victorioso a Roma. Allí descubrirá que la ciudad en paz puede ser más violenta que los campos de batalla. Una venganza arrastrará a otra y amenazará con destruir la sociedad entera. Una versión alucinada de la obra más cruel y sangrienta de Shakespeare. Una tragedia que se convierte en comedia, una comedia que se convierte en pesadilla, una pesadilla que retumba en el presente..",
+            "ticketsQty": 2,
+            "seatsAvailable": ["1-7","1-8"],
+            "rated": "Apta para mayores de 16 años",
+            "date": "2022-02-26",
+            "time": "21:30",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1200,
+            "released": false
+            },
+            {
+            "id": 27,
+            "name": "Toc toc",
+            "genre": "Comedia",
+            "length": "105 min",
+            "image":
+            "https://www.multiteatro.com.ar/img/obras/270-foto.jpg",
+            "summary":
+            "Seis personajes que padecen trastornos obsesivos compulsivos (TOC) se encontrarán y se conocerán en la sala de espera de un afamado psiquiatra con el fin de solucionar sus problemas. El psiquiatra nunca acudirá a la terapia y serán ellos los que tengan que llegar a sus propias conclusiones.",
+            "ticketsQty": 3,
+            "seatsAvailable": ["1-2","1-8", "2-5"],
+            "rated": "Todas las edades",
+            "date": "2022-02-24",
+            "time": "18:15",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1000,
+            "released": false
+        },
+        {
+            "id": 28,
+            "name": "Casi normales",
+            "genre": "Musical",
+            "length": "85 min",
+            "image":
+            "https://www.multiteatro.com.ar/img/obras/281-foto.jpg",
+            "summary":
+            "Casi Normales es la historia de una familia que lucha por ser %A8normal%A8 hasta que, al igual que pasa con todas las familias, la adversidad aparece. La familia está compuesta por un ama de casa con un aparente trastorno de bipolaridad que lucha a diario con tratamientos y psiquiatras. La acompaña su incondicional marido, una hija adolescente que se siente invisible en la casa y hace todo para abandonarla y ,por el contrario , el hijo mayor que por nada del mundo quiere dejar ni a esa casa ni a esa madre.",
+            "ticketsQty": 2,
+            "seatsAvailable": ["1-3","2-8"],
+            "rated": "Apta para mayores de 16 años",
+            "date": "2022-02-24",
+            "time": "21:15",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1200,
+            "released": false
+        },
+        {
+            "id": 29,
+            "name": "La desgracia",
+            "genre": "Musical",
+            "length": "90 min",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/la-desgracia.jpg",
+            "summary":
+            "En un pequeño y conservador pueblo llamado Terranova se despierta una enfermedad mortal de transmisión sexual a la que llaman la desgracia. El escándalo se evidencia cuando Anita, la joven hija de la intendente, es internada en la sala medica por encontrarse infectada. Como si esto no fuera suficiente desgracia, el único doctor del pueblo es encontrado muerto en su consultorio a minutos de haber hallado la cura.",
+            "ticketsQty": 5,
+            "seatsAvailable": ["1-3","1-4", "2,5", "2,6", "2,8"],
+            "rated": "Apta para mayores de 16 años",
+            "date": "2022-02-25",
+            "time": "20:45",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1300,
+            "released":false
+        },
+        {
+            "id": 30,
+            "name": "Petroleo",
+            "genre": "Tragicomedia",
+            "length": "100 min",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/petroleo-_.jpg",
+            "summary":
+            "Yacimiento petrolero en la Patagonia. Cuatro hombres conviven en un trailer y a sólo unos metros de allí, extraen petróleo de un pozo casi vacío. Arriba, el tiempo libre se cubre de polvo, de mitos oscuros de la zona, de desafíos físicos. Abajo, la piedra se fractura para extraer la última gota, lo poco que queda.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["1-5","1-8", "3-4", "3-6"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-26",
+            "time": "18:15",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1400,
+            "released":false
+        },
+        {
+            "id": 31,
+            "name": "Una casa llena de agua",
+            "genre": "Drama",
+            "length": "60 min",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/una-casa-llena-de-agua.jpg",
+            "summary":
+            "En plena década del 90, una joven estudiante de Biología entra a trabajar como niñera en la casa de una familia acomodada. Entre peluches y frascos de compota Milena le irá contando a Angie, la bebé que cuida, su vida en tiempo real: sus miedos, sus romances, sus fantasías y el nudo en el que todas esas líneas se cruzan, la pregunta por un futuro incierto.",
+            "ticketsQty": 5,
+            "seatsAvailable": ["2-1","2-3", "3-4", "3-5", "3-8"],
+            "rated": "Apta para mayores de 13 años",
+            "date": "2022-02-24",
+            "time": "19:15",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1400,
+            "released":false
+        },
+        {
+            "id": 32,
+            "name": "El cuarto de Veronica",
+            "genre": "Drama",
+            "length": "70 min",
+            "image":
+            "https://imgplateanet.com.ar/imagenes/img/imagenes/220x220/el-cuarto-de-veronica.jpg",
+            "summary":
+            "Susan, de 20 años, es abordada mientras cena con su novio en un restaurante por una encantadora pareja de ancianos que se muestra impresionada por el parecido de Susan con Verónica, fallecida hace mucho tiempo. Susan y su novio acompañan a la pareja hasta la mansión para ver el retrato de Verónica y comprobar el parecido. Allí comienza esta intrigante pesadilla con un final inesperado.",
+            "ticketsQty": 4,
+            "seatsAvailable": ["1-3","1-4", "2-8", "3-5"],
+            "rated": "Apta para mayores de 18 años",
+            "date": "2022-02-26",
+            "time": "22:00",
+            "theaterId": 1,
+            "FavoriteId": 1,
+            "originPrice": 1500,
+            "released":false
         }
+        
     ]
 }
