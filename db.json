@@ -839,7 +839,6 @@
             "sold": true
         },
         {
-            "id": 31,
             "price": 980,
             "seatNumber": "2-5",
             "showId": 11,
@@ -847,7 +846,6 @@
             "sold": true
         },
         {
-            "id": 32,
             "price": 1120,
             "seatNumber": "3-4",
             "showId": 11,
@@ -855,7 +853,6 @@
             "sold": true
         },
         {
-            "id": 33,
             "price": 1260,
             "seatNumber": "4-2",
             "showId": 11,
@@ -863,7 +860,6 @@
             "sold": true
         },
         {
-            "id": 34,
             "price": 910,
             "seatNumber": "1-4",
             "showId": 12,
@@ -871,7 +867,6 @@
             "sold": true
         },
         {
-            "id": 35,
             "price": 910,
             "seatNumber": "2-4",
             "showId": 12,
@@ -879,7 +874,6 @@
             "sold": true
         },
         {
-            "id": 36,
             "price": 1040,
             "seatNumber": "2-5",
             "showId": 12,
@@ -887,7 +881,6 @@
             "sold": true
         },
         {
-            "id": 37,
             "price": 1105,
             "seatNumber": "3-5",
             "showId": 12,
@@ -895,7 +888,6 @@
             "sold": true
         },
         {
-            "id": 38,
             "price": 1105,
             "seatNumber": "3-7",
             "showId": 12,
@@ -903,7 +895,6 @@
             "sold": true
         },
         {
-            "id": 39,
             "price": 840,
             "seatNumber": "1-3",
             "showId": 13,
@@ -911,7 +902,6 @@
             "sold": true
         },
         {
-            "id": 40,
             "price": 960,
             "seatNumber": "2-1",
             "showId": 13,
@@ -919,7 +909,6 @@
             "sold": true
         },
         {
-            "id": 41,
             "price": 960,
             "seatNumber": "2-3",
             "showId": 13,
@@ -927,7 +916,6 @@
             "sold": true
         },
         {
-            "id": 42,
             "price": 1020,
             "seatNumber": "1-7",
             "showId": 13,
@@ -935,7 +923,6 @@
             "sold": true
         },
         {
-            "id": 43,
             "price": 750,
             "seatNumber": "1-3",
             "showId": 14,
@@ -943,7 +930,6 @@
             "sold": true
         },
         {
-            "id": 44,
             "price": 750,
             "seatNumber": "1-6",
             "showId": 14,
@@ -951,7 +937,6 @@
             "sold": true
         },
         {
-            "id": 45,
             "price": 850,
             "seatNumber": "2-3",
             "showId": 14,
@@ -959,7 +944,6 @@
             "sold": true
         },
         {
-            "id": 46,
             "price": 850,
             "seatNumber": "2-7",
             "showId": 14,
@@ -967,7 +951,6 @@
             "sold": true
         },
         {
-            "id": 47,
             "price": 900,
             "seatNumber": "3-1",
             "showId": 14,
@@ -975,7 +958,6 @@
             "sold": true
         },
         {
-            "id": 48,
             "price": 960,
             "seatNumber": "1-4",
             "showId": 15,
@@ -983,7 +965,6 @@
             "sold": true
         },
         {
-            "id": 49,
             "price": 960,
             "seatNumber": "2-3",
             "showId": 15,
@@ -991,7 +972,6 @@
             "sold": true
         },
         {
-            "id": 50,
             "price": 1080,
             "seatNumber": "3-6",
             "showId": 15,
@@ -999,7 +979,6 @@
             "sold": true
         },
         {
-            "id": 51,
             "price": 1050,
             "seatNumber": "2-3",
             "showId": 16,
@@ -1007,7 +986,6 @@
             "sold": true
         },
         {
-            "id": 52,
             "price": 1200,
             "seatNumber": "3-5",
             "showId": 16,
@@ -1015,7 +993,6 @@
             "sold": true
         },
         {
-            "id": 53,
             "price": 1200,
             "seatNumber": "3-6",
             "showId": 16,
@@ -1023,7 +1000,6 @@
             "sold": true
         },
         {
-            "id": 54,
             "price": 1120,
             "seatNumber": "2-1",
             "showId": 17,
@@ -1031,7 +1007,6 @@
             "sold": true
         },
         {
-            "id": 55,
             "price": 1260,
             "seatNumber": "3-7",
             "showId": 17,
@@ -1039,7 +1014,6 @@
             "sold": true
         },
         {
-            "id": 56,
             "price": 1200,
             "seatNumber": "1-5",
             "showId": 18,
@@ -1047,7 +1021,6 @@
             "sold": true
         },
         {
-            "id": 57,
             "price": 1200,
             "seatNumber": "1-7",
             "showId": 18,
@@ -1055,7 +1028,6 @@
             "sold": true
         },
         {
-            "id": 58,
             "price": 770,
             "seatNumber": "2-4",
             "showId": 19,
@@ -1063,7 +1035,6 @@
             "sold": true
         },
         {
-            "id": 59,
             "price": 880,
             "seatNumber": "2-7",
             "showId": 19,
@@ -1071,7 +1042,6 @@
             "sold": true
         },
         {
-            "id": 60,
             "price": 880,
             "seatNumber": "2-9",
             "showId": 19,
@@ -1079,7 +1049,6 @@
             "sold": true
         },
         {
-            "id": 61,
             "price": 935,
             "seatNumber": "3-5",
             "showId": 19,
@@ -1087,7 +1056,6 @@
             "sold": true
         },
         {
-            "id": 62,
             "price": 840,
             "seatNumber": "2-1",
             "showId": 20,
@@ -1095,7 +1063,6 @@
             "sold": true
         },
         {
-            "id": 63,
             "price": 900,
             "seatNumber": "2-5",
             "showId": 20,
@@ -1103,7 +1070,6 @@
             "sold": true
         },
         {
-            "id": 64,
             "price": 1020,
             "seatNumber": "3-2",
             "showId": 20,
@@ -1111,7 +1077,6 @@
             "sold": true
         },
         {
-            "id": 65,
             "price": 1050,
             "seatNumber": "1-5",
             "showId": 21,
@@ -1119,7 +1084,6 @@
             "sold": true
         },
         {
-            "id": 66,
             "price": 1050,
             "seatNumber": "1-7",
             "showId": 21,
@@ -1127,7 +1091,6 @@
             "sold": true
         },
         {
-            "id": 67,
             "price": 1190,
             "seatNumber": "2-3",
             "showId": 21,
@@ -1135,7 +1098,6 @@
             "sold": true
         },
         {
-            "id": 68,
             "price": 1200,
             "seatNumber": "1-6",
             "showId": 22,
@@ -1143,7 +1105,6 @@
             "sold": true
         },
         {
-            "id": 69,
             "price": 1200,
             "seatNumber": "1-9",
             "showId": 22,
@@ -1151,7 +1112,6 @@
             "sold": true
         },
         {
-            "id": 70,
             "price": 1275,
             "seatNumber": "2-3",
             "showId": 22,
@@ -1159,7 +1119,6 @@
             "sold": true
         },
         {
-            "id": 71,
             "price": 1275,
             "seatNumber": "2-6",
             "showId": 22,
@@ -1167,7 +1126,6 @@
             "sold": true
         },
         {
-            "id": 72,
             "price": 900,
             "seatNumber": "2-5",
             "showId": 23,
@@ -1175,7 +1133,6 @@
             "sold": true
         },
         {
-            "id": 73,
             "price": 960,
             "seatNumber": "2-7",
             "showId": 23,
@@ -1183,7 +1140,6 @@
             "sold": true
         },
         {
-            "id": 74,
             "price": 1080,
             "seatNumber": "3-6",
             "showId": 23,
