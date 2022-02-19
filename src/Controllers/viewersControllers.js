@@ -1,5 +1,5 @@
-const { Viewers, Tickets,Favorites } = require("../db");
-const api = require("../../db.json")
+const { Viewers, Tickets, Favorites } = require("../db");
+const api = require("../../db.json");
 
 const postViewersRegistration = async (
   name,
@@ -14,7 +14,10 @@ const postViewersRegistration = async (
       name,
       email,
       password,
-      image: image !== '' ? image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwu1xab-FP5z_TqMTXJVTC3mSQDrsVGuSpSkuIkSd4AUFZ5QSoiQYkFJ6JSRmj-0CBBI&usqp=CAU",
+      image:
+        image !== ""
+          ? image
+          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwu1xab-FP5z_TqMTXJVTC3mSQDrsVGuSpSkuIkSd4AUFZ5QSoiQYkFJ6JSRmj-0CBBI&usqp=CAU",
       province,
     });
     console.log(Viewers);
@@ -24,7 +27,7 @@ const postViewersRegistration = async (
   }
 };
 
-const getAllViewers = async () =>{
+const getAllViewers = async () => {
   try {
     const allViewers = await Viewers.findAll({
       include: [
@@ -37,15 +40,15 @@ const getAllViewers = async () =>{
       ],
     });
 
-    if(!allViewers.length) {
-      const allViewersdb = await Viewers.bulkCreate(api.usuarios)
-      return allViewersdb
+    if (!allViewers.length) {
+      const allViewersdb = await Viewers.bulkCreate(api.usuarios);
+      return allViewersdb;
     }
-    return allViewers
+    return allViewers;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 const getViewersById = async (id) => {
   try {
     let viewerID = await Viewers.findByPk(id, {

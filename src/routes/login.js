@@ -2,9 +2,11 @@
 // const bcrypt = require("bcrypt");
 const router = require("express").Router();
 const { Viewers, Theaters } = require("../db");
-const { OAuth2Client } = require('google-auth-library');
+const { OAuth2Client } = require("google-auth-library");
 
-const client = new OAuth2Client("506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.apps.googleusercontent.com")
+const client = new OAuth2Client(
+  "506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.apps.googleusercontent.com"
+);
 
 //const users = [];
 
@@ -14,9 +16,9 @@ const client = new OAuth2Client("506901482868-h6pf1ffiuv7vicavl8btlunj18oeamjr.a
 //   else array.push(item);
 // }
 
-router.post('/google/viewer', async (req, res) => {
+router.post("/google/viewer", async (req, res) => {
   const { token } = req.body;
-  console.log('token',token)
+  console.log("token", token);
   const ticket = await client.verifyIdToken({
     idToken: token,
     audience: process.env.CLIENT_ID,
@@ -25,18 +27,19 @@ router.post('/google/viewer', async (req, res) => {
   //console.log(ticket.getPayload());
   //upsert(users, { name, email, picture })
   const user = await Viewers.findOne({
-    where:{
+    where: {
       email,
-    }
-  })
-  
-  user ? res.status(201).send({ id: user.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
+    },
+  });
 
-})
+  user
+    ? res.status(201).send({ id: user.id, token })
+    : res.status(401).send({ error: "usuario o contraseña incorrectas" });
+});
 
-router.post('/google/theater', async (req, res) => {
+router.post("/google/theater", async (req, res) => {
   const { token } = req.body;
-  console.log('token',token)
+  console.log("token", token);
   const ticket = await client.verifyIdToken({
     idToken: token,
     audience: process.env.CLIENT_ID,
@@ -45,16 +48,18 @@ router.post('/google/theater', async (req, res) => {
   //console.log(ticket.getPayload());
   //upsert(users, { name, email, picture })
   const theater = await Theaters.findOne({
-    where:{
+    where: {
       email,
-    }
-  })
-    theater ? res.status(201).send({ id: theater.id, token }) : res.status(401).send({ error: "usuario o contraseña incorrectas"})
-})
+    },
+  });
+  theater
+    ? res.status(201).send({ id: theater.id, token })
+    : res.status(401).send({ error: "usuario o contraseña incorrectas" });
+});
 
 router.post("/theater", async (req, res) => {
   const { email, password } = req.body;
-  console.log('teatro',req.body);
+  console.log("teatro", req.body);
   const theater = await Theaters.findOne({
     where: {
       email,
@@ -81,7 +86,7 @@ router.post("/theater", async (req, res) => {
       //   token,
       // });
 
-      res.status(200).json({ isLogged });
+      res.status(200).json({ isLogged, id: theater.id });
     }
   } else {
     res.status(401).send({ error: "usuario o contraseña incorrectas" });
@@ -115,7 +120,7 @@ router.post("/viewer", async (req, res) => {
       //   isViewer: viewer.isViewer,
       //   token,
       // });
-      res.status(200).json({ isLogged });
+      res.status(200).json({ isLogged, id: viewer.id });
     }
   } else {
     res.status(401).send({ error: "usuario o contraseña incorrectas" });
