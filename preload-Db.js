@@ -2394,6 +2394,25 @@ const loadReviews = () => {
 //   "originPrice": 1400,
 //   "released": false
 // }
+// {
+//   "name": "",
+//   "genre": "",
+//   "length": "0 minutos",
+//   "image":
+//   "",
+//   "summary":
+//   "",
+//   "ticketsQty": 0,
+//   "seatsAvailable": [""],
+//   "ticketsSold": 0,
+//   "rated": "Apta para mayores de 16 años",
+//   "date": "2022-02-2",
+//   "time": "18:00",
+//   "theaterId": 0,
+//   "FavoriteId": 0,
+//   "originPrice": 1000,
+//   "released":false
+// },
 
 
 module.exports = {
