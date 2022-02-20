@@ -32,14 +32,13 @@ router.post("/", async (req, res, next) => {
     where: {
       nameTheater: nameTheater,
     },
-    include: {
-      model: Shows,
-    },
   });
 
-  // console.log(allFavorites.dataValues.shows);
-  // console.log(allViewers);
-  allViewers?.map((viewers) => {
+  let filteredViewers = allViewers?.filter((el) =>
+    el.Favorites?.find((e) => e.nameTheater === nameTheater)
+  );
+
+  filteredViewers?.map((viewers) => {
     allFavorites?.map((fav) => {
       let mailOption = {
         from: "A Sala Llena",
@@ -51,13 +50,6 @@ router.post("/", async (req, res, next) => {
 
           <a href="http://localhost:3000" target="_blank">www.asalallena.com</a> </br>
          `,
-        // attachments: [
-        //   {
-        //     filename: "image.png",
-        //     path: "/path/to/file",
-        //     cid: "unique@kreata.ee", //same cid value as in the html img src
-        //   },
-        // ],
       };
 
       transporter.sendMail(mailOption, (error, info) => {
