@@ -10,8 +10,8 @@ const router = Router();
   const mercadopago = require("mercadopago");
   // Agrega credenciales
   mercadopago.configure({
-    access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
-    //access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
+    //access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
+    access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
   });
 
 router.get("/", async (req, res, next) => {
@@ -36,9 +36,16 @@ router.post("/", async (req, res, next) => {
 });
 
 router.post("/pay", async (req, res) => {
-
+try {
   console.log(req.body)
   const { seatNumber, showId, idViewer } = req.body;
+  const idShow = Buffer.from(showId)
+  const encodeIdSHow = idShow.toString('base64')
+  const viewerId = Buffer.from(idViewer)
+  const encodeIdViewer = viewerId.toString('base64')
+  //console.log('encodeIdSHow',encodeIdSHow)
+  //console.log('encodeIdViewer',encodeIdViewer)
+  
   const allTickets = await Tickets.findAll({
     where: {
       showId: showId,
@@ -57,9 +64,9 @@ router.post("/pay", async (req, res) => {
   let preference = {
     items: [],
     back_urls: {
-      success: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
-      failure: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
-      pending: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      success: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
+      failure: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
+      pending: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
     },
     auto_return: "approved",
   };
@@ -76,14 +83,18 @@ router.post("/pay", async (req, res) => {
   //console.log(response.body);
   const preferenceId = response.body.sandbox_init_point;
   res.send(preferenceId);
+} catch (error) {
+  console.log(error)
+}
+  
 });
 
-router.get("/finish/:showId/:idViewer/:seatNumber", async function (req, res) {
+router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req, res) {
 
-  const { status } = req.query
   
-  const { showId, seatNumber } = req.params
   
+  const { showId, seatNumber, status } = req.params
+  console.log('showId',showId)
   const array = seatNumber.split(",")
   console.log(req.params)
   if(status === "approved"){
