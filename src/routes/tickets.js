@@ -37,7 +37,7 @@ router.post("/", async (req, res, next) => {
 
 router.post("/pay", async (req, res) => {
 
-  //console.log(req.body)
+  console.log(req.body)
   const { seatNumber, showId, idViewer } = req.body;
   const allTickets = await Tickets.findAll({
     where: {
@@ -58,8 +58,8 @@ router.post("/pay", async (req, res) => {
     items: [],
     back_urls: {
       success: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
-      failure: `http://localhost:3000/ticket/finish/showDetail/${showId}/${idViewer}/${seatNumber}`,
-      pending: `http://localhost:3000/ticket/finish/showDetail/${showId}/${idViewer}/${seatNumber}`,
+      failure: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      pending: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
     },
     auto_return: "approved",
   };
@@ -85,7 +85,7 @@ router.get("/finish/:showId/:idViewer/:seatNumber", async function (req, res) {
   const { showId, seatNumber } = req.params
   
   const array = seatNumber.split(",")
-
+  console.log(req.params)
   if(status === "approved"){
     const show = await Shows.findOne({ //busco el show
       where: {
