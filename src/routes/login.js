@@ -63,6 +63,7 @@ router.post("/theater", async (req, res) => {
   const theater = await Theaters.findOne({
     where: {
       email,
+      password
     },
   });
   if (theater) {
@@ -99,6 +100,7 @@ router.post("/viewer", async (req, res) => {
   const viewer = await Viewers.findOne({
     where: {
       email,
+      password
     },
   });
   if (viewer) {
