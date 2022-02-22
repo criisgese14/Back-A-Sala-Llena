@@ -10,8 +10,8 @@ const router = Router();
   const mercadopago = require("mercadopago");
   // Agrega credenciales
   mercadopago.configure({
-    access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
-    //access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
+    //access_token:"TEST-4897216680136890-020912-428eee3e2c74fb3f30d970976a0166ce-392112530" 
+    access_token:"APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410", //poner token
   });
 
 router.get("/", async (req, res, next) => {
@@ -92,7 +92,6 @@ try {
 router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req, res) {
 
   const { showId, seatNumber, status } = req.params
-  console.log('showId',showId)
   const array = seatNumber.split(",")
   console.log("esto trae por params al redirigirte ", req.params)
   if(status === "approved"){
@@ -110,15 +109,17 @@ router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req,
         showId,
       }
     })
-
+    var entradasCompradas = [];
     for( let i = 0; i < tickets.length; i++) { // comparo todos los tickets con los que compré
       for (let j = 0; j < array.length; j++) {
         if (tickets[i].dataValues.seatNumber === array[j]) {
+          console.log(tickets[i].dataValues)
           tickets[i].dataValues.sold = true // si coinciden le cambio la propiedad "sold" a true
+          entradasCompradas.push(tickets[i].dataValues)
         }
       }
     }
-
+    console.log("estas entradas compré, ", entradasCompradas)
     tickets.map(async t => {
       await Tickets.update(t.dataValues, { // actualizo de a uno los tickets
         where: {
@@ -126,16 +127,23 @@ router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req,
         }
       })
     })
+//tickets son los tickets del show
+//array son los asientos de los tickets ["!,4", "2-4"]
 
-    const entradasCompradas = tickets.filter( t => t.dataValues.sold === true)
+    //const entradasCompradas = tickets.filter( t => { if (array.indexOf(t.dataValues.seatNumber) > -1) return t } )
+    console.log(entradasCompradas)
     var newTotal = show.dataValues.total
+    const ticketsSold = show.dataValues.ticketsSold
+    console.log("esto es el inicio", newTotal)
     for (let i = 0; i < entradasCompradas.length; i++) {
-      //console.log(entradasCompradas[i].dataValues.price)
-      newTotal = newTotal + entradasCompradas[i].dataValues.price
+      console.log(entradasCompradas[i].price)
+      show.dataValues.ticketsSold = show.dataValues.ticketsSold + 1
+      newTotal = newTotal + entradasCompradas[i].price
+      console.log("esta es la suma", newTotal)
       //newTotal = newTotal + entradasCompradas[i].dataValues.price
       //return newTotal
     }
-    console.log(newTotal)
+    console.log("esto es el final", newTotal)
     //console.log("estas son  las entradas ", entradasCompradas)
 
     const asientos = show.seatsAvailable // me guardo los asientos que figuran disponibles
@@ -154,6 +162,9 @@ router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req,
       if (clave === "total") {
         updateShow[clave] = newTotal
       }
+      // if (clave === "ticketsSold"){
+      //   updateShow[clave] = sumTickets
+      // }
     }
 
     await Shows.update(updateShow, { // actualizo el show
