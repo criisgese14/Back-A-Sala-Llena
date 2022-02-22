@@ -1245,25 +1245,25 @@
             "sold": false
         },
         {
-            "price": 1400,
+            "price": 1120,
             "seatNumber": "1-5",
             "showId": 24,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 1,
+            "sold": true
         },
         {
-            "price": 1400,
+            "price": 1120,
+            "seatNumber": "1-6",
+            "showId": 24,
+            "viewerId": 1,
+            "sold": true
+        },
+        {
+            "price": 1120,
             "seatNumber": "1-7",
             "showId": 24,
-            "viewerId": null,
-            "sold": false
-        },
-        {
-            "price": 1400,
-            "seatNumber": "2-3",
-            "showId": 24,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 1,
+            "sold": true
         },
         {
             "price": 1200,
@@ -1784,53 +1784,39 @@
             "sold": false
         },
         {
-            "price": 1500,
-            "seatNumber": "1-6",
+            "price": 1125,
+            "seatNumber": "1-8",
             "showId": 45,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 2,
+            "sold": true
         },
         {
-            "price": 1500,
+            "price": 1125,
             "seatNumber": "1-9",
             "showId": 45,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 2,
+            "sold": true
         },
         {
-            "price": 1500,
-            "seatNumber": "2-3",
-            "showId": 45,
-            "viewerId": null,
-            "sold": false
-        },
-        {
-            "price": 1500,
-            "seatNumber": "2-6",
-            "showId": 45,
-            "viewerId": null,
-            "sold": false
-        },
-        {
-            "price": 1200,
+            "price": 900,
             "seatNumber": "2-5",
             "showId": 46,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 3,
+            "sold": true
         },
         {
-            "price": 1200,
+            "price": 900,
             "seatNumber": "2-7",
             "showId": 46,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 3,
+            "sold": true
         },
         {
-            "price": 1200,
-            "seatNumber": "3-6",
+            "price": 900,
+            "seatNumber": "2-6",
             "showId": 46,
-            "viewerId": null,
-            "sold": false
+            "viewerId": 3,
+            "sold": true
         },
         {
             "price": 1200,
@@ -3452,7 +3438,7 @@
         },
         {
             "name": "Amame",
-            "genre": "Monologo",
+            "genre": "Monólogo",
             "length": "120 minutos",
             "image": "https://storage.lacapitalmdp.com/2018/12/AMAME-2.jpg",
             "summary":
@@ -3574,7 +3560,7 @@
         },
         {
             "name": "Fracaso yotuve",
-            "genre": "Monologo",
+            "genre": "Monólogo",
             "length": "40 minutos",
             "image":
             "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/88/000235888.jpg",
@@ -3655,7 +3641,7 @@
         },
         {
             "name": "Furia - Stand Up",
-            "genre": "Monologo",
+            "genre": "Monólogo",
             "length": "90 minutos",
             "image":
             "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/27/000242927.jpg",
@@ -3715,7 +3701,7 @@
     },
     {
         "name": "La noche devora a sus hijos",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "50 minutos",
         "image":
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/85/000224785.jpg",
@@ -3775,7 +3761,7 @@
     },
     {
         "name": "Inestable",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "70 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/inestable---pablo-fabregas.jpg",
@@ -3883,19 +3869,20 @@
         "summary":
         "Tarde noche de verano en el cementerio municipal del pueblo de Carhué, en el límite con Epecuén, provincia de Buenos Aires. Ante el acecho de una tormenta incipiente y cansadas de la rutina, dos mujeres encargadas del crematorio intentan terminar lo antes posible su jornada laboral. De repente el llamado de su jefe genera que aquellas heridas, ruinas y cenizas del pasado se remuevan y vuelvan a salir a luz.",
         "ticketsQty": 3,
-        "seatsAvailable": ["1-5", "1-7", "2-3"],
-        "ticketsSold": 0,
+        "seatsAvailable": [],
+        "ticketsSold": 3,
+        "total": 3360,
         "rated": "Apta para mayores de 16 años",
         "date": "2022-02-16",
         "time": "19:00",
-        "theaterId": 5,
-        "FavoriteId": 5,
+        "theaterId": 1,
+        "FavoriteId": 1,
         "originPrice": 1400,
         "released": true
     },
     {
         "name": "Artesanal",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "60 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/artesanal_.jpg",
@@ -3933,7 +3920,7 @@
     },
     {
         "name": "Fragil",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "80 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/sebastian-wainraich---fragil.jpg",
@@ -4028,7 +4015,7 @@
     },
     {
         "name": "Piltrafa",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "60 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/leo-lenuzza---piltrafa.jpg",
@@ -4237,7 +4224,7 @@
     },
     {
         "name": "Mellera lauriente",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "80 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/mellera-lauriente_.jpg",
@@ -4281,14 +4268,15 @@
         "https://img.alternativateatral.com/scripts/es/fotos/obras/resumen/33/000235133.jpg",
         "summary":
         "En un viejo loteo fracasado Caín, Abel, y su versión conurbana del mito. Caín productor morronero. Abel vagabundo, vendedor de carnada viva en una banquina del asfalto que va al Tigris. Hermanos a los bifes compartiendo ese terreno, su edén berreta, partido al medio, al que nunca podrán volver morada común. La dialéctica imperecedera entre el sedentario y el nómade. Y Tatita, siempre ausente, que regresa al fin ese domingo melancólico.",
-        "ticketsQty": 4,
-        "seatsAvailable": ["1-6", "1-9", "2-3", "2-6"],
-        "ticketsSold": 0,
+        "ticketsQty": 2,
+        "seatsAvailable": [],
+        "ticketsSold": 2,
+        "total": 2250,
         "rated": "Apta para mayores de 13 años",
         "date": "2022-02-14",
         "time": "20:00",
-        "theaterId": 9,
-        "FavoriteId": 9,
+        "theaterId": 2,
+        "FavoriteId": 2,
         "originPrice": 1500,
         "released": true
     },
@@ -4301,13 +4289,14 @@
         "summary":
         "Susana se acaba de quedar sin trabajo, va a cuanta entrevista de trabajo consigue. Hasta que llega a una agencia de colocación de empleo en donde conoce a un funcionario de la misma llamado Alberto. Cuando entra a la entrevista, Alberto la recibirá con recelo y prejuicio, Susana tendrá que hacer valer sus ideas para hacerle ver que ella lucha cada día por ser mejor persona y que su aspecto no determina de forma negativa lo que es por dentro. Alberto le tocará aprender una lección a través del testimonio de Susana, y al conocer la verdad de ella, él mismo se confrontará con la suya, dejando salir sus demonios para así reconciliarse con él mismo.",
         "ticketsQty": 3,
-        "seatsAvailable": ["2-5", "2-7", "3-6"],
+        "seatsAvailable": [],
         "ticketsSold": 0,
         "rated": "Todas las edades",
         "date": "2022-02-15",
         "time": "22:00",
-        "theaterId": 9,
-        "FavoriteId": 9,
+        "total": 2700,
+        "theaterId": 3,
+        "FavoriteId": 3,
         "originPrice": 1200,
         "released": true
     },
@@ -4370,7 +4359,7 @@
     },
     {
         "name": "Cheto y choto",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "80 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/cheto-y-choto.jpg",
@@ -4484,7 +4473,7 @@
     },
     {
         "name": "No soy yo sos vos",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "50 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/no-soy-yo-sos-vos.jpg",
@@ -4541,7 +4530,7 @@
     },
     {
         "name": "Luly, el toxio de mi vida",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "90 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/luly---el-toxico-de-mi-vida-_.jpg",
@@ -4751,7 +4740,7 @@
     },
     {
         "name": "Casi adulto",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "60 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/juli-bellese---casi-adulto.jpg",
@@ -4865,7 +4854,7 @@
     },
     {
         "name": "La violencia de la ternura",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "60 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/tomas-quintin-palma.jpg",
@@ -5074,7 +5063,7 @@
     },
     {
         "name": "Pequeñas cosas fundamentales",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "60 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/pequenas-cosas-fundamentales.jpg",
@@ -5188,7 +5177,7 @@
     },
     {
         "name": "Algo satanico",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "80 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/noelia-custodio---algo-satanico.jpg",
@@ -5378,7 +5367,7 @@
     },
     {
         "name": "Las chicas de la culpa",
-        "genre": "Monologo",
+        "genre": "Monólogo",
         "length": "80 minutos",
         "image":
         "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/las-chicas-de-la-culpa.jpg",
@@ -5416,7 +5405,7 @@
         },
         {
             "name": "Connie Ballarini",
-            "genre": "Monologo",
+            "genre": "Monólogo",
             "length": "70 minutos",
             "image":
             "https://imgplateanet.com.ar/imagenes/img/imagenes/302x302/connie-ballarini-stand-up_.jpg",
