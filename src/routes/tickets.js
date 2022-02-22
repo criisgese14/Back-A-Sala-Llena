@@ -78,14 +78,13 @@ router.post("/pay", async (req, res) => {
   res.send(preferenceId);
 });
 
-router.get("/finish/:showId/:idViewer/:seatNumber", async function (req, res) {
-
-  const { status } = req.query
-  
-  const { showId, seatNumber } = req.params
+router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req, res) {
+  //const { status } = req.query
+  //console.log(req.query)
+  const { showId, seatNumber, status } = req.params
   
   const array = seatNumber.split(",")
-  console.log(req.params)
+  console.log("esto trae por params al redirigirte ", req.params)
   if(status === "approved"){
     const show = await Shows.findOne({ //busco el show
       where: {
