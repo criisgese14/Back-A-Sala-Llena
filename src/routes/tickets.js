@@ -89,15 +89,21 @@ try {
   
 });
 
-router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req, res) {
+router.get("/finish/:decodIdN/:decodIdVn/:seatNumber/:status", async function (req, res) {
 
-  const { showId, seatNumber, status } = req.params
+  
+  
+  const { decodIdN, seatNumber, status, decodIdVn } = req.params
+  //console.log(atob(showId));
+  //const idShow = Buffer.from(showId,'base64')
+  //const decodIdShow = idShow.toString('ascii');
+  //console.log('decodIdShow',decodIdShow)
   const array = seatNumber.split(",")
-  console.log("esto trae por params al redirigirte ", req.params)
+  console.log('esto trae por params al redirigirte', req.params)
   if(status === "approved"){
     const show = await Shows.findOne({ //busco el show
       where: {
-        id : showId
+        id : decodIdN
       },
       include: {
         model: Tickets,
@@ -106,7 +112,7 @@ router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req,
     console.log("este es el total inicial ", show.dataValues.total)
     const tickets = await Tickets.findAll({ //busco los tickets del show
       where: {
-        showId,
+        showId : decodIdN
       }
     })
     var entradasCompradas = [];
@@ -169,7 +175,7 @@ router.get("/finish/:showId/:idViewer/:seatNumber/:status", async function (req,
 
     await Shows.update(updateShow, { // actualizo el show
       where: {
-        id: showId,
+        id: decodIdN,
       },
     })
   }
