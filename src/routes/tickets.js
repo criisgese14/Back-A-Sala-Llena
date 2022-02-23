@@ -64,9 +64,9 @@ try {
   let preference = {
     items: [],
     back_urls: {
-      success: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
-      failure: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
-      pending: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      success: `http://localhost:3000/ticket/finish/${idViewer}/${showId}/${seatNumber}`,
+      failure: `http://localhost:3000/ticket/finish/${idViewer}/${showId}/${seatNumber}`,
+      pending: `http://localhost:3000/ticket/finish/${idViewer}/${showId}/${seatNumber}`,
     },
     auto_return: "approved",
   };
