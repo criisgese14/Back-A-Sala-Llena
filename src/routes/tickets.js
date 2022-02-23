@@ -39,10 +39,10 @@ router.post("/pay", async (req, res) => {
 try {
   console.log(req.body)
   const { seatNumber, showId, idViewer } = req.body;
-  const idShow = Buffer.from(showId)
-  const encodeIdSHow = idShow.toString('base64')
-  const viewerId = Buffer.from(idViewer)
-  const encodeIdViewer = viewerId.toString('base64')
+  //const idShow = Buffer.from(showId)
+  //const encodeIdSHow = idShow.toString('base64')
+  //const viewerId = Buffer.from(idViewer)
+  //const encodeIdViewer = viewerId.toString('base64')
   //console.log('encodeIdSHow',encodeIdSHow)
   //console.log('encodeIdViewer',encodeIdViewer)
   
@@ -64,9 +64,9 @@ try {
   let preference = {
     items: [],
     back_urls: {
-      success: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
-      failure: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
-      pending: `http://localhost:3000/ticket/finish/${encodeIdViewer}/${encodeIdSHow}/${seatNumber}`,
+      success: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      failure: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
+      pending: `http://localhost:3000/ticket/finish/${showId}/${idViewer}/${seatNumber}`,
     },
     auto_return: "approved",
   };
@@ -89,11 +89,11 @@ try {
   
 });
 
-router.get("/finish/:decodIdN/:decodIdVn/:seatNumber/:status", async function (req, res) {
+router.get("/finish/:id/:idV/:seatNumber/:status", async function (req, res) {
 
   
   
-  const { decodIdN, seatNumber, status, decodIdVn } = req.params
+  const { id, seatNumber, status, idV } = req.params
   //console.log(atob(showId));
   //const idShow = Buffer.from(showId,'base64')
   //const decodIdShow = idShow.toString('ascii');
@@ -103,7 +103,7 @@ router.get("/finish/:decodIdN/:decodIdVn/:seatNumber/:status", async function (r
   if(status === "approved"){
     const show = await Shows.findOne({ //busco el show
       where: {
-        id : decodIdN
+        id : id
       },
       include: {
         model: Tickets,
@@ -112,7 +112,7 @@ router.get("/finish/:decodIdN/:decodIdVn/:seatNumber/:status", async function (r
     console.log("este es el total inicial ", show.dataValues.total)
     const tickets = await Tickets.findAll({ //busco los tickets del show
       where: {
-        showId : decodIdN
+        showId : id
       }
     })
     var entradasCompradas = [];
@@ -175,7 +175,7 @@ router.get("/finish/:decodIdN/:decodIdVn/:seatNumber/:status", async function (r
 
     await Shows.update(updateShow, { // actualizo el show
       where: {
-        id: decodIdN,
+        id: id,
       },
     })
   }
